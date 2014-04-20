@@ -1,0 +1,74 @@
+/* ======== Harvateck css. 
+			Currently override bootstrap css
+			later covey to .less ===== */
+
+ul{
+	padding-left: 0;
+}
+ul li{
+	list-style: none;
+}
+.nav > li > a{
+	padding:10px 10px;
+}
+
+.navbar-toggle{
+	background-color:#458ccb;
+}
+
+.navbar-toggle .icon-bar{
+	background-color: white;
+}
+
+/* ======== section : title ===== */
+#title{
+	background: url("../images/gplaypattern.png");
+	min-height: 180px;
+}
+.barblue, .barsky, .bargreen{
+	height: 5px;
+}
+.barsky{
+	background-color:#2aaae1;
+}
+.barblue{
+	background-color:#458cca;
+}
+.bargreen{
+	background-color:#77ab41;
+}
+.title{
+	margin-top: 3em;
+}
+.title img, .title h3{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+
+#footer{
+	background: url("../images/gplaypattern.png");
+}
+
+
+/* ======== The accordion menu style ===== */
+
+
+	.accordion { list-style-type: none; padding: 0; margin: 0 0 30px; border: 1px solid #17a; border-top: none; border-left: none; }
+	.accordion ul { padding: 0; margin: 0; float: left; display: block; width: 100%; }
+	.accordion li { background: #3cf; cursor: pointer; list-style-type: none; padding: 0; margin: 0; float: left; display: block; width: 100%;}
+	.accordion li.active>a { background: url('../images/close.gif') no-repeat center right; }
+	.accordion li div { padding: 20px; background: #aef; display: block; clear: both; float: left; width: 360px;}
+	.accordion a { text-decoration: none; border-bottom: 1px solid #4df; font: bold 1.1em/2em Arial, sans-serif; color: #222; padding: 0 10px; display: block; cursor: pointer; 
+		background: url('../images/open.gif') no-repeat center right;}
+	
+	/* Level 2 */
+	.accordion li ul li { background: #7FD2FF; font-size: 0.9em; }
+
+/* ======== Media query ===== */
+@media (min-width: 768px){
+	.navbar-nav{
+		float:right;
+	}
+}
