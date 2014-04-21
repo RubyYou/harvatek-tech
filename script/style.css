@@ -13,6 +13,9 @@ ul{
 ul li{
 	list-style: none;
 }
+.table > thead > tr > th{
+	border-bottom:none;
+}
 ol{
 	margin-top: 10px;
 }
@@ -225,9 +228,9 @@ ul.navbar-nav a:hover {
 @media (min-width: 992px){
 
 	#footer{
-		bottom: 0;
+		/*bottom: 0;
 		position: absolute;
-		width: 100%;
+		width: 100%;*/
 	}
 	#footer .col-md-6 .col-md-12{
 		padding-left: 0;
