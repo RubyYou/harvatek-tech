@@ -28,13 +28,13 @@
 </head>
 
 <body>
-<div class="container">
-	<header id="header">
 
+<header id="header">
+<div class="headercover">
 
 	<!--Navigation 
     ================================================== -->
-		<nav class="navbar" role="navigation">
+		<nav class="navbar navbar-fixed-top" role="navigation">
 			<div class="container">
 			  <div class="navbar-header">
 	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -73,7 +73,6 @@
 							<li><a href="#">UV LED</a></li>
 						</ul>
 					</li>
-
 					<li><a class="dropdown-toggle" data-toggle="dropdown">
 								E-catalogue
 								<span class="caret"></span>
@@ -98,22 +97,16 @@
 							<li><a href="contact">Contact US</a></li>
 						</ul>
 					</li>
-					<li><a href="cart.php">Inquiry cart</a></li>
+					<li><a class="cart" href="cart.php">Inquiry cart</a></li>
 		          </ul>
 		       </div>
 		   </div>
 		</nav>
-	</div>
-</header>
+
 
 	<!-- Title : php define which page
 	================================================== -->
-<section id="title">
-	<div class="titleBar">
-		<div class="col-xs-4 barblue"> </div>
-		<div class="col-xs-4 barsky"> </div>
-		<div class="col-xs-4 bargreen"> </div>
-	</div>
+
 	<div class="container text-center">
 		<div class="title">
 			<img src="images/inolux_logo.png" alt="inolux_logo" /> 
@@ -121,7 +114,8 @@
 		</div>
 		<p class="subTitle"> Here is where your slogan. </p>
 	</div>
-</section>
+</div>
+</header>
 
 
 
@@ -269,26 +263,26 @@
 			<div class="col-xs-4 bargreen"> </div>
 		</div>
 		<div class="container">
-	      	<div class="col-md-3">
+	      	<div class="col-md-4">
 	      		<h3>Harvatek Technology</h3>
-		  		<p>Small intro about the comopany-
-					Harvateck is a company provides
+		  		<p>Small intro about the comopany-<br/>
+					Harvateck is a company provides<br/>
 					advanced technology in LED sector. 
 		  		</p>
 	      	
 	      	</div>
-	      	<div class="col-md-6">
-	      		<div class="col-md-12">
-	      		<ul class="col-md-6">
-	      			<li><a href="">Company Profile</a></li>
-	      			<li><a href="">Global Locations</a></li>
-	      			<li><a href="">Applications</a></li>
-	      			<li><a href="">News</a></li>
-	      			<li><a href="">Local Representative</a></li>
-	      			<li><a href="">Contact US</a></li>
+	      	<div class="col-md-5">
+	      		<div class="row">
+	      		<ul class="col-md-6 mainlink">
+	      			<li><a href="profile.php">Company Profile</a></li>
+	      			<li><a href="global-locations.php">Global Locations</a></li>
+	      			<li><a href="applications.php">Applications</a></li>
+	      			<li><a href="news.php">News</a></li>
+	      			<li><a href="local-representative.php">Local Representatives</a></li>
+	      			<li><a href="contact-Us.php">Contact US</a></li>
 	      		</ul>
 	      		<ul class="col-md-6">
-	      			<li><a href="">Products</a></li>
+	      			<li class="mainlink">Products</li>
 	      			<li><a href="">Display</a></li>
 	      			<li><a href="">SMD LED</a></li>
 	      			<li><a href="">Through Hole LED</a></li>
@@ -298,7 +292,7 @@
 	      		</div>
 	      	</div>
 	      	<div class="col-md-3">
-	      		<p>3350 Scott Blvd #41-01, <br/>Santa Clara, CA, 95054<br/>
+	      		<p><b>3350 Scott Blvd #41-01, Santa Clara, CA, 95054</b><br/>
 					TEL:+1 408 884 3871<br/>
 					Fax: +1 408 844 9618<br/>
 					Email: sales@harvatek-tech.com<br/>

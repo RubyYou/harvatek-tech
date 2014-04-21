@@ -1,5 +1,9 @@
-/* ======== Overwrite bootstrap css// later covey to .less ===== */
+/* ======== Overwrite bootstrap css// later covey to .less ============================== */
 
+*{
+	font-weight: normal;
+	line-height: 1.8em;
+}
 th{
 	text-align: center;
 }
@@ -27,25 +31,59 @@ ol{
 	background-color: white;
 }
 
+ul.navbar-nav > li a{
+	color:white;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+ul.navbar-nav a.cart{
+	background-color: #458ccb;
+}
+ul.navbar-nav > li{
+	background-color: rgba(0,0,0,0.6);
+}
+ul.navbar-nav a:hover {
+	background-color: black;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+	background-color: black;
+
+}
+.dropdown-menu{
+	background-color: black;
+	border:none;
+}
+.dropdown-menu > li > a{
+	padding: 5px 15px;
+}
+.dropdown-menu > li > a:hover{
+	color:#458ccb;
+}
+
 /* ================ section : title ===================================================== */
-#title{
-	background: url("../images/gplaypattern.png");
-	min-height: 180px;
+#header{
+	background: url("../images/headImage.jpg");
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	position: relative;
+	color:white;
+	text-shadow: 1px 2px 1px $ccc;
+	min-height: 250px;
 }
-.barblue, .barsky, .bargreen{
-	height: 5px;
-}
-.barsky{
-	background-color:#2aaae1;
-}
-.barblue{
-	background-color:#458cca;
-}
-.bargreen{
-	background-color:#77ab41;
+.headercover{
+	width:100%;
+	min-height: 250px;
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	position: relative;
+	background-color:rgba(0,0,0,0.5);
 }
 .title{
-	margin-top: 3em;
+	margin-top: 8em;
 }
 .title img, .title h3{
 	display: inline-block;
@@ -143,15 +181,64 @@ ol{
 }
 
 /* ============= Section: footer ======================================== */
+
 #footer{
-	background: url("../images/gplaypattern.png");
+	background: url("../images/gplaypattern.jpg");
+}
+
+#footer .container{
+	padding:3em 0;
+	color:#656970;
+	font-weight: 300;
+
+}
+.barblue, .barsky, .bargreen{
+	height: 5px;
+}
+.barsky{
+	background-color:#2aaae1;
+}
+.barblue{
+	background-color:#458cca;
+}
+.bargreen{
+	background-color:#77ab41;
+}
+#footer h3{
+	margin-top: 0;
+	color:#458cca;
+}
+#footer ul a{
+	color:#656970;
+}
+#footer ul.mainlink li a,
+#footer li.mainlink{
+	color:#2aaae1;
+}
+#footer b{
+	font-weight: normal;
+	color:#77ab41;
 }
 
 
+/* =============  Media query ======================================== */
+@media (min-width: 992px){
 
-/* ======== Media query ===== */
+	#footer{
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+	}
+	#footer .col-md-6 .col-md-12{
+		padding-left: 0;
+	}
+}
 @media (min-width: 768px){
 	.navbar-nav{
 		float:right;
 	}
+	.navbar-nav{
+		margin-top: 23px;
+	}
+
 }
