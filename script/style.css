@@ -20,7 +20,7 @@ ul li{
 	background-color: white;
 }
 
-/* ======== section : title ===== */
+/* ================ section : title ===================================================== */
 #title{
 	background: url("../images/gplaypattern.png");
 	min-height: 180px;
@@ -45,30 +45,80 @@ ul li{
 	vertical-align: middle;
 }
 
-
-
 #footer{
 	background: url("../images/gplaypattern.png");
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+	margin-top: 5em;
 }
 
+/* ============= The accordion menu style ======================================== */
+.categoryTitle{
+	width:100%;
+	background: #80bee8;
+	color:white;
+	font-weight: 300;
+	letter-spacing: 1px;
+	padding:10px;
+	border-top-left-radius: 5px; 
+	border-top-right-radius: 5px;
+	margin-bottom: 0;
+}
+.accordion > li:last-child{
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px;
+}
+.accordion > li:last-child a{
+	border-bottom:none;
+}
+.accordion { 
+	list-style-type: none; padding: 0; 
+	margin: 0 0 30px;
+}
+.accordion ul {
+	padding: 0; margin: 0; 
+	float: left; display: block;
+	width: 100%;
+}
+.accordion li { 
+	background: #458ccb; 
+	cursor: pointer;
+	list-style-type: none;
+	padding: 0; margin: 0;
+	float: left;
+	display: block;
+	width: 100%;
+}
+.accordion li img{
+	margin-top: -3px;
+	margin-right: 5px;
+}
+.accordion li.active>a { 
+	background: url('../images/close.gif') no-repeat center right;
+	font-weight: bold;
+}
+.accordion a { 
+	text-decoration: none; 
+	border-bottom: 1px solid #7cb8e5; 
+	font-weight: 400;
+	line-height: 3em;
+	color: white;
+	padding: 0 10px; 
+	display: block; 
+	cursor: pointer; 
+}
+.accordion a.toggle{
+	background: url('../images/open.gif') no-repeat center right;
+	font-weight: 300;
+}
 
-
-/* ======== The accordion menu default style ===== */
-
-
-	.accordion { list-style-type: none; padding: 0; margin: 0 0 30px; border: 1px solid #17a; border-top: none; border-left: none; }
-	.accordion ul { padding: 0; margin: 0; float: left; display: block; width: 100%; }
-	.accordion li { background: #3cf; cursor: pointer; list-style-type: none; padding: 0; margin: 0; float: left; display: block; width: 100%;}
-	.accordion li.active>a { background: url('../images/close.gif') no-repeat center right; }
-	.accordion li div { padding: 20px; background: #aef; display: block; clear: both; float: left; width: 360px;}
-	.accordion a.toggle { text-decoration: none; border-bottom: 1px solid #4df; font: bold 1.1em/2em Arial, sans-serif; color: #222; padding: 0 10px; display: block; cursor: pointer; 
-		background: url('../images/open.gif') no-repeat center right;}
-	
-	/* Level 2 */
-	.accordion li ul li { background: #7FD2FF; font-size: 0.9em; }
+/* Level 2 */
+.accordion li ul li {
+	background: #7FD2FF;
+}
+.accordion li ul li a{
+	color:#1167a8; 
+	padding-left: 25px;
+	border-bottom: 1px solid #458ccb;
+}
 
 /* ======== Media query ===== */
 @media (min-width: 768px){
