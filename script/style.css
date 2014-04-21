@@ -1,12 +1,19 @@
-/* ======== Harvateck css. 
-			Currently override bootstrap css
-			later covey to .less ===== */
+/* ======== Overwrite bootstrap css// later covey to .less ===== */
 
+th{
+	text-align: center;
+}
 ul{
 	padding-left: 0;
 }
 ul li{
 	list-style: none;
+}
+ol{
+	margin-top: 10px;
+}
+.breadcrumb{
+	display: inline-block;
 }
 .nav > li > a{
 	padding:10px 10px;
@@ -44,12 +51,27 @@ ul li{
 	display: inline-block;
 	vertical-align: middle;
 }
-
-#footer{
-	background: url("../images/gplaypattern.png");
-	margin-top: 5em;
+/* ============= Section: content ======================================== */
+#content{
+	margin:3em 0;
 }
+#content table{
+	border-color:#7cb8e5;
 
+}
+#content table thead{
+	background-color: #458ccb;
+	color:white;
+	
+}
+#content table thead th{
+	font-weight: 300;
+	letter-spacing: 1px;
+	height: 40px;
+}
+#content table tbody tr:hover{
+	background-color: #f5f5f5;
+}
 /* ============= The accordion menu style ======================================== */
 .categoryTitle{
 	width:100%;
@@ -119,6 +141,13 @@ ul li{
 	padding-left: 25px;
 	border-bottom: 1px solid #458ccb;
 }
+
+/* ============= Section: footer ======================================== */
+#footer{
+	background: url("../images/gplaypattern.png");
+}
+
+
 
 /* ======== Media query ===== */
 @media (min-width: 768px){
