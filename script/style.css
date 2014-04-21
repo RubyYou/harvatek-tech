@@ -49,10 +49,14 @@ ul li{
 
 #footer{
 	background: url("../images/gplaypattern.png");
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 
-/* ======== The accordion menu style ===== */
+
+/* ======== The accordion menu default style ===== */
 
 
 	.accordion { list-style-type: none; padding: 0; margin: 0 0 30px; border: 1px solid #17a; border-top: none; border-left: none; }
@@ -60,7 +64,7 @@ ul li{
 	.accordion li { background: #3cf; cursor: pointer; list-style-type: none; padding: 0; margin: 0; float: left; display: block; width: 100%;}
 	.accordion li.active>a { background: url('../images/close.gif') no-repeat center right; }
 	.accordion li div { padding: 20px; background: #aef; display: block; clear: both; float: left; width: 360px;}
-	.accordion a { text-decoration: none; border-bottom: 1px solid #4df; font: bold 1.1em/2em Arial, sans-serif; color: #222; padding: 0 10px; display: block; cursor: pointer; 
+	.accordion a.toggle { text-decoration: none; border-bottom: 1px solid #4df; font: bold 1.1em/2em Arial, sans-serif; color: #222; padding: 0 10px; display: block; cursor: pointer; 
 		background: url('../images/open.gif') no-repeat center right;}
 	
 	/* Level 2 */

@@ -26,7 +26,7 @@
 					$(this).hide();
 				});
 				
-				$.each($ul.find('a'), function(){
+				$.each($ul.find('a.toggle'), function(){
 					$(this).click(function(e){
 						activate(this);
 						return void(0);
