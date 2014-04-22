@@ -13,7 +13,7 @@
 
 (function(jQuery){
      jQuery.fn.extend({  
-         accordion: function() {       
+         accordion: function() {
             return this.each(function() {
             	
             	var $ul = $(this);

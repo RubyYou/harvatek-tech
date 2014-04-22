@@ -39,42 +39,44 @@
 
 <!-- product // table & product location
 ================================================== -->
-		<div class="col-md-9">
+		<div class="col-md-9 ">
 			<ol class="breadcrumb"> Display / Numeric / Sigal Digit</ol>
-			<table width="100%" border="1" class="text-center">
-				<thead>
-					<tr>
-						<th>&nbsp;</th>
-						<th>Name</th>
-						<th>DIMENSION</th>
-						<th>DATASHEET</th>
-						<th></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
-						<td>HT-T158 Series</td>
-						<td>3.0 x 2.0 x 1.3 (mm)</td>
-						<td><a href="#"><i class="fa fa-download fa-2x"></i></a></td>
-						<td><a href="#" class="btn btn-primary">Details</a></td>
-					</tr>
-					<tr>
-						<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
-						<td>HT-T158 Series</td>
-						<td>3.0 x 2.0 x 1.3 (mm)</td>
-						<td><a href="#"><i class="fa fa-download fa-2x"></i></a></td>
-						<td><a href="#" class="btn btn-primary">Details</a></td>
-					</tr>
-					<tr>
-						<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
-						<td>HT-T158 Series</td>
-						<td>3.0 x 2.0 x 1.3 (mm)</td>
-						<td><a href="#"><i class="fa fa-download fa-2x"></i></a></td>
-						<td><a href="#" class="btn btn-primary">Details</a></td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="table-responsive">
+				<table width="100%" border="1" class="text-center">
+					<thead>
+						<tr>
+							<th>&nbsp;</th>
+							<th>Name</th>
+							<th>DIMENSION</th>
+							<th>DATASHEET</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
+							<td>HT-T158 Series</td>
+							<td>3.0 x 2.0 x 1.3 (mm)</td>
+							<td><a href="#"><i class="fa fa-download fa-2x"></i></a></td>
+							<td><a href="#" class="btn btn-primary">Details</a></td>
+						</tr>
+						<tr>
+							<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
+							<td>HT-T158 Series</td>
+							<td>3.0 x 2.0 x 1.3 (mm)</td>
+							<td><a href="#"><i class="fa fa-download fa-2x"></i></a></td>
+							<td><a href="#" class="btn btn-primary">Details</a></td>
+						</tr>
+						<tr>
+							<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
+							<td>HT-T158 Series</td>
+							<td>3.0 x 2.0 x 1.3 (mm)</td>
+							<td><a href="#"><i class="fa fa-download fa-2x"></i></a></td>
+							<td><a href="#" class="btn btn-primary">Details</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 </section>

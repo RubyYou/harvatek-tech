@@ -64,7 +64,12 @@
 					</ul>
 				</li>
 				<li><a class="cart" href="cart.php">Inquiry cart</a></li>
-	          </ul>
-	       </div>
-	   </div>
+			</ul>
+			</div>
+		</div>
 	</nav>
+
+
+<!-- todo: there is a bug on mobile version, 
+	 the col-md-3 is way to small in height, 
+	 that cause the col-md-9 block navigation.-->
