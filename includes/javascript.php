@@ -13,5 +13,7 @@
 				$('.delete').hide();
 				event.preventDefault();
 			});
+		});
+
 
 	</script>
