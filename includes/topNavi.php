@@ -20,9 +20,9 @@
 							<span class="caret"></span>
 						</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Company Profile</a></li>
-						<li><a href="#">Global Locations</a></li>
-						<li><a href="#">Supply Chain</a></li>
+						<li><a href="company-profile.php">Company Profile</a></li>
+						<li><a href="global-locations.php">Global Locations</a></li>
+						<li><a href="supply-chain.php">Supply Chain</a></li>
 					</ul>
 				</li>
 				<li><a href="applications.php">Applications</a></li>
