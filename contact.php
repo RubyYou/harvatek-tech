@@ -81,21 +81,21 @@
 			<hr/>
 		<div class="row">
 			
-			<ul class="col-sm-3">
+			<ul class="col-sm-3 col-xs-6">
 				<li><input type="checkbox" value="display" name="display"><b>Display</b></li>
 				<li><input type="checkbox" value="display" name="display">Throught Hole Display</li>
 				<li><input type="checkbox">Numeric</li>
 				<li><input type="checkbox">Dot Matrix</li>
 				<li><input type="checkbox">SMD Display</li>
 			</ul>
-			<ul class="col-sm-3">
+			<ul class="col-sm-3 col-xs-6">
 				<li><input type="checkbox" value="display" name="display"><b>SMD LED</b></li>
 				<li><input type="checkbox" value="display" name="display">Surface Mount</li>
 				<li><input type="checkbox">Back Lighting</li>
 				<li><input type="checkbox">General Lighting</li>
 				<li><input type="checkbox">LM-80</li>
 			</ul>
-			<ul class="col-sm-3">
+			<ul class="col-sm-3 col-xs-6">
 				<li><input type="checkbox" value="display" name="display"><b>THROUGH Hole LED</b></li>
 				<li><input type="checkbox" value="display" name="display">Round Lamp</li>
 				<li><input type="checkbox">Oval Lamp</li>
@@ -103,7 +103,7 @@
 				<li><input type="checkbox">Lead Frame Axial</li>
 				<li><input type="checkbox">Lamp with housing</li>
 			</ul>
-			<ul class="col-sm-3">
+			<ul class="col-sm-3 col-xs-6">
 				<li><input type="checkbox" value="display" name="display"><b>Infrared</b></li>
 				<li><input type="checkbox">Emitter</li>
 				<li><input type="checkbox">Sensor</li>
