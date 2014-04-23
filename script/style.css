@@ -28,6 +28,9 @@ input[type="radio"], input[type="checkbox"]{
 .breadcrumb{
 	display: inline-block;
 }
+.date{
+	color:#656970;
+}
 .nav > li > a{
 	padding:10px 10px;
 }

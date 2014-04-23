@@ -34,7 +34,7 @@
 <!-- inQuiry details
 	================================================== -->
 		<h3 class="pull-left"> Inquiry products</h3>
-		<p class="pull-right"> <b>Inquiry number</b> # 166 / 
+		<p class="pull-right date"> <b>Inquiry number</b> # 166 / 
 			<b>Date</b>
 			<?php date_default_timezone_set('UTC');
 				  echo date("d/M/Y");?></p>
