@@ -19,6 +19,12 @@ ul li{
 ol{
 	margin-top: 10px;
 }
+.form-horizontal .radio, .form-horizontal .checkbox{
+	display: inline-block;;
+}
+input[type="radio"], input[type="checkbox"]{
+	margin-right: 5px;
+}
 .breadcrumb{
 	display: inline-block;
 }

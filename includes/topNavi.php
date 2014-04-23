@@ -60,7 +60,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="local-representative.php">Local Representatives</a></li>
 						<li><a href="distribution.php">The distribution</a></li>
-						<li><a href="contact">Contact US</a></li>
+						<li><a href="contact.php">Contact US</a></li>
 					</ul>
 				</li>
 				<li><a class="cart" href="cart.php">Inquiry cart</a></li>
