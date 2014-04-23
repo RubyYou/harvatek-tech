@@ -17,7 +17,7 @@ harvatek-tech.com // rebuild the php code
   categories level second
   
   等你都完成了，我會把後台所有檔案也放到這裡，我怕我們的資料夾會有重覆！
-  ps.翻譯上有問題，請跟我說喔！
-  我都亂翻的...
+  ps.警告或後台內文，翻譯上有問題
+  ，單字、語句再跟我說！我都亂翻的...
   Sorry,英文沒有很好！
 
