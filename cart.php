@@ -17,8 +17,7 @@
 
 		<div class="container text-center">
 			<div class="title">
-				<img src="images/inolux_logo.png" alt="inolux_logo" /> 
-				<h3> PRODUCTS </h3>
+				<h3> Your Product Inquiry Cart</h3>
 			</div>
 			<p class="subTitle"> Here is where your slogan. </p>
 		</div>
@@ -34,7 +33,6 @@
 
 <!-- product // table & product location
 ================================================== -->
-		<h3> Your Product Inquiry Cart</h3>
 		<table width="100%" border="1" class="text-center">
 			<thead>
 				<tr>
@@ -148,7 +146,7 @@
 		<div class="col-md-12 text-center">
 			<hr/>
 			<div class="col-md-4 col-md-offset-4">
-			<a href="sentDetails.php" class="btn btn-primary btn-block">Send</a>
+			<a href="confirm.php" class="btn btn-primary btn-block">Send</a>
 			</div>
 		</div>
 	</div>
