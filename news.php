@@ -36,7 +36,7 @@
 <?php include("includes/productCategories.php");?>
 
 
-	<!-- product // product details location
+	<!--  News Post locations
     ================================================== -->
 			<div class="col-md-9">
 				<h3> Harvatek Technologies Implements New Product Branding Strategy</h3>
