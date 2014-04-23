@@ -58,7 +58,7 @@
 							<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="local-representative.php">Local Representatives</a></li>
+						<li><a href="local-representatives.php">Local Representatives</a></li>
 						<li><a href="distribution.php">The distribution</a></li>
 						<li><a href="contact.php">Contact US</a></li>
 					</ul>
