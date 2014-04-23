@@ -244,7 +244,12 @@ ul.navbar-nav a:hover {
 	font-weight: normal;
 	color:#77ab41;
 }
-
+/* ============  Local representative map ========================= */
+#map{
+	width:1000px;
+	height:642px;
+	background: url('http://harvatek-tech.com/wp-content/uploads/2013/08/salesMap.jpg');
+}
 
 /* =============  Media query ======================================== */
 @media (min-width: 992px){

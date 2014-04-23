@@ -8,12 +8,10 @@
 		$(document).ready(function () {
 			$('.accordion').accordion();
 
-				$('.next').on("click",function(event){
-					$('#clientinfo').slideDown();
-					$('.delete').hide();
-					event.preventDefault();
-				});
-		});
-
+			$('.next').on("click",function(event){
+				$('#clientinfo').slideDown();
+				$('.delete').hide();
+				event.preventDefault();
+			});
 
 	</script>
