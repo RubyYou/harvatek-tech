@@ -28,6 +28,10 @@ $id1=$cTree->getNowId();
 $cTree->add($id1,STR_ADD,"product3/add.php","mainframe");
 $cTree->add($id1,STR_LIST,"product3/list.php","mainframe");
 
+$cTree->add($rootid,"Product Categories 4","#","");
+$id1=$cTree->getNowId();
+$cTree->add($id1,STR_ADD,"product4/add.php","mainframe");
+$cTree->add($id1,STR_LIST,"product4/list.php","mainframe");
 
 /***********************/
 switch(BGM_ACCOUNTSETTING)
