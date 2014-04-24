@@ -1,0 +1,25 @@
+<?php
+    include_once 'config.local.php';
+    /*
+     *function
+     */
+    include_once BGM_PATH.'libraries/php/js.lib.php';
+    include_once BGM_PATH.'libraries/php/validation-1.0.lib.php';
+    include_once BGM_PATH.'libraries/php/injection-1.0.lib.php';
+    
+    include_once WEB_PATH.'modules/Myadodb/adodb.inc.php';
+    /*
+     *autoload set
+     */
+    $includePath[] = get_include_path();
+    $includePath[] = WEB_PATH.'cls';
+    $includePath[] = WEB_PATH.'modules';
+    set_include_path(join(PATH_SEPARATOR,$includePath));
+    function __autoload($class)
+    {
+        include_once strtolower($class).'.class.php';
+    }
+    
+    /*有會員登入統一開啟session*/
+    session_start();
+?>
