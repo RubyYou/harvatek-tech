@@ -20,8 +20,8 @@ define(WEB_DESCRIPTION_CN,'');
  *Front-End
  ***************************************/
 define(WEB_HOST,$_SERVER['HTTP_HOST']);//gethostbyname($_SERVER['HTTP_HOST']) || $_SERVER['HTTP_HOST'];
-define(WEB_ROOT,'http://'.WEB_HOST.'/harvatek-tech/');
-define(WEB_PATH,$_SERVER['DOCUMENT_ROOT'].'/harvatek-tech/');
+define(WEB_ROOT,'http://'.WEB_HOST.'/harvatek-tech-git/');
+define(WEB_PATH,$_SERVER['DOCUMENT_ROOT'].'/harvatek-tech-git/');
 define(WEB_TITLE,'harvatek-tech');
 define(FWEB_TITLE,'harvatek-tech');
 define(FWEB_WEBSITEMAIL,'nick@targets.com.tw');

@@ -13,6 +13,7 @@ harvatek-tech.com // rebuild the php code
   可以同步做，如果改到同一行同一個page，再溝通一下看要哪一行，或者mark起來，
   前端的工作測試完成，我們看怎麼合起來做維調，我再加入後端的行列，看可以幫什麼。 :)
 
+- I know！但是我怕影響到你。既然你這樣說那我就不客氣啦！！
 
 - 後台測試位置：
   http://nickchen.uphero.com/harvatek-tech/manager/
