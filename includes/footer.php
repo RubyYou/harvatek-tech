@@ -19,12 +19,12 @@
 	      	<div class="col-md-5">
 	      		<div class="row">
 	      		<ul class="col-md-6 mainlink">
-	      			<li><a href="profile.php">Company Profile</a></li>
+	      			<li><a href="company-profile.php">Company Profile</a></li>
 	      			<li><a href="global-locations.php">Global Locations</a></li>
 	      			<li><a href="applications.php">Applications</a></li>
 	      			<li><a href="news.php">News</a></li>
-	      			<li><a href="local-representative.php">Local Representatives</a></li>
-	      			<li><a href="contact-Us.php">Contact US</a></li>
+	      			<li><a href="local-representatives.php">Local Representatives</a></li>
+	      			<li><a href="contact.php">Contact US</a></li>
 	      		</ul>
 	      		<ul class="col-md-6">
 	      			<li class="mainlink">Products</li>
