@@ -11,17 +11,22 @@ unset($cPri);
 /*code*/
 $cTree=new Tree(BGM_TITLE,"#","");
 $rootid=$cTree->getNowId();
-$cTree->add($rootid,'Product Categories',"#","");
+
+$cTree->add($rootid,'Product Categories 1',"#","");
 $id1=$cTree->getNowId();
 $cTree->add($id1,STR_ADD,"product1/add.php","mainframe");
 $cTree->add($id1,STR_LIST,"product1/list.php","mainframe");
 
-$cTree->add($rootid,"Product2","#","");
+$cTree->add($rootid,"Product Categories 2","#","");
 $id1=$cTree->getNowId();
 $cTree->add($id1,STR_ADD,"product2/add.php","mainframe");
 $cTree->add($id1,STR_LIST,"product2/list.php","mainframe");
 
 
+$cTree->add($rootid,"Product Categories 3","#","");
+$id1=$cTree->getNowId();
+$cTree->add($id1,STR_ADD,"product3/add.php","mainframe");
+$cTree->add($id1,STR_LIST,"product3/list.php","mainframe");
 
 
 /***********************/

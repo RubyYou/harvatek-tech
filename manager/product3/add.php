@@ -1,4 +1,4 @@
-<?php include_once 'update.c.php';?>
+<?php include_once 'add.c.php';?>
 <html>
 <head>
 <title><?php echo BGM_TITLE;?></title>
@@ -6,11 +6,11 @@
 require_once WEB_PATH.'include/head.inc.php';
 ?>
 <style>
-  #update_wrap table.update_table{
+  #add_wrap table.add_table{
     width:600px;
     /*border: 1px #ccc solid;*/
   }
-  #update_wrap table.update_table td.title{
+  #add_wrap table.add_table td.title{
     /*border: 1px #ccc solid;*/
     width: 150px;
   }
@@ -20,28 +20,28 @@ require_once WEB_PATH.'include/head.inc.php';
 <body>
 <div id="wrapper">
   <div id="header">
-    <div id="path_wrap">Product Categories 2 > Edit</div>
+    <div id="path_wrap">Product Categories 3 > Add</div>
   </div>
   <div id="main">
-    <div id="update_wrap">
-      <form name="form" action="update_.php?product2_id=<?php echo $arr['product2_id'];?>" method="POST" enctype="multipart/form-data" onsubmit="return check();">
-      <table class="update_table">
+    <div id="add_wrap">
+      <form name="form" action="add_.php" method="POST" enctype="multipart/form-data" onsubmit="return check();">
+      <table class="add_table">
         <tr>
           <td class="title alignright">Product Categories:</td>
           <td>
-              <?php echo $product1Select;?>
+              <?php echo $product2Select;?>
           </td>
         </tr>
         <tr>
           <td class="title alignright">Name:</td>
           <td>
-            <input type="text" name="name" value="<?php echo $arr['name'];?>"/>
+            <input type="text" name="name" />
           </td>
         </tr>
         <tr>
           <td class="title alignright">Link:</td>
           <td>
-            <input type="text" name="link" value="<?php echo $arr["link"];?>" class="width250"/>
+            <input type="text" name="link" class="width250"/>
           </td>
         </tr>
         <tr>

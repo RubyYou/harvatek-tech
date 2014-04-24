@@ -20,16 +20,16 @@ require_once WEB_PATH.'include/head.inc.php';
 <body>
 <div id="wrapper">
   <div id="header">
-    <div id="path_wrap">Product Categories 2 > Edit</div>
+    <div id="path_wrap">Product Categories 3 > Edit</div>
   </div>
   <div id="main">
     <div id="update_wrap">
-      <form name="form" action="update_.php?product2_id=<?php echo $arr['product2_id'];?>" method="POST" enctype="multipart/form-data" onsubmit="return check();">
+      <form name="form" action="update_.php?product3_id=<?php echo $arr['product3_id'];?>" method="POST" enctype="multipart/form-data" onsubmit="return check();">
       <table class="update_table">
         <tr>
           <td class="title alignright">Product Categories:</td>
           <td>
-              <?php echo $product1Select;?>
+              <?php echo $product2Select;?>
           </td>
         </tr>
         <tr>

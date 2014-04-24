@@ -1,5 +1,5 @@
 <?php
-class Product2 extends Main{
+class Product3 extends Main{
     
     public $table1;
 	public $table2;
@@ -12,7 +12,7 @@ class Product2 extends Main{
 		 *類別同名的函式
 		 *同時有兩個建構子，則以  __construct() 為優先，同類別名的函數將不會被執行
 		 */
-		$this->table1 = "tbl_product2";
+		$this->table1 = "tbl_product3";
 		$this->db = new MyDb();
 	}
 	
@@ -37,19 +37,19 @@ class Product2 extends Main{
 		$this->db->closeConnection();
 	}
 	
-	function addProduct2($post)
+	function addProduct3($post)
 	{
 		array_walk($post,"quoteSlashes");
 		extract($post);
 		
-		$keyAry['product1_id'] = $product1_id;
+		$keyAry['product2_id'] = $product2_id;
 		
 		$order_num=$this->get_order($keyAry,false,$this->table1);
 		$sql = "insert into 
 				".$this->table1."
 				values
 				(
-					'".$product1_id."'
+					'".$product2_id."'
 					,null
 					,'".$name."'
 					,'".$link."'
@@ -58,7 +58,7 @@ class Product2 extends Main{
 		$this->db->execute($sql);
 	}
     
-	function getPage($nowpage,$product1_id)
+	function getPage($nowpage,$product2_id)
     {
 		$nowpage = intval($nowpage);
 		$pagesize = 10;
@@ -68,7 +68,7 @@ class Product2 extends Main{
 		$sql = "select *
 				from ".$this->table1."
 				where
-				product1_id = '".$product1_id."'
+				product2_id = '".$product2_id."'
 				order by
 				order_num
 				asc";
@@ -84,8 +84,8 @@ class Product2 extends Main{
 		while($rs = $this->db->getNext())
 		{
 			$ary['data'][] = array(
-				'product1_id' 		=> 		$rs->product1_id
-				,'product2_id' 		=> 		$rs->product2_id
+				'product2_id' 		=> 		$rs->product2_id
+				,'product3_id' 		=> 		$rs->product3_id
 				,'name' 			=> 		$rs->name
 				,'link' 			=> 		$rs->link
 				,'order_num' 		=> 		$rs->order_num
@@ -95,19 +95,19 @@ class Product2 extends Main{
 		
 	}
 	
-	function getProduct2($product2_id)
+	function getProduct3($product3_id)
 	{
-		$product2_id = intval($product2_id);
+		$product3_id = intval($product3_id);
 		$sql = "select * 
 				from ".$this->table1."
 				where 
-				product2_id='".$product2_id."'";
+				product3_id='".$product3_id."'";
 		$this->db->execute($sql);
 		$rs = $this->db->getNext();
 		
 			$ary = array(
-				'product1_id' => $rs->product1_id
-				,'product2_id' => $rs->product2_id
+				'product2_id' => $rs->product2_id
+				,'product3_id' => $rs->product3_id
 				,'name' => $rs->name
 				,'link' => $rs->link
 				,'order_num' => $rs->order_num
@@ -117,38 +117,38 @@ class Product2 extends Main{
 		
 	}
 	
-	function updateProduct2($post)
+	function updateProduct3($post)
 	{
 		array_walk($post,"quoteSlashes");
 		extract($post);
 		
-		$arr = $this->getProduct2($product2_id);
-		$o_product1_id = $arr['product1_id'];
+		$arr = $this->getProduct3($product3_id);
+		$o_product2_id = $arr['product2_id'];
 		$sql = '';
-		if($o_product1_id == $product1_id)
+		if($o_product2_id == $product2_id)
 		{
 			$sql = "update ".$this->table1."
 				set
-				product1_id = '".$product1_id."'
+				product2_id = '".$product2_id."'
 				,name='".$name."'
 				,link='".$link."'
 				where 
-				product2_id='".$product2_id."'";
+				product3_id='".$product3_id."'";
 		}
 		else
 		{
-			$keyAry['product1_id'] = $o_product1_id;
-			$this->reset_order("product2_id",$product2_id,$keyAry,$this->table1);
-			$keyAry['product1_id'] = $product1_id;
+			$keyAry['product2_id'] = $o_product2_id;
+			$this->reset_order("product3_id",$product3_id,$keyAry,$this->table1);
+			$keyAry['product2_id'] = $product2_id;
 			$order_num=$this->get_order($keyAry,false,$this->table1);
 			$sql = "update ".$this->table1."
 				set
-				product1_id = '".$product1_id."'
+				product2_id = '".$product2_id."'
 				,name='".$name."'
 				,link='".$link."'
 				,order_num = '".$order_num."'
 				where 
-				product2_id='".$product2_id."'";
+				product3_id='".$product3_id."'";
 		}
 		
 		
@@ -156,7 +156,7 @@ class Product2 extends Main{
 		$this->db->execute($sql);
 	}
 	
-	function deleteProduct2($product1_id,$product2_id)
+	function deleteProduct3($product2_id,$product3_id)
 	{
 		if($_GET['del']!='true')
 		{
@@ -164,74 +164,38 @@ class Product2 extends Main{
 			exit;
 		}
 		
-		$product1_id = intval($product1_id);
 		$product2_id = intval($product2_id);
-		$keyAry['product1_id'] = $product1_id;
+		$product3_id = intval($product3_id);
+		$keyAry['product2_id'] = $product2_id;
 		
-		$this->reset_order("product2_id",$product2_id,$keyAry,$this->table1);
+		$this->reset_order("product3_id",$product3_id,$keyAry,$this->table1);
 		$sql = "delete from
 				".$this->table1."
 				where
-				product2_id='".$product2_id."'";
+				product3_id='".$product3_id."'";
 		$this->db->execute($sql);
 
 	}
 
-	function getAll($product1_id = '')
-	{
-		$product1_id = intval($product1_id);
-		$sqlWhere = '';
-		if($product1_id != 0)
-			$sqlWhere = " where
-							product1_id = '".$product1_id."' ";
-		$sql = "select *
-				from ".$this->table1;
-		$sql .= $sqlWhere;
-		$sql .= " order by
-					order_num
-					asc";
-		$this->db->execute($sql);
-		while($rs = $this->db->getNext())
-		{
-			$arr[] = array(
-				'product1_id' => $rs->product1_id
-				,'product2_id' => $rs->product2_id
-				,'name' 		=> 		$rs->name
-				,'link' 		=> 		$rs->link
-				,'order_num' 	=> 		$rs->order_num
-			);
-		}
-		
-		return $arr;
-	}
+/*
+ SELECT 
+p1.name as p1_name
+,p1.link as p1_link
+,p2.name as p2_name
+,p2.link as p2_link
+,p3.name as p3_name
+,p3.link as p3_link
+FROM `tbl_product2` as p2
+right join tbl_product1 as p1
+on p1.product1_id = p2.product1_id
+left join tbl_product3 as p3
+on p3.product2_id = p2.product2_id
+order by 
+p1.order_num asc 
+, p2.order_num asc
+, p3.order_num asc
+ */
 
-	function getSelect($product1Ary,$selected = '',$onchange = false)
-	{
-		
-		
-		if($onchange)
-			$onchange_ = 'onchange="selectChange();"';
-		$select = '<select name="product2_id" '.$onchange_.'>';
-		$option = '';
-		
-		if(count($product1Ary) > 0)
-		  foreach ($product1Ary as $key1 => $val1)
-		  {
-				$product2Ary = $this->getAll($product1Ary[$key1]['product1_id']);
-				$option .= '<optgroup label="'.$product1Ary[$key1]['name'].'">';
-				foreach($product2Ary as $key2 => $val2)
-				{
-					$selected_ = '';
-					if($selected == $product2Ary[$key2]['product2_id']) $selected_ = 'selected="selected"';
-					$option .= '<option value="'.$product2Ary[$key2]['product2_id'].'" '.$selected_.'>'.$product2Ary[$key2]['name'].'</option>';
-				}
-				$option .= '</optgroup>';
-				
-		  }
-		
-		$select .= $option.'</select>';
-		return $select;
-	}
 
 	//Front-End
 

@@ -11,21 +11,21 @@
 </style>
 <script type="text/javascript">
   function selectChange() {
-		document.location='?product1_id='+$('select[name=product1_id]').val();
+		document.location='?product2_id='+$('select[name=product2_id]').val();
   }
 </script>
 
 <body>
 <div id="wrapper">
   <div id="header">
-    <div id="path_wrap">Product Categories 2 > List</div>
+    <div id="path_wrap">Product Categories 3 > List</div>
   </div>
   <div id="main">
     <div id="list_wrap">
       <table id="select_wrap">
 		<tr>
 		  <td>
-			<?php echo $product1Select;?>
+			<?php echo $product2Select;?>
 		  </td>
 		</tr>
         <tr> 
@@ -60,14 +60,14 @@
 					<?php echo $page['data'][$key]['name'];?>
 				</td>
         <td class="sysimg">
-          <a class="order" href="order.php?nowpage=<?php echo $nowpage;?>&product1_id=<?php echo $page['data'][$key]['product1_id'];?>&product2_id=<?php echo $page['data'][$key]['product2_id'];?>&order=up"><img src="../images/up.gif" width="10" height="11" border="0"></a>
-          <a class="order" href="order.php?nowpage=<?php echo $nowpage;?>&product1_id=<?php echo $page['data'][$key]['product1_id'];?>&product2_id=<?php echo $page['data'][$key]['product2_id'];?>&order=down"><img src="../images/down.gif" width="10" height="11" border="0"></a>
+          <a class="order" href="order.php?nowpage=<?php echo $nowpage;?>&product2_id=<?php echo $page['data'][$key]['product2_id'];?>&product3_id=<?php echo $page['data'][$key]['product3_id'];?>&order=up"><img src="../images/up.gif" width="10" height="11" border="0"></a>
+          <a class="order" href="order.php?nowpage=<?php echo $nowpage;?>&product2_id=<?php echo $page['data'][$key]['product2_id'];?>&product3_id=<?php echo $page['data'][$key]['product3_id'];?>&order=down"><img src="../images/down.gif" width="10" height="11" border="0"></a>
         </td>
 				<td class="sysimg">
-					<a href="update.php?product1_id=<?php echo $page['data'][$key]['product1_id'];?>&product2_id=<?php echo $page['data'][$key]['product2_id'];?>&nowpage=<?php echo $nowpage?>"><img src="../images/edit.gif" width="24" height="24" border="0"></a>
+					<a href="update.php?product2_id=<?php echo $page['data'][$key]['product2_id'];?>&product3_id=<?php echo $page['data'][$key]['product3_id'];?>&nowpage=<?php echo $nowpage?>"><img src="../images/edit.gif" width="24" height="24" border="0"></a>
 				</td>
 					<td class="sysimg">
-					  <a href="delete.php?product1_id=<?php echo $page['data'][$key]['product1_id'];?>&product2_id=<?php echo $page['data'][$key]['product2_id'];?>&nowpage=<?php echo $nowpage;?>"><img src="../images/del.gif" width="24" height="24" border="0"></a> 
+					  <a href="delete.php?product2_id=<?php echo $page['data'][$key]['product2_id'];?>&product3_id=<?php echo $page['data'][$key]['product3_id'];?>&nowpage=<?php echo $nowpage;?>"><img src="../images/del.gif" width="24" height="24" border="0"></a> 
 					</td>
 			  </tr>
           <?php
