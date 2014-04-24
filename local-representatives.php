@@ -17,7 +17,7 @@
 
 		<div class="container text-center">
 			<div class="title">
-				<h3>Harvatek Americas Sales Teritories</h3>
+				<h3>Harvatek Americas Sales Territories</h3>
 			</div>
 		</div>
 	</div>

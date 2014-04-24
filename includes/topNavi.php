@@ -8,7 +8,7 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 			</button>
-          	<a class="navbar-brand" href="index.html">
+          	<a class="navbar-brand" href="index.php">
 				<img class="img-responsive" src="images/global_logo.png" alt="Harvateck-logo" />
           	</a>
           </div>

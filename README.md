@@ -7,7 +7,7 @@ harvatek-tech.com // rebuild the php code
 - originTemplate.html is the not seperated html for overall template.
 
 - Ruby next step:
-  差index.php，其他頁面都有了，之後的前端工作會是debug和做一些style調整。
+  目前所有的頁面都有了，之後的前端工作會是debug和做一些style $ font 的調整。
 
 - 資料夾如果有重覆，github會說哪裡有不一樣的地方，再整理即可，
   可以同步做，如果改到同一行同一個page，再溝通一下看要哪一行，或者mark起來，
