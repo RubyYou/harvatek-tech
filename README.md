@@ -25,7 +25,10 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
   首要條件是看你怎麼比較方便做，如果奇怪，我之後再改就好了！:)
   
 - 2014-04-25
+
   1.categories level third complete.
+  
   2.測試位置更新.
+  
   by Nick.
   
