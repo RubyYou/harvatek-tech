@@ -176,6 +176,78 @@ class Product3 extends Main{
 		$this->db->execute($sql);
 
 	}
+	
+	
+	function getAll($product2_id = '')
+	{
+		$product2_id = intval($product2_id);
+		$sqlWhere = '';
+		if($product2_id != 0)
+			$sqlWhere = " where
+							product2_id = '".$product2_id."' ";
+		$sql = "select *
+				from ".$this->table1;
+		$sql .= $sqlWhere;
+		$sql .= " order by
+					order_num
+					asc";
+		$this->db->execute($sql);
+		while($rs = $this->db->getNext())
+		{
+			$arr[] = array(
+				'product2_id' => $rs->product2_id
+				,'product3_id' => $rs->product3_id
+				,'name' 		=> 		$rs->name
+				,'link' 		=> 		$rs->link
+				,'order_num' 	=> 		$rs->order_num
+			);
+		}
+		
+		return $arr;
+	}
+	
+	
+	
+	function getSelect($selected = '',$onchange = false)
+	{
+		$cProduct1 = new Product1();
+		$cProduct2 = new Product2();
+		
+		if($onchange)
+			$onchange_ = 'onchange="selectChange();"';
+		$select = '<select name="product3_id" '.$onchange_.'>';
+		$option = '';
+		
+		$product1Ary = $cProduct1->getAll();
+		if(count($product1Ary) > 0)
+		  foreach ($product1Ary as $key1 => $val1)
+		  {
+
+				$option .= '<optgroup label="'.$product1Ary[$key1]['name'].'">';
+				
+				$product2Ary = $cProduct2->getAll($product1Ary[$key1]['product1_id']);
+				foreach($product2Ary as $key2 => $val2)
+				{
+					$option .= '<optgroup label="&nbsp;&nbsp;'.$product2Ary[$key2]['name'].'">';
+					
+					$product3Ary = $this->getAll($product2Ary[$key2]['product2_id']);
+					foreach($product3Ary as $key3 => $val3)
+					{
+						$selected_ = '';
+						if($selected == $product3Ary[$key3]['product3_id']) $selected_ = 'selected="selected"';
+						$option .= '<option value="'.$product3Ary[$key3]['product3_id'].'" '.$selected_.'>'.$product3Ary[$key3]['name'].'</option>';
+					}
+					
+					
+					$option .= '</optgroup>';
+				}
+				$option .= '</optgroup>';
+				
+		  }
+		
+		$select .= $option.'</select>';
+		return $select;
+	}
 
 /*
  SELECT 

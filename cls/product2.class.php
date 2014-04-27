@@ -205,15 +205,16 @@ class Product2 extends Main{
 		return $arr;
 	}
 
-	function getSelect($product1Ary,$selected = '',$onchange = false)
+	function getSelect($selected = '',$onchange = false)
 	{
-		
+		$cProduct1 = new Product1();
 		
 		if($onchange)
 			$onchange_ = 'onchange="selectChange();"';
 		$select = '<select name="product2_id" '.$onchange_.'>';
 		$option = '';
 		
+		$product1Ary = $cProduct1->getAll();
 		if(count($product1Ary) > 0)
 		  foreach ($product1Ary as $key1 => $val1)
 		  {

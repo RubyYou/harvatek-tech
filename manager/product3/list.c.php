@@ -8,16 +8,13 @@ unset($cPri);
 /*permission*/
 
 
-$cProduct1 = new Product1();
-$product1Ary = $cProduct1->getAll();
-
 $cProduct2 = new Product2();
 $product2Ary = $cProduct2->getAll();
 
 $product2_id = intval($_GET['product2_id']);
 if($product2_id == 0) $product2_id = $product2Ary[0]['product2_id'];
 
-$product2Select = $cProduct2->getSelect($product1Ary,$product2_id,true);
+$product2Select = $cProduct2->getSelect($product2_id,true);
 $cProduct3 = new Product3();
 $page = $cProduct3->getPage($_GET['nowpage'],$product2_id);
 $nowpage = $page['nowpage'];

@@ -5,6 +5,9 @@ $cPri = new Pri();
 if(!$cPri->checkLogin()){parentGoto(BGM_ROOT);}
 unset($cPri);
 /*permission*/
-$cProduct2 = new Product2();
-$product2Select = $cProduct2->getSelect($product1Ary);
-;?>
+/*code*/
+$_POST['product4_id'] = intval($_GET['product4_id']);
+$cProduct4 = new Product4();
+$cProduct4->updateProduct4($_POST);
+goto_('list.php');
+?>
