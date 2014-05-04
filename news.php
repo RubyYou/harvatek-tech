@@ -1,4 +1,4 @@
-
+<?php include("news.c.php");?>
 
 <?php include("includes/header.php");?>
 
@@ -38,17 +38,10 @@
 
 	<!--  News Post locations
     ================================================== -->
-			<div class="col-md-9">
-				<h3> Harvatek Technologies Implements New Product Branding Strategy</h3>
-				<p class="date">Post Date : November 14, 2013 </p>
-				<p>Santa Clara, CA – Harvatek Technologies announces the implementation of a new product branding strategy for its opto-electronics product portfolios. Beginning on Feb. 1, 2014, Harvatek Technologies will market and sell products under the following brand names:
-					<ul>
-						<li>Harvatek - SMD LED products</li>
-						<li>CT Micro - Infrared and optocoupler products</li>
-						<li>Inolux - Display LED, through hole LED and non-standard solutions products</li>
-					</ul>
-					Harvatek, along with its subsidiaries, has design centers, marketing and manufacturing sites in various locations around the world. To best focus our design, marketing and manufacturing resources, these divisions will operate under their own P&amp;L structures. In the Americas region, Harvatek Technologies will continue to be the sales channel for these brands, as well as their sales representatives and distribution channels.
-				</p>
+				<div class="col-md-9">
+					<h3><?php echo $arr['name'];?></h3>
+					<p class="date">Post Date : <?php echo $arr['post_date'];?> </p>
+					<?php echo $arr['content'];?>
 				</div>
 			</div>
 		</div>

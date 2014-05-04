@@ -19,7 +19,4 @@
     {
         include_once strtolower($class).'.class.php';
     }
-    
-    /*有會員登入統一開啟session*/
-    session_start();
 ?>

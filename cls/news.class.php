@@ -148,5 +148,28 @@ class News extends Main{
 
 	//Front-End
 
+	function getNews_Front($news_id)
+	{
+		$news_id = intval($news_id);
+		$sql = "select * 
+				from ".$this->table1;
+		if($news_id == 0)
+			$sql .= " order by post_date desc limit 0,1";
+		else
+			$sql .= " where 
+					news_id='".$news_id."'";
+		$this->db->execute($sql);
+		$rs = $this->db->getNext();
+		
+		$ary = array(
+			'news_id' 			=> 		$rs->news_id
+			,'name' 			=> 		$rs->name
+			,'post_date' 		=> 		$rs->post_date
+			,'content'			=>		$rs->content
+		);
+		
+		return $ary;
+	}
+	
 }
 ?>
