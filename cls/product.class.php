@@ -62,8 +62,9 @@ class Product extends Main{
 		
 		$quantity_visible_ = ($quantity_visible == 1)?1:0;
 		$color_visible_ = ($color_visible == 1)? 1:0;
-		$table_id = explode('-',$categories_id)[0];
-		$products_id = explode('-',$categories_id)[1];
+		$categories = explode('-',$categories_id);
+		$table_id = $categories[0];
+		$products_id = $categories[1];
 		
 		$keyAry['table_id'] = $table_id;
 		$keyAry['products_id'] = $products_id;
@@ -257,8 +258,9 @@ class Product extends Main{
 		$MenuSize = 10;
 		if($nowpage==0 || $nowpage=='') $nowpage=1;
 		
-		$table_id = explode('-',$categories_id)[0];
-		$products_id = explode('-',$categories_id)[1];
+		$categories = explode('-',$categories_id);
+		$table_id = $categories[0];
+		$products_id = $categories[1];
 		
 		$sql = "select *
 				from ".$this->table1."
@@ -336,8 +338,9 @@ class Product extends Main{
 		
 		$quantity_visible_ = ($quantity_visible == 1)?1:0;
 		$color_visible_ = ($color_visible == 1)? 1:0;
-		$table_id = explode('-',$categories_id)[0];
-		$products_id = explode('-',$categories_id)[1];
+		$categories = explode('-',$categories_id);
+		$table_id = $categories[0];
+		$products_id = $categories[1];
 		
 		$arr = $this->getProduct($product_id);
 		$o_products_id = $arr['products_id'];

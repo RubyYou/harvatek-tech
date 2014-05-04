@@ -48,7 +48,7 @@
           ?>
 			  <tr>
 				<td class="sysimg" style="background-color: #7cb8e5;">
-					<img src="<?php echo $cProduct1->webRoot.$page['data'][$key]['product1_id'];?>"/>
+					<img src="<?php echo $cProduct1->webRoot.$page['data'][$key]['product1_id'].$page['data'][$key]['ext'];?>"/>
 				</td>
 				<td class="aligncenter">
 					<?php echo $page['data'][$key]['name'];?>
