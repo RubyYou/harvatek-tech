@@ -64,7 +64,7 @@
           ?>
 			  <tr>
 				<td class="aligncenter">
-					<img src="<?php echo $cProduct->webRoot.$page['data'][$key]['product_id'].''.$page['data'][$key]['ext'];?>" class="pic" />
+					<img src="<?php echo $cProduct->webRoot.$page['data'][$key]['product_id'].$page['data'][$key]['ext'];?>" class="pic" />
 				</td>
 				<td class="aligncenter">
 					<?php echo $page['data'][$key]['name'];?>
