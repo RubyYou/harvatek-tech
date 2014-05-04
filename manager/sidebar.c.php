@@ -33,6 +33,20 @@ $id1=$cTree->getNowId();
 $cTree->add($id1,STR_ADD,"product4/add.php","mainframe");
 $cTree->add($id1,STR_LIST,"product4/list.php","mainframe");
 
+$cTree->add($rootid,"Product","#","");
+$id1=$cTree->getNowId();
+$cTree->add($id1,STR_ADD,"product/add.php","mainframe");
+$cTree->add($id1,STR_LIST,"product/list.php","mainframe");
+
+$cTree->add($rootid,"News","#","");
+$id1=$cTree->getNowId();
+$cTree->add($id1,STR_ADD,"news/add.php","mainframe");
+$cTree->add($id1,STR_LIST,"news/list.php","mainframe");
+
+$cTree->add($rootid,"Inquiry","#","");
+$id1=$cTree->getNowId();
+$cTree->add($id1,STR_LIST,"inquiry/list.php","mainframe");
+
 /***********************/
 switch(BGM_ACCOUNTSETTING)
 {

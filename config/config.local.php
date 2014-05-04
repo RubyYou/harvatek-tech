@@ -5,6 +5,7 @@
 date_default_timezone_set('Asia/Taipei');
 ini_set('display_errors', true);
 error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+//error_reporting(E_ALL ^ (E_NOTICE));
 //ini_set('upload_max_filesize',10240);
 
 /***************************************
@@ -84,7 +85,7 @@ define(STR_SEARCHACCOUNTPASSWORD,'Without this '.STR_ACCOUNT.'&'.STR_PASSWORD.'!
 
 define(STR_UPLOAD,'upload file');
 define(STR_UPLOADSUCCESS,STR_UPLOAD.' success!');
-define(STR_UPLOADFAIL,STR_UPLOAD.' success!');
+define(STR_UPLOADFAIL,STR_UPLOAD.' fail!');
 
 define(STR_ADD,'Add');
 define(STR_ADDSUCCESS,STR_ADD.' success!');

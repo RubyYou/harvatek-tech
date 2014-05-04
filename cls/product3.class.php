@@ -249,25 +249,6 @@ class Product3 extends Main{
 		return $select;
 	}
 
-/*
- SELECT 
-p1.name as p1_name
-,p1.link as p1_link
-,p2.name as p2_name
-,p2.link as p2_link
-,p3.name as p3_name
-,p3.link as p3_link
-FROM `tbl_product2` as p2
-right join tbl_product1 as p1
-on p1.product1_id = p2.product1_id
-left join tbl_product3 as p3
-on p3.product2_id = p2.product2_id
-order by 
-p1.order_num asc 
-, p2.order_num asc
-, p3.order_num asc
- */
-
 
 	//Front-End
 

@@ -176,7 +176,59 @@ class Product4 extends Main{
 		$this->db->execute($sql);
 
 	}
+	
+	function getAll($product3_id = '')
+	{
+		$product3_id = intval($product3_id);
+		$sqlWhere = '';
+		if($product3_id != 0)
+			$sqlWhere = " where
+							product3_id = '".$product3_id."' ";
+		$sql = "select *
+				from ".$this->table1;
+		$sql .= $sqlWhere;
+		$sql .= " order by
+					order_num
+					asc";
+		$this->db->execute($sql);
+		while($rs = $this->db->getNext())
+		{
+			$arr[] = array(
+				'product3_id' => $rs->product3_id
+				,'product4_id' => $rs->product4_id
+				,'name' 		=> 		$rs->name
+				,'link' 		=> 		$rs->link
+				,'order_num' 	=> 		$rs->order_num
+			);
+		}
+		
+		return $arr;
+	}
 
+	
+	
+//	
+//	 SELECT 
+//p1.name as p1_name
+//,p1.link as p1_link
+//,p2.name as p2_name
+//,p2.link as p2_link
+//,p3.name as p3_name
+//,p3.link as p3_link
+//,p4.name as p4_name
+//,p4.link as p4_link
+//FROM `tbl_product2` as p2
+//right join tbl_product1 as p1
+//on p1.product1_id = p2.product1_id
+//left join tbl_product3 as p3
+//on p3.product2_id = p2.product2_id
+//left join tbl_product4 as p4
+//on p4.product3_id = p3.product3_id
+//order by 
+//p1.order_num asc 
+//, p2.order_num asc
+//, p3.order_num asc
+//, p3.order_num asc
 	
 
 	//Front-End

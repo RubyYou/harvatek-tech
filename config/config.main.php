@@ -1,4 +1,8 @@
 <?php
+    /*有會員統一開啟Server*/
+    session_start();
+    
+    
     include_once 'config.local.php';
     /*
      *function
@@ -21,7 +25,4 @@
     {
         include_once strtolower($class).'.class.php';
     }
-    
-    /*有會員統一開啟Server*/
-    session_start();
 ?>
