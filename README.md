@@ -38,7 +38,8 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
   
   2.晚點會更新到我的測試位置
   
-  另外，我有個問題 product 的
+  另外，我有幾個問題
+  1.關於 product 的
   quantity 和 color 裡的選項是固定的嗎？
   我有上舊的官網查quantity好像是固定的
   color的內容不是固定的
@@ -51,6 +52,9 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
   如果沒有分類的邏輯的話，每個product有自己的color也是可以
   只是第一次在建產品資料的時候會比較累！
   必須一個產品一個產品上（我看產品還蠻多的...）
+  
+  2.inquiry cart 的內容要記在資料庫？（我忘了...sorry）
+  3.contact us 的內容要記在資料庫？（我忘了...sorry）
   
   by Nick.
   

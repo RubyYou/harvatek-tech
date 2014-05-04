@@ -34,8 +34,9 @@
         </tr>
       </table>
       <table id="data_wrap" class="fancyTable">
-          <tr> 
-            <th width="480">Name</th>
+          <tr>
+			<th width="50">Logo</th>
+            <th width="430">Name</th>
             <th width="40"><?php echo STR_ORDER;?></th>
             <th width="40"><?php echo STR_EDIT;?></th>
             <th width="40"><?php echo STR_DELETE;?></th>
@@ -46,13 +47,16 @@
 			{
           ?>
 			  <tr>
+				<td class="sysimg" style="background-color: #7cb8e5;">
+					<img src="<?php echo $cProduct1->webRoot.$page['data'][$key]['product1_id'];?>"/>
+				</td>
 				<td class="aligncenter">
 					<?php echo $page['data'][$key]['name'];?>
 				</td>
-        <td class="sysimg">
-          <a class="order" href="order.php?nowpage=<?php echo $nowpage;?>&product1_id=<?php echo $page['data'][$key]['product1_id'];?>&order=up"><img src="../images/up.gif" width="10" height="11" border="0"></a>
-          <a class="order" href="order.php?nowpage=<?php echo $nowpage;?>&product1_id=<?php echo $page['data'][$key]['product1_id'];?>&order=down"><img src="../images/down.gif" width="10" height="11" border="0"></a>
-        </td>
+				<td class="sysimg">
+				  <a class="order" href="order.php?nowpage=<?php echo $nowpage;?>&product1_id=<?php echo $page['data'][$key]['product1_id'];?>&order=up"><img src="../images/up.gif" width="10" height="11" border="0"></a>
+				  <a class="order" href="order.php?nowpage=<?php echo $nowpage;?>&product1_id=<?php echo $page['data'][$key]['product1_id'];?>&order=down"><img src="../images/down.gif" width="10" height="11" border="0"></a>
+				</td>
 				<td class="sysimg">
 					<a href="update.php?product1_id=<?php echo $page['data'][$key]['product1_id'];?>&nowpage=<?php echo $nowpage?>"><img src="../images/edit.gif" width="24" height="24" border="0"></a>
 				</td>

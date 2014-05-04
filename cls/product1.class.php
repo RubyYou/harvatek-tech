@@ -14,6 +14,8 @@ class Product1 extends Main{
 		 */
 		$this->table1 = "tbl_product1";
 		$this->db = new MyDb();
+		$this->uploadPath = BGM_UPLOADPATH.'product1/';
+		$this->webRoot = WEB_ROOT.'uploads/product1/';
 	}
 	
 	function __destruct(){
@@ -37,10 +39,17 @@ class Product1 extends Main{
 		$this->db->closeConnection();
 	}
 	
-	function addProduct1($post)
+	function addProduct1($post,$files)
 	{
 		array_walk($post,"quoteSlashes");
 		extract($post);
+		
+		$ext = '';
+        $file = $files['file']['name'];
+        $tmpfile = $files['file']["tmp_name"];
+		$ext = ".".pathinfo($file, PATHINFO_EXTENSION);
+		$ext = ($ext == '.')?'':$ext;
+		
 		$order_num=$this->get_order('',false,$this->table1);
 		$sql = "insert into 
 				".$this->table1."
@@ -49,9 +58,20 @@ class Product1 extends Main{
 					null
 					,'".$name."'
 					,'".$link."'
+					,'".$ext."'
 					,'".$order_num."'
 				)";
 		$this->db->execute($sql);
+		$insert_id = $this->db->getInsert_Id();
+		if($ext != '')
+		{
+			$path = $this->uploadPath.$insert_id.$ext;
+			if(!move_uploaded_file($tmpfile,$path))
+			{
+				@unlink($tmpfile);
+				die(STR_UPLOADFAIL);
+			}
+		}
 	}
     
 	function getPage($nowpage)
@@ -78,10 +98,11 @@ class Product1 extends Main{
 		while($rs = $this->db->getNext())
 		{
 			$ary['data'][] = array(
-				'product1_id' => $rs->product1_id
-				,'name' => $rs->name
-				,'link' => $rs->link
-				,'order_num' => $rs->order_num
+				'product1_id'	=> $rs->product1_id
+				,'name'			=> $rs->name
+				,'link'			=> $rs->link
+				,'ext'			=> $rs->ext
+				,'order_num'	=> $rs->order_num
 			);
 		}
 		return $ary;
@@ -99,27 +120,48 @@ class Product1 extends Main{
 		$rs = $this->db->getNext();
 		
 			$ary = array(
-				'product1_id' => $rs->product1_id
-				,'name' => $rs->name
-				,'link' => $rs->link
-				,'order_num' => $rs->order_num
+				'product1_id' 	=> $rs->product1_id
+				,'name' 		=> $rs->name
+				,'link' 		=> $rs->link
+				,'ext'			=> $rs->ext
+				,'order_num' 	=> $rs->order_num
 			);
 		
 		return $ary;
 		
 	}
 	
-	function updateProduct1($post)
+	function updateProduct1($post,$files)
 	{
 		array_walk($post,"quoteSlashes");
 		extract($post);
+		
+		$ext = '';
+        $file = $files['file']['name'];
+        $tmpfile = $files['file']["tmp_name"];
+		$ext = ".".pathinfo($file, PATHINFO_EXTENSION);
+		$ext = ($ext == '.')?'':$ext;
+		
 		$sql = "update ".$this->table1."
 				set
 				name='".$name."'
-				,link='".$link."'
-				where 
-				product1_id='".$product1_id."'";
+				,link='".$link."'";
+		
+		if($ext != '')
+			$sql .= ",ext = '".$ext."'";
+		
+		$sql .= " where 
+					product1_id='".$product1_id."'";
 		$this->db->execute($sql);
+		if($ext != '')
+		{
+			$path = $this->uploadPath.$product1_id.$ext;
+			if(!move_uploaded_file($tmpfile,$path))
+			{
+				@unlink($tmpfile);
+				die(STR_UPLOADFAIL);
+			}
+		}
 	}
 	
 	function deleteProduct1($product1_id)
@@ -129,6 +171,7 @@ class Product1 extends Main{
 			delForm($_GET,STR_DELETECONFIRM,$_POST);
 			exit;
 		}
+		$arr = $this->getProduct1($product1_id);
 		$this->reset_order("product1_id",$product1_id,'',$this->table1);
 		$product1_id = intval($product1_id);
 		$sql = "delete from
@@ -136,6 +179,7 @@ class Product1 extends Main{
 				where
 				product1_id='".$product1_id."'";
 		$this->db->execute($sql);
+		@unlink($this->uploadPath.$product1_id.$arr['ext']);
 
 	}
 
@@ -153,6 +197,7 @@ class Product1 extends Main{
 				'product1_id' => $rs->product1_id
 				,'name' 		=> 		$rs->name
 				,'link' 		=> 		$rs->link
+				,'ext'			=>		$rs->ext
 				,'order_num' 	=> 		$rs->order_num
 			);
 		}

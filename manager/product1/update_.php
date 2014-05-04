@@ -8,6 +8,6 @@ unset($cPri);
 /*code*/
 $_POST['product1_id'] = intval($_GET['product1_id']);
 $cProduct = new Product1();
-$cProduct->updateProduct1($_POST);
+$cProduct->updateProduct1($_POST,$_FILES);
 goto_('list.php');
 ?>

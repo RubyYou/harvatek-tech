@@ -7,6 +7,6 @@ unset($cPri);
 /*permission*/
 /*code*/
 $cProduct1 = new Product1();
-$cProduct1->addProduct1($_POST);
+$cProduct1->addProduct1($_POST,$_FILES);
 goto_('list.php');
 ?>

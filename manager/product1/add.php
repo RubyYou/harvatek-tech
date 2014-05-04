@@ -20,7 +20,7 @@ require_once WEB_PATH.'include/head.inc.php';
 <body>
 <div id="wrapper">
   <div id="header">
-    <div id="path_wrap">Product Categories > Add</div>
+    <div id="path_wrap">Product Categories 1 > Add</div>
   </div>
   <div id="main">
     <div id="add_wrap">
@@ -30,6 +30,12 @@ require_once WEB_PATH.'include/head.inc.php';
           <td class="title alignright">Name:</td>
           <td>
             <input type="text" name="name" />
+          </td>
+        </tr>
+        <tr>
+          <td class="title alignright">logo:</td>
+          <td>
+            <input type="file" name="file"/>
           </td>
         </tr>
         <tr>

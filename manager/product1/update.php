@@ -33,6 +33,12 @@ require_once WEB_PATH.'include/head.inc.php';
           </td>
         </tr>
         <tr>
+          <td class="title alignright">logo:</td>
+          <td>
+            <input type="file" name="file"/>
+          </td>
+        </tr>
+        <tr>
           <td class="title alignright">Link:</td>
           <td>
             <input type="text" name="link" value="<?php echo $arr["link"];?>" class="width250"/>
