@@ -5,6 +5,7 @@
 date_default_timezone_set('Asia/Taipei');
 ini_set('display_errors', true);
 error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+//error_reporting(E_ALL ^ (E_NOTICE));
 //ini_set('upload_max_filesize',10240);
 
 /***************************************
@@ -22,7 +23,6 @@ define(WEB_DESCRIPTION_CN,'');
 define(WEB_HOST,$_SERVER['HTTP_HOST']);//gethostbyname($_SERVER['HTTP_HOST']) || $_SERVER['HTTP_HOST'];
 define(WEB_ROOT,'http://'.WEB_HOST.'/harvatek-tech/');
 define(WEB_PATH,'/home/a5099492/public_html/harvatek-tech/');
-
 define(WEB_TITLE,'harvatek-tech');
 define(FWEB_TITLE,'harvatek-tech');
 define(FWEB_WEBSITEMAIL,'nick@targets.com.tw');
@@ -52,7 +52,7 @@ define(BGM_WELCOME,'Welcome to '.WEB_TITLE.' Control Panel.');
 
 define(OFFICIAL,'Nick');
 define(DESIGNBYOFFICIAL,'Design by:'.OFFICIAL);
-define(OFFICIALWEBSITE,'http://www.targets.com.tw');
+define(OFFICIALWEBSITE,'http://www.nickchen14.com');
 define(FULLCOPYRIGHT,'Copyright © '.date('Y').' Nick');
 define(SHORTCOPYRIGHT,'Copyright © '.date('Y').' Nick');
 define(WEBSITEAUTHOR,'Nick');
@@ -85,7 +85,7 @@ define(STR_SEARCHACCOUNTPASSWORD,'Without this '.STR_ACCOUNT.'&'.STR_PASSWORD.'!
 
 define(STR_UPLOAD,'upload file');
 define(STR_UPLOADSUCCESS,STR_UPLOAD.' success!');
-define(STR_UPLOADFAIL,STR_UPLOAD.' success!');
+define(STR_UPLOADFAIL,STR_UPLOAD.' fail!');
 
 define(STR_ADD,'Add');
 define(STR_ADDSUCCESS,STR_ADD.' success!');

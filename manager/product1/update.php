@@ -20,7 +20,7 @@ require_once WEB_PATH.'include/head.inc.php';
 <body>
 <div id="wrapper">
   <div id="header">
-    <div id="path_wrap">Product Categories> Edit</div>
+    <div id="path_wrap">Product Categories 1 > Edit</div>
   </div>
   <div id="main">
     <div id="update_wrap">
@@ -36,6 +36,7 @@ require_once WEB_PATH.'include/head.inc.php';
           <td class="title alignright">logo:</td>
           <td>
             <input type="file" name="file"/>
+            <a href="<?php echo $cProduct->webRoot.$arr['product1_id'].$arr['ext'];?>" target="_blank">preview</a>
           </td>
         </tr>
         <tr>

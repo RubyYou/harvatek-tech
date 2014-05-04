@@ -52,7 +52,7 @@ define(BGM_WELCOME,'Welcome to '.WEB_TITLE.' Control Panel.');
 
 define(OFFICIAL,'Nick');
 define(DESIGNBYOFFICIAL,'Design by:'.OFFICIAL);
-define(OFFICIALWEBSITE,'http://www.targets.com.tw');
+define(OFFICIALWEBSITE,'http://www.nickchen14.com');
 define(FULLCOPYRIGHT,'Copyright © '.date('Y').' Nick');
 define(SHORTCOPYRIGHT,'Copyright © '.date('Y').' Nick');
 define(WEBSITEAUTHOR,'Nick');

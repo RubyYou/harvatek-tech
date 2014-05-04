@@ -13,7 +13,7 @@
 <body>
 <div id="wrapper">
   <div id="header">
-    <div id="path_wrap">Product Categories > List</div>
+    <div id="path_wrap">Product Categories 1 > List</div>
   </div>
   <div id="main">
     <div id="list_wrap">
