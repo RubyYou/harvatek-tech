@@ -47,7 +47,7 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
   color有沒有分類的邏輯呢？
   display下的可能color都是hyper red,super red...等?
   smd led下的color都是 yellow green,yellow...等？
-  再麻你跟你朋友確認一下？
+  再麻煩你跟你朋友確認一下？
   如果沒有分類的邏輯的話，每個product有自己的color也是可以
   只是第一次在建產品資料的時候會比較累！
   必須一個產品一個產品上（我看產品還蠻多的...）
