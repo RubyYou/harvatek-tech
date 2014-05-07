@@ -17,7 +17,7 @@
 
 		<div class="container text-center">
 			<div class="title">
-				<h3> Contact US</h3>
+				<h3> Contact Us</h3>
 			</div>
 		</div>
 	</div>
@@ -29,8 +29,8 @@
 
 <section id="content">
 	<div class="container">
-		<p class="lead text-center">Please fill out this form and we will get in touch with you shortly.<br/>
-		We would love to hear from you!</p>
+		<p class="lead text-center">We would love to hear from you!<br/>
+		Please fill out this form and we will get in touch with you shortly.</p>
 <!-- product // table & product location
 ================================================== -->
 	<form class="form-horizontal" role="form">

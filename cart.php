@@ -19,7 +19,6 @@
 			<div class="title">
 				<h3> Your Product Inquiry Cart</h3>
 			</div>
-			<p class="subTitle"> Here is where your slogan. </p>
 		</div>
 	</div>
 </header>

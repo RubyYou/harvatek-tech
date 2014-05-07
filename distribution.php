@@ -29,6 +29,7 @@
 
 <section id="content">
 	<div class="container">
+		<div class="col-md-10 col-md-offset-1">
 
 <!-- page: distribution
 ================================================== -->
@@ -68,6 +69,7 @@
 			</div>
 		</div>
 
+		</div>
 	</div>
 </section>
 
