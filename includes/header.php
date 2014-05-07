@@ -13,7 +13,7 @@
 	--> 
   <link rel="stylesheet" type="text/css" media="screen" href="scripts/bootstrap/bootstrap.css" />
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" >
-  <link rel="stylesheet" type="text/css" media="screen" href="/scripts/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="scripts/oldstyle.css" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes" />

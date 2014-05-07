@@ -37,7 +37,7 @@
 			<div class="row index-col">
 				<p>Harvatek Technologies was built on the resources of a world class LED manufacturer based in Hsin-Chu, Taiwan. 
 				   The mother company, Harvatek Corporation, was established back in 1995 as an SMD LED supplier. </p>
-			<a href="company-profile.php" class="btn btn-primary">Read More</a>
+			<a href="pages/company-profile.php" class="btn btn-primary">Read More</a>
 			</div>
 		</div>
 		<div class="col-sm-4 text-center">
@@ -45,14 +45,14 @@
 			<div class="row index-col ">
 				<p>Designing components to meet the needs of a wide range of design and efficiency requirement,
 					Harvatek Technologies offers high quality and competitive LED solutions for industries across the globe. </p>
-			<a href="applications.php" class="btn btn-primary">Read More</a>
+			<a href="pages/applications.php" class="btn btn-primary">Read More</a>
 			</div>
 		</div>
 		<div class="col-sm-4 newsList">
 			<h3 class="text-center">News</h3>
 
 			<!-- Latest Posts -->
-			<p> <a href="news.php">Harvatek Technologies Implements New Product Branding Strategy</a><br/>
+			<p> <a href="pages/news.php">Harvatek Technologies Implements New Product Branding Strategy</a><br/>
 				<span class="date">Novemeber, 19.2014<span></p>
 			<hr/>
 			<p> xxxxx / xxxxxx / xxxxxx </p>
