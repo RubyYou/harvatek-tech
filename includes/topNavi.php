@@ -31,7 +31,7 @@
 							<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Harvatek brands</a></li>
+						<li><a href="brands.php">Harvatek brands</a></li>
 						<li><a href="#">Display</a></li>
 						<li><a href="#">SMD LED</a></li>
 						<li><a href="#">Through Hole LED</a></li>

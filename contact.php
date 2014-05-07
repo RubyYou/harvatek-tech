@@ -19,7 +19,6 @@
 			<div class="title">
 				<h3> Contact US</h3>
 			</div>
-			<p class="subTitle"> We would love to hear from you! </p>
 		</div>
 	</div>
 </header>
@@ -30,7 +29,8 @@
 
 <section id="content">
 	<div class="container">
-		<p class="lead text-center">Please fill out this form and we will get in touch with you shortly.</p>
+		<p class="lead text-center">Please fill out this form and we will get in touch with you shortly.<br/>
+		We would love to hear from you!</p>
 <!-- product // table & product location
 ================================================== -->
 	<form class="form-horizontal" role="form">

@@ -1,4 +1,373 @@
-$grey: #ccc;
-body{
-	background:lighten($grey, 60);
+/* ======== Variables. scss ============================== */
+@import "compass";
+
+$white: #f5f5f5;
+$grey: #656970;
+$lightblue:#80bee8;
+$blue: #458ccb;
+$skyblue:#2aaae1;
+$darkblue: darken($blue, 40);
+$green:#77ab41;
+
+
+// mixin setups
+$default-text-shadow-color: black;
+$default-text-shadow-blur: 10px;
+$default-text-shadow-v-offset: 1px;
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+/* ======== Overwrite bootstrap css ============================== */
+
+p{	font-size:1.6rem;
+	font-weight: normal;
+	line-height: 1.8em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:300;
+	letter-spacing:1px;
+	font-family: "Open Sans",Helvetica, Arial, sans-serif;
+}
+a:hover{
+	text-decoration:none;
+}
+th{
+	text-align: center;
+}
+ul{
+	padding-left: 0;
+	li{
+	list-style: none;
+	}
+}
+.table > thead > tr > th{
+	border-bottom:none;
+}
+ol{
+	margin-top: 10px;
+}
+.form-horizontal {
+	.radio, .checkbox{
+	display: inline-block;
+	}
+}
+input[type="radio"],
+input[type="checkbox"]{
+	margin-right: 5px;
+}
+.breadcrumb{
+	display: inline-block;
+}
+.date{
+	color:$grey;
+}
+.nav > li > a{
+	padding:10px 10px;
+}
+
+.navbar-toggle{
+	background-color:$blue;
+
+	.icon-bar{
+	background-color: white;
+	}
+}
+
+ul.navbar-nav {
+
+	> li{
+	background-color: rgba(black,0.6);
+	}
+
+	> li a{
+	color:darken($white, 5);
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-transform:uppercase;
+	}
+
+	a.cart{
+	background-color: $blue;
+	}
+
+	a:hover {
+	background-color: black;
+	}
+
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+	background-color: black;
+}
+
+.dropdown-menu{
+	background-color: black;
+	border:none;
+
+	> li > a{
+		padding: 5px 15px;
+
+		&:hover{
+			color:$blue;
+		}
+	}
+}
+
+/* ================ section : title ===================================================== */
+
+#header{
+
+	background: {
+      image: url("../../images/headImage.jpg");
+      repeat: no-repeat;
+      position: center center;
+
+    }
+	@include background-size(cover);
+	position: relative;
+	color:white;
+	min-height: 250px;
+}
+.headercover{
+	width:100%;
+	min-height: 250px;
+	position: relative;
+	@include background-size(cover);
+	@include background-image(linear-gradient( rgba(white,0), rgba($darkblue, 0.5)) );
+}
+.title{
+	margin-top:2em;
+
+	img, h3{
+	display: inline-block;
+	vertical-align: middle;
+	@include text-shadow;
+	}
+
+	h3{
+	font-size: 3em;
+	font-weight: 200;
+	letter-spacing: 1px;
+	text-transform:uppercase;
+	}
+}
+
+.indexTitle{
+	font-size: 32px;
+	font-weight: 100;
+	letter-spacing: 2px;
+	display: inline-block;
+	margin-top: 3em;
+	padding: 0.5em 3em;
+	background: rgba(18,96,155,0.6);
+}
+/* ============= Section: content ======================================== */
+#content{
+	margin:3em 0;
+
+	table{
+	border-color:#7cb8e5;
+		thead{
+		background-color: $blue;
+		color:white;
+			th{
+			font-weight: 300;
+			letter-spacing: 1px;
+			height: 40px;
+			}
+		} // thead
+
+		tbody tr:hover{
+		background-color: $white;
+		}
+
+	}// table
+
+	.productLine{
+	padding: 8px 15px;
+	margin-bottom: 8px;
+	list-style: none;
+	background-color: $white;
+	@include border-radius(5px);
+	}
+
+	h3{
+	margin-bottom: 1em;
+	}
+}
+
+#clientinfo, 
+#clientdetail, 
+#featureProduct{
+	margin-bottom: 3em;
+}
+#clientinfo{
+	display: none;
+}
+#featureProduct h3{
+	margin-bottom: 2em;
+}
+#featureProduct hr{
+	margin:30px 0;
+}
+/* ============= The accordion menu style ======================================== */
+.categoryTitle{
+	width:100%;
+	background: $lightblue;
+	color:white;
+	letter-spacing: 1px;
+	padding:10px;
+	margin-bottom: 0;
+	@include border-top-radius(5px);
+}
+.accordion > li:last-child{
+	@include border-bottom-radius(5px);
+}
+.accordion > li:last-child a{
+	border-bottom:none;
+}
+.accordion { 
+	list-style-type: none; 
+	padding: 0; 
+	margin: 0 0 30px;
+}
+.accordion ul {
+	padding: 0; 
+	margin: 0; 
+	float: left; 
+	display: block;
+	width: 100%;
+}
+.accordion li { 
+	background: $blue; 
+	cursor: pointer;
+	list-style-type: none;
+	padding: 0; margin: 0;
+	float: left;
+	display: block;
+	width: 100%;
+}
+.accordion li img{
+	margin-top: -3px;
+	margin-right: 5px;
+}
+.accordion li.active>a { 
+	background: url('../images/close.gif') no-repeat center right;
+	font-weight: bold;
+}
+.accordion a { 
+	text-decoration: none; 
+	border-bottom: 1px solid #7cb8e5; 
+	font-weight: 400;
+	line-height: 3em;
+	color: white;
+	padding: 0 10px; 
+	display: block; 
+	cursor: pointer; 
+}
+.accordion a.toggle{
+	background: url('../images/open.gif') no-repeat center right;
+	font-weight: 300;
+}
+
+/* Level 2 */
+.accordion li ul li {
+	background: #7FD2FF;
+}
+.accordion li ul li a{
+	color:#1167a8; 
+	padding-left: 25px;
+	border-bottom: 1px solid $blue;
+}
+
+/* ============= Section: footer ======================================== */
+
+#footer{
+	background: url("../../images/gplaypattern.jpg");
+
+	.container{
+	padding:3em 0;
+	color:$grey;
+	font-weight: 300;
+	} // footer container
+
+	.barblue, .barsky, .bargreen{
+	height: 5px;
+	}
+	.barsky{
+	background-color:$skyblue;
+	}
+	.barblue{
+	background-color:$blue;
+	}
+	.bargreen{
+	background-color:$green;
+	} // end of bar
+
+	h3{
+	margin-top: 0;
+	color:$blue;
+	} // h3
+
+	ul a{
+	color:$grey;
+	}// ul a
+
+	ul.mainlink li a,
+	li.mainlink{
+	font-size:1.6rem;
+	line-height:1.8em;
+	color:$skyblue;
+
+	} // li & a 
+
+	b{
+	font-weight: normal;
+	color:$green;
+	} //b [green section]
+
+}
+
+/* ============  Local representative map ========================= */
+#map{
+	width:1000px;
+	height:642px;
+	background: url('http://harvatek-tech.com/wp-content/uploads/2013/08/salesMap.jpg');
+}
+
+/* =============  Media query ======================================== */
+@media (min-width: 992px){
+
+	#footer{
+		.col-md-6 .col-md-12{
+		padding-left: 0;
+		}
+	}
+}
+@media (min-width: 768px){
+	.navbar-nav{
+		float:right;
+		margin-top: 23px;
+	}
+	#content .brand{
+		min-height: 235px;
+	}
+	.index-col{
+		position: relative;
+		padding:0 3em;
+		border-right:1px solid #eee;
+		min-height: 210px;
+
+		.btn{
+		position: absolute;
+		margin-left: -50px;
+		bottom:0;
+		}
+	}// index-col
+	.newsList{
+		padding:0 3em;
+	}
+
 }

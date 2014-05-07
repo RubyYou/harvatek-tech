@@ -29,7 +29,7 @@
 
 <section id="content">
 	<div class="container">
-
+		<div class="col-md-10 col-md-offset-1">
 <!-- page: global locations
 ================================================== -->
 		<img class="img-responsive" alt="global-locations" src="http://harvatek-tech.com/wp-content/uploads/2013/07/about21.jpg" width="1040" height="517" />
@@ -47,7 +47,7 @@
 			</div>
 		</div>
 
-		<div class="col-sm-6" style="border-left: 5px solid #ccc; padding-left: 1em;">
+		<div class="col-sm-5" style="border-left: 5px solid #ccc; padding-left: 1em; ">
 			<h4 style="color: #f9a23a;">Manufacture Sites</h4>
 			<strong>Hsin-Chu, Taiwan</strong><br/>
 			Capacity: 1,500 million units per month<br/>
@@ -57,8 +57,7 @@
 			Specialize: Lighting LED<br/>
 		</div>
 
-		
-
+		</div>
 	</div>
 </section>
 

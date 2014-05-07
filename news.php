@@ -19,7 +19,6 @@
 			<div class="title">
 				<h3> News</h3>
 			</div>
-			<p class="subTitle"> Here is where your slogan. </p>
 		</div>
 	</div>
 </header>

@@ -19,7 +19,6 @@
 			<div class="title">
 				<h3> Your Inquiry Details </h3>
 			</div>
-			<p class="subTitle"> Thank you! your inquiry has been received. </p>
 		</div>
 	</div>
 </header>
@@ -33,6 +32,8 @@
 
 <!-- inQuiry details
 	================================================== -->
+		<p class="lead text-center well">Thank you! your inquiry has been received.</p>
+
 		<h3 class="pull-left"> Inquiry products</h3>
 		<p class="pull-right date"> <b>Inquiry number</b> # 166 / 
 			<b>Date</b>

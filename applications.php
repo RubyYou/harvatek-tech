@@ -19,7 +19,6 @@
 			<div class="title">
 				<h3>Applications</h3>
 			</div>
-			<p> This is the subtitle</p>
 		</div>
 	</div>
 </header>

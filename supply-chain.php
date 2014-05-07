@@ -29,7 +29,7 @@
 
 <section id="content">
 	<div class="container">
-
+		<div class="col-md-10 col-md-offset-1">
 <!-- page: Supply chain
 ================================================== -->
 		<div class="col-sm-7">
@@ -45,6 +45,7 @@
 			<li>- Better uniformity, higher yield.</li>
 		</div>
 
+		</div>
 	</div>
 </section>
 

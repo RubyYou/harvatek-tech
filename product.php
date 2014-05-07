@@ -20,7 +20,6 @@
 				<img src="images/inolux_logo.png" alt="inolux_logo" /> 
 				<h3> PRODUCTS </h3>
 			</div>
-			<p class="subTitle"> Here is where your slogan. </p>
 		</div>
 	</div>
 </header>
