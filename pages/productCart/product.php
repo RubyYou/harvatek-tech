@@ -1,6 +1,6 @@
 
 
-<?php include("includes/header.php");?>
+<?php include("../../includes/header.php");?>
 
 <body>
 <header id="header">
@@ -9,7 +9,7 @@
 	<!--Navigation 
     ================================================== -->
 
-	<?php include("includes/topNavi.php");?>
+	<?php include("../../includes/topNavi.php");?>
 
 
 	<!-- Title : define which page with title changes.
@@ -17,7 +17,7 @@
 
 		<div class="container text-center">
 			<div class="title">
-				<img src="images/inolux_logo.png" alt="inolux_logo" /> 
+				<img src="../../images/inolux_logo.png" alt="inolux_logo" /> 
 				<h3> PRODUCTS </h3>
 			</div>
 			<p class="subTitle"> Here is where your slogan. </p>
@@ -34,7 +34,7 @@
 
 <!-- Side menu // product categories
 ================================================== -->
-<?php include("includes/productCategories.php");?>
+<?php include("../../includes/productCategories.php");?>
 
 
 <!-- product // table & product location
@@ -84,8 +84,8 @@
 
 	<!-- Footer & javascript 
     ================================================== -->
-<?php include("includes/footer.php");?>
-<?php include("includes/javascript.php");?>
+<?php include("../../includes/footer.php");?>
+<?php include("../../includes/javascript.php");?>
 
 </body>
 </html>

@@ -11,9 +11,9 @@
   <link rel="apple-touch-icon" href="images/iphone-57.png"/>
   <link rel="icon" href="images/ulacicon.ico" type="image/ico" />
 	--> 
-  <link rel="stylesheet" type="text/css" media="screen" href="bootstrap-3.1.1/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="scripts/bootstrap/bootstrap.css" />
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" >
-  <link rel="stylesheet" type="text/css" media="screen" href="script/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/scripts/style.css" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes" />
