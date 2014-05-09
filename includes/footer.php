@@ -1,6 +1,7 @@
 
 	<!-- Footer
     ================================================== -->
+
 	<section id="footer">
 		<div class="titleBar">
 			<div class="col-xs-4 barblue"> </div>

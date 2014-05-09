@@ -3,6 +3,7 @@
 <?php include("includes/header.php");?>
 
 <body>
+<div id='layout'>
 <header id="header">
 	<div class="headercover">
 
@@ -76,7 +77,8 @@
 		</div>
 	</div>
 </section>
-
+<div id='layout_footer'></div>
+</div>
 
 	<!-- Footer & javascript 
     ================================================== -->
