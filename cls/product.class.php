@@ -426,6 +426,142 @@ class Product extends Main{
 
 	
 	
+	
+	function getCategoriesMenu($selected = '')
+	{
+		$cProduct1 = new Product1();
+		$cProduct2 = new Product2();
+		$cProduct3 = new Product3();
+		$cProduct4 = new Product4();
+
+		$categoriesSelect = '
+		<ul class="accordion">
+		';
+		
+		$p1_arr = $cProduct1->getAll();
+		foreach($p1_arr as $key1 => $val1)
+		{
+			$p2_arr = $cProduct2->getAll($p1_arr[$key1]['product1_id']);
+			if(count($p2_arr) > 0)
+			{
+				$href1 = str_replace(' ','-',$p1_arr[$key1]['name']);
+				$categoriesSelect .= '
+				<li>
+					<a class="toggle"><img src="'.$cProduct1->webRoot.$p1_arr[$key1]["product1_id"].$p1_arr[$key1]["ext"].'" alt=""/>'.$p1_arr[$key1]['name'].'</a>
+				';
+				
+				
+				$categoriesSelect .= '
+						<ul>
+				';
+				foreach($p2_arr as $key2 => $val2)
+				{
+					$p3_arr = $cProduct3->getAll($p2_arr[$key2]['product2_id']);
+					$href2 = str_replace(' ','-',$p2_arr[$key2]['name']);
+					if(count($p3_arr) > 0)
+					{
+						$categoriesSelect .= '
+						
+							<li>
+								<a href="#'.$href1.'-'.$href2.'" class="toggle">'.$p2_arr[$key2]['name'].'</a>
+							
+											';
+											
+						$categoriesSelect .= '
+								<ul>
+						';
+						foreach($p3_arr as $key3 => $val3)
+						{
+							$p4_arr = $cProduct4->getAll($p3_arr[$key3]['product3_id']);
+							if(count($p4_arr) > 0)
+							{
+								$categoriesSelect .= '
+									<li>
+										<a href="#'.$href1.'-'.$href2.'-'.str_replace(' ','-',$p3_arr[$key3]['name']).'" class="toggle">'.$p3_arr[$key3]['name'].'</a>
+									
+								';
+								
+								
+								$tmpCategories = '';
+								foreach($p4_arr as $key4 => $val4)
+								{
+									$selected_ = '';
+									$tmpCategories .= '
+											<li>
+												<a href="#">'.$p4_arr[$key4]['name'].'</a>
+											</li>
+									';
+								}
+								$categoriesSelect .= '
+										<ul>
+										'.$tmpCategories.'
+										</ul>
+									</li>';
+								
+							}
+							else
+							{
+								$selected_ = '';
+								$categoriesSelect .= '
+									<li>
+										<a href="#">'.$p3_arr[$key3]['name'].'</a>
+									</li>
+								';
+							}
+							
+							
+						}
+						
+						$categoriesSelect .= '
+								</ul>
+						';
+						
+						
+						$categoriesSelect .= '
+							</li>
+						';
+					}
+					else
+					{
+						$selected_ = '';
+						$categoriesSelect .= '
+								<li>
+									<a href="#">'.$p2_arr[$key2]['name'].'</a>
+								</li>
+								';
+					}
+					
+				}
+				
+				
+				
+				
+				
+				$categoriesSelect .= '
+						</ul>
+				</li>
+				';
+			}
+			else
+			{
+				$selected_ = '';
+				$categoriesSelect .= '
+				<li>
+					<a href="#">'.$p1_arr[$key1]['name'].'</a>
+				</li>
+				';
+			}
+			
+		}
+				
+		$categoriesSelect .= '
+		</ul>
+		';
+		return $categoriesSelect;
+		
+	}
+	
+	
 //	
 //	 SELECT 
 //p1.name as p1_name

@@ -1,4 +1,4 @@
-
+<?php include("product.c.php");?>
 
 <?php include("includes/header.php");?>
 

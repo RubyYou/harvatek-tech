@@ -2,32 +2,35 @@
     ================================================== -->
 	<div class="col-md-3">
 		<h4 class="categoryTitle">PRODUCT CATEGORIES</h4>
+		<?php echo $categoriesMenu;?>
+		
+		<!--
 		<ul class="accordion">
-			<li><a class="toggle">
-				<img src="images/inolux_icon.png" alt="inolux-product-icon"/>DISPLAY</a>
-				<ul>
-					<li><a href="#display-throughhole" class="toggle">Through Hole Display</a>
-						<ul>
-							<li><a href="#display-throughhole-numeric" class="toggle">Numeric</a>
-								<ul>
-									<li><a href="#display-numeric-single">Single Digit</a></li>
-									<li><a href="#display-numeric-dual">Dual Digit</a></li>
-									<li><a href="#display-numeric-triple">Triple Digit</a></li>
-									<li><a href="#display-numeric-four">four digit</a></li>
-								</ul>
-							</li>
-							<li><a href="#display-throughhole-dotMetri">Dot Metrix</a></li>
-						</ul>
-					</li>
-					<li><a href="#display-smddisplay" class="toggle">SMD Display</a>
-						<ul>
-							<li><a href="#display-smddisplay-single">Single Digit</a></li>
-							<li><a href="#display-smddisplay-dual">Dual Digit</a></li>
-							<li><a href="#display-smddisplay-triple">Triple Digit</a></li>
-							<li><a href="#display-smddisplay-four">Four digit</a></li>
-						</ul>
-					</li>
-				</ul>
+			<li>
+				<a class="toggle"><img src="images/inolux_icon.png" alt="inolux-product-icon"/>DISPLAY</a>
+					<ul>
+						<li><a href="#display-throughhole" class="toggle">Through Hole Display</a>
+							<ul>
+								<li><a href="#display-throughhole-numeric" class="toggle">Numeric</a>
+									<ul>
+										<li><a href="#display-numeric-single">Single Digit</a></li>
+										<li><a href="#display-numeric-dual">Dual Digit</a></li>
+										<li><a href="#display-numeric-triple">Triple Digit</a></li>
+										<li><a href="#display-numeric-four">four digit</a></li>
+									</ul>
+								</li>
+								<li><a href="#display-throughhole-dotMetri">Dot Metrix</a></li>
+							</ul>
+						</li>
+						<li><a href="#display-smddisplay" class="toggle">SMD Display</a>
+							<ul>
+								<li><a href="#display-smddisplay-single">Single Digit</a></li>
+								<li><a href="#display-smddisplay-dual">Dual Digit</a></li>
+								<li><a href="#display-smddisplay-triple">Triple Digit</a></li>
+								<li><a href="#display-smddisplay-four">Four digit</a></li>
+							</ul>
+						</li>
+					</ul>
 			</li>
 			<li><a class="toggle">
 				<img src="images/harvatek_icon.png" alt="harvatek-product-icon"/>SMD LED</a>
@@ -81,4 +84,5 @@
 				<img src="images/inolux_icon.png" alt="inolux-product-icon"/>UV LED</a>
 			</li>
 		</ul>
+		-->
 	</div>
