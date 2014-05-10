@@ -547,7 +547,7 @@ class Product extends Main{
 				$selected_ = '';
 				$categoriesSelect .= '
 				<li>
-					<a href="#">'.$p1_arr[$key1]['name'].'</a>
+					<a href="#"><img src="'.$cProduct1->webRoot.$p1_arr[$key1]["product1_id"].$p1_arr[$key1]["ext"].'" alt=""/>'.$p1_arr[$key1]['name'].'</a>
 				</li>
 				';
 			}
