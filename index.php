@@ -66,41 +66,53 @@
 				<div class="col-sm-4 hidden-xs"><hr/></div>
 			</div>
 			<div class="row">
-				<div class="col-sm-2 col-xs-4">
-					<a href="#">
-						<img class="thumbnail" src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="HTF199">
+				<div class="col-sm-2 col-xs-4 text-center">
+					<div class="featured text-center">
+					<a href="#" >
+						<img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="HTF199">
 						<p>HTF199</p>
 					</a>
+					</div>
 				</div>
-				<div class="col-sm-2 col-xs-4">
+				<div class="col-sm-2 col-xs-4 text-center">
+					<div class="featured text-center">
 					<a href="#">
-						<img class="thumbnail" src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
+						<img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
 						<p>HTF199</p>
 					</a>
+					</div>
 				</div>
-				<div class="col-sm-2 col-xs-4">
+				<div class="col-sm-2 col-xs-4 text-center">
+					<div class="featured text-center">
 					<a href="#">
-						<img class="thumbnail" src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
+						<img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
 						<p>HTF199</p>
 					</a>
+					</div>
 				</div>
-				<div class="col-sm-2 col-xs-4">
+				<div class="col-sm-2 col-xs-4 text-center">
+					<div class="featured text-center">
 					<a href="#">
-						<img class="thumbnail" src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
+						<img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
 						<p>HTF199</p>
 					</a>
+					</div>
 				</div>
-				<div class="col-sm-2 col-xs-4">
+				<div class="col-sm-2 col-xs-4 text-center">
+					<div class="featured text-center">
 					<a href="#">
-						<img class="thumbnail" src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
+						<img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
 						<p>HTF199</p>
 					</a>
+					</div>
 				</div>
-				<div class="col-sm-2 col-xs-4">
+				<div class="col-sm-2 col-xs-4 text-center">
+					<div class="featured text-center">
 					<a href="#">
-						<img class="thumbnail" src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
+						<img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
 						<p>HTF199</p>
 					</a>
+					</div>
 				</div>
 			</div>
 		</div>

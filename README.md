@@ -7,7 +7,7 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
 - originTemplate.html is the not seperated html for overall template.
 
 - Ruby next step:
-  form validation & mobile ability.
+  mobile ability.
   Email template: 寄出order list email到客戶和顧主信箱 ~ 
 
 - 後台測試位置：
