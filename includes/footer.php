@@ -13,7 +13,8 @@
 	      		<h3>Harvatek Technology</h3>
 		  		<p>Small intro about the comopany-<br/>
 					Harvateck is a company provides<br/>
-					advanced technology in LED sector. 
+					advanced technology in LED sector.<br/><br/>
+					Copyright © 2014. All Right Reserved. 
 		  		</p>
 	      	
 	      	</div>
@@ -42,7 +43,7 @@
 					TEL:+1 408 884 3871<br/>
 					Fax: +1 408 844 9618<br/>
 					Email: sales@harvatek-tech.com<br/>
-					Copyright © 2014.  All Right Reserved. 
+					
 	      		</p>
 	      	</div>
         </div>
