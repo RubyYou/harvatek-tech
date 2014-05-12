@@ -18,8 +18,7 @@
 
 		<div class="container text-center">
 			<div class="title">
-				<img src="images/inolux_logo.png" alt="inolux_logo" /> 
-				<h3> PRODUCTS </h3>
+				<h3> Harvatek Brands </h3>
 			</div>
 		</div>
 	</div>
