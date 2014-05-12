@@ -23,10 +23,16 @@ $default-text-shadow-v-offset: 1px;
 
 /* ======== Overwrite bootstrap css ============================== */
 
-p{	font-size:1.6rem;
-	font-weight: normal;
-	line-height: 2em;
+body{
 	font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+}
+p{	font-size:1.6rem;
+	font-weight: 300;
+	line-height: 1.8em;
+	color:$grey;
+}
+p.lead{
+	line-height:1.8em;
 }
 h1, h2, h3, h4, h5, h6{
 	font-weight:300;
@@ -65,11 +71,17 @@ input[type="checkbox"]{
 }
 .date{
 	color:$grey;
+	font-size: 0.8em;
+	float: right;
 }
 .nav > li > a{
-	padding:10px 10px;
+	padding:5px 15px;
 }
-
+.navbar{
+	border:none;
+	background-color:rgba($darkblue,0.8);
+	padding-bottom:1em;
+}
 .navbar-toggle{
 	background-color:$blue;
 
@@ -84,20 +96,19 @@ input[type="checkbox"]{
 	}
 }
 ul.navbar-nav {
-
-	> li{
-	background-color: rgba(black,0.6);
-	}
-
+	
 	> li a{
 	color:darken($white, 5);
 	font-weight: normal;
 	letter-spacing: 1px;
-	text-transform:uppercase;
 	}
 
 	a.cart{
 	background-color: $blue;
+
+	&:hover{
+		background-color: $green;
+		}
 	}
 
 	a:hover {
@@ -122,31 +133,61 @@ ul.navbar-nav {
 		}
 	}
 }
+.nav-pills > li > a{
+	font-weight:300;
+	padding:5px 30px;
+	letter-spacing:1px;
+	background:$blue;
+	color:white;
+	&:hover{
+	background-color:lighten($darkblue,10);
+	}
+}
+.nav-pills > li.active > a{
+	font-weight:300;
+	padding:5px 30px;
+	&:hover{
+	background-color:lighten($darkblue,10);
+	}
+}
+.btn{
+	padding:5px 30px;
+	font-weight:300;
+	color:white;
+	letter-spacing:1px;
+	border:none;
+}
+.btn-primary{
+	background-color:lighten($darkblue,10);
+	&:hover{
+		background-color:lighten($darkblue,10);
+		color:white;
+	}
+}
+.btn-addcart{
+	background-color:$green;
+	&:hover{
+		background-color:lighten($green,10);
+		color:white;
+	}
+}
 
 /* ================ section : title ===================================================== */
 
 #header{
 
 	background: {
-      image: url("../../images/headImage.jpg");
-      repeat: no-repeat;
-      position: center center;
-
+    image: url("../../images/headImage2.jpg");
+    repeat: no-repeat;
+    position: center center;
     }
 	@include background-size(cover);
 	position: relative;
 	color:white;
-	min-height: 250px;
-}
-.headercover{
-	width:100%;
-	min-height: 250px;
-	position: relative;
-	@include background-size(cover);
-	@include background-image(linear-gradient( rgba(white,0), rgba($darkblue, 0.5)) );
+	min-height: 350px;
 }
 .title{
-	margin-top:2em;
+	margin-top:5em;
 
 	img, h3{
 	display: inline-block;
@@ -160,22 +201,21 @@ ul.navbar-nav {
 	letter-spacing: 1px;
 	}
 }
-
-.indexTitle{
-	font-size: 32px;
+	.indexTitle{
+	position:absolute;
+	bottom:10px;
+	font-size: 2.2em;
 	font-weight: 100;
 	letter-spacing: 2px;
-	display: inline-block;
-	margin-top: 3em;
-	padding: 0.5em 3em;
-	background: rgba(18,96,155,0.6);
 }
+
+
 /* ============= Section: content ======================================== */
 #content{
 	margin:3em 0;
 
 	table{
-	border-color:#7cb8e5;
+		border:1px solid $skyblue;
 		thead{
 		background-color: $blue;
 		color:white;
@@ -201,9 +241,11 @@ ul.navbar-nav {
 	}
 
 	h3{
+	font-size:1.5em;
 	margin-bottom: 1em;
 	font-weight:bold;
-	color:$blue;
+	color:lighten($darkblue,20);
+	text-transform: uppercase;
 	}
 }
 
@@ -215,12 +257,19 @@ ul.navbar-nav {
 #clientinfo{
 	display: none;
 }
-#featureProduct h3{
-	margin-bottom: 2em;
-}
-#featureProduct hr{
+#featureProduct{
+	hr{
 	margin:30px 0;
+	}
+	h3{
+	font-size:1.5em;
+	font-weight:bold;
+	color:lighten($darkblue,20);
+	margin-bottom: 2em;
+	text-transform: uppercase;
+	}
 }
+
 /* ============= The accordion menu style ======================================== */
 .categoryTitle{
 	width:100%;
@@ -380,7 +429,7 @@ ul.navbar-nav {
 @media (min-width: 768px){
 	.navbar-nav{
 		float:right;
-		margin-top: 23px;
+		margin-top: 35px;
 	}
 	#content .brand{
 		min-height: 235px;
@@ -392,13 +441,18 @@ ul.navbar-nav {
 		min-height: 210px;
 
 		.btn{
-		position: absolute;
-		margin-left: -50px;
 		bottom:0;
 		}
 	}// index-col
 	.newsList{
 		padding:0 3em;
 	}
-
+}
+// when collapse start
+@media (max-width: 692px){
+	.navbar{
+		position:absolute;
+		top:0;
+		width:100%;
+	}
 }

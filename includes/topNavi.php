@@ -1,5 +1,3 @@
-	<!--Navigation 
-    ================================================== -->
 	<nav class="navbar" role="navigation">
 		<div class="container">
 		  <div class="navbar-header">

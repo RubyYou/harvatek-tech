@@ -5,7 +5,6 @@
 <body>
 <div id='layout'>
 <header id="header">
-	<div class="headercover" style="min-height:350px;">
 
 	<!--Navigation 
     ================================================== -->
@@ -17,11 +16,8 @@
 	================================================== -->
 
 		<div class="container text-center">
-			<div >
 				<h3 class="indexTitle">Lighting your view of the future!</h3>
-			</div>
 		</div>
-	</div>
 </header>
 
 
@@ -53,7 +49,7 @@
 			<h3 class="text-center">News</h3>
 
 			<!-- Latest Posts -->
-			<p> <a href="pages/news.php">Harvatek Technologies Implements New Product Branding Strategy</a><br/>
+			<p> <a href="news.php">Harvatek Technologies Implements New Product Branding Strategy</a><br/>
 				<span class="date">Novemeber, 19.2014<span></p>
 			<hr/>
 			<p> xxxxx / xxxxxx / xxxxxx </p>

@@ -5,7 +5,6 @@
 <body>
 <div id='layout'>
 <header id="header">
-	<div class="headercover">
 
 	<!--Navigation 
     ================================================== -->
@@ -22,7 +21,6 @@
 				<h3> PRODUCTS </h3>
 			</div>
 		</div>
-	</div>
 </header>
 
 
@@ -64,7 +62,7 @@
 							  <option>Red</option>
 							</select>
 							<br/><br/>
-							<a href="cart.php" class="btn btn-success">Add to Cart</a>
+							<a href="cart.php" class="btn btn-addcart">Add to Cart</a>
 						</form>
 					</div>
 				</div>

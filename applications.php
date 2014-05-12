@@ -5,7 +5,6 @@
 <body>
 <div id='layout'>
 <header id="header">
-	<div class="headercover">
 
 	<!--Navigation 
     ================================================== -->
@@ -21,7 +20,6 @@
 				<h3>Applications</h3>
 			</div>
 		</div>
-	</div>
 </header>
 
 
@@ -36,7 +34,7 @@
 ================================================== -->
 		<p class="lead text-center">Designing components to meet the needs of a wide range of design and efficiency requirement,
 			Harvatek Technologies offers high quality and competitive LED solutions for industries across the globe.</p>
-
+		
 		<ul class="nav nav-pills">
 			<li class="active"><a href="#tabs-1" data-toggle="pill">General Lighting</a></li>
 			<li><a href="#tabs-2" data-toggle="pill">Display</a></li>
@@ -44,7 +42,6 @@
 			<li><a href="#tabs-4" data-toggle="pill">SMD LED</a></li>
 			<li><a href="#tabs-5" data-toggle="pill">UV</a></li>
 		</ul>
-
 		<div class="tab-content">
 			<div id="tabs-1" class="tab-pane fade in active">
 				<h3>General Lighting</h3>
@@ -78,7 +75,7 @@
 			</div>
 			<div id="tabs-5" class="tab-pane">
 				<h3>UV Application</h3>
-				<img class="alignleft size-full" alt="UV" src="http://harvatek-tech.com/wp-content/uploads/2014/04/app_uv.jpg" width="1000" height="469" border="0" />
+				<img class="img-responsive" alt="UV" src="http://harvatek-tech.com/wp-content/uploads/2014/04/app_uv.jpg" width="1000" height="469" border="0" />
 			</div>
 		</div>
 

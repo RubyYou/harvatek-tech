@@ -5,7 +5,6 @@
 <body>
 <div id='layout'>
 <header id="header">
-	<div class="headercover">
 
 	<!--Navigation 
     ================================================== -->
@@ -21,7 +20,6 @@
 				<h3>News</h3>
 			</div>
 		</div>
-	</div>
 </header>
 
 
