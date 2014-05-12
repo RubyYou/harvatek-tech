@@ -33,9 +33,10 @@
 ================================================== -->
 
 <!-- todo: need to take out iframe: or change to other way of doing / not responsive and can not be hover as well-->
-<iframe src="http://www.harvatek-tech.com/salesMap.html" height="642" width="1000" frameborder="0" scrolling="no"></iframe>
+<iframe src="http://www.harvatek-tech.com/salesMap.html" 
+		height="642" width="1000" frameborder="0" scrolling="no"></iframe>
 
-<div class="row">
+<div class="row salesRepo">
 	<ul class="col-sm-4">
 		<li style="color: #febe10;">OASIS SALES</li>
 		<li>WI, IL</li>
@@ -63,7 +64,7 @@
 		<li></li>
 	</ul>
 	</div>
-	<div class="row">
+<div class="row salesRepo">
 	<ul class="col-sm-4">
 		<li style="color: #5ddff4;">TRINITY</li>
 		<li>Northern California</li>

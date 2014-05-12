@@ -32,16 +32,16 @@
 <!-- page: Supply chain
 ================================================== -->
 		<div class="col-sm-7">
-			<img class="img-responsive" alt="supply-chain" src="http://harvatek-tech.com/wp-content/uploads/2013/07/about31.jpg" width="527" height="718"/>
+			<img class="img-responsive" alt="supply-chain" 
+			src="http://harvatek-tech.com/wp-content/uploads/2013/07/about31.jpg"/>
 		</div>
 		<div class="col-sm-5" style="margin-top:5em;">
-		<ul>
-			<li><strong>World’s largest IC testing service provider</strong></li>
-			<li>1. Die Sorting</li>
-			<li>2. Wafer Probing</li>
-			<li><strong>Detailed binned Chips before packaging</strong></li>
-			<li>- Choice of chip spec for different product, reduces cost.</li>
-			<li>- Better uniformity, higher yield.</li>
+			<p><strong>World’s largest IC testing service provider</strong></p>
+			<p>1. Die Sorting</p>
+			<p>2. Wafer Probing</p>
+			<p><strong>Detailed binned Chips before packaging</strong></p>
+			<p>- Choice of chip spec for different product, reduces cost.</p>
+			<p>- Better uniformity, higher yield.</p>
 		</div>
 
 		</div>

@@ -79,7 +79,7 @@ input[type="checkbox"]{
 }
 .navbar{
 	border:none;
-	background-color:rgba($darkblue,0.8);
+	background-color:rgba($darkblue,0.9);
 	padding-bottom:1em;
 }
 .navbar-toggle{
@@ -164,7 +164,7 @@ ul.navbar-nav {
 .btn-primary{
 	background-color:lighten($darkblue,10);
 	&:hover{
-		background-color:lighten($darkblue,10);
+		background-color:lighten($darkblue,30);
 		color:white;
 	}
 }
@@ -450,7 +450,18 @@ ul.navbar-nav {
 }
 
 
-/* ============  Local representative map : current disable========================= */
+/* ============  Local representative ========================= */
+.salesRepo{
+	li{
+		font-size:1.6rem;
+		font-weight: 300;
+		line-height: 1.8em;
+		color:$grey;
+	}
+}
+
+
+// map : current disable
 #map{
 	width:1000px;
 	height:642px;

@@ -69,7 +69,7 @@
 		</table>
 		<span > &nbsp; </span>
 		<div class="text-center">
-			<a href="product.php" class="btn btn-default"> Back to Product</a>
+			<a href="product.php" class="btn btn-primary"> Back to Product</a>
 			<a href="#" class="btn btn-danger next">NEXT STEP</a>
 		</div>
 	</div>

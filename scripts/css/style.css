@@ -96,7 +96,7 @@ input[type="checkbox"] {
 /* line 80, ../components/sass/style.scss */
 .navbar {
   border: none;
-  background-color: rgba(15, 35, 53, 0.8);
+  background-color: rgba(15, 35, 53, 0.9);
   padding-bottom: 1em; }
 
 /* line 85, ../components/sass/style.scss */
@@ -180,7 +180,7 @@ ul.navbar-nav a:hover {
   background-color: #1a3e5d; }
   /* line 166, ../components/sass/style.scss */
   .btn-primary:hover {
-    background-color: #1a3e5d;
+    background-color: #3072ad;
     color: white; }
 
 /* line 171, ../components/sass/style.scss */
@@ -459,8 +459,15 @@ ul.navbar-nav a:hover {
 .nav-tabs li.bv-tab-error > a {
   color: #a94442; }
 
-/* ============  Local representative map : current disable========================= */
-/* line 454, ../components/sass/style.scss */
+/* ============  Local representative ========================= */
+/* line 455, ../components/sass/style.scss */
+.salesRepo li {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.8em;
+  color: #656970; }
+
+/* line 465, ../components/sass/style.scss */
 #map {
   width: 1000px;
   height: 642px;
@@ -468,34 +475,34 @@ ul.navbar-nav a:hover {
 
 /* =============  Media Query Adjust mobile layout======================================== */
 @media (min-width: 992px) {
-  /* line 464, ../components/sass/style.scss */
+  /* line 475, ../components/sass/style.scss */
   #footer .col-md-6 .col-md-12 {
     padding-left: 0; } }
 @media (min-width: 768px) {
-  /* line 470, ../components/sass/style.scss */
+  /* line 481, ../components/sass/style.scss */
   .navbar-nav {
     float: right;
     margin-top: 35px; }
 
-  /* line 474, ../components/sass/style.scss */
+  /* line 485, ../components/sass/style.scss */
   #content .brand {
     min-height: 235px; }
 
-  /* line 477, ../components/sass/style.scss */
+  /* line 488, ../components/sass/style.scss */
   .index-col {
     position: relative;
     padding: 0 3em;
     border-right: 1px solid #eee;
     min-height: 210px; }
-    /* line 483, ../components/sass/style.scss */
+    /* line 494, ../components/sass/style.scss */
     .index-col .btn {
       bottom: 0; }
 
-  /* line 487, ../components/sass/style.scss */
+  /* line 498, ../components/sass/style.scss */
   .newsList {
     padding: 0 3em; } }
 @media (max-width: 692px) {
-  /* line 493, ../components/sass/style.scss */
+  /* line 504, ../components/sass/style.scss */
   .navbar {
     position: absolute;
     top: 0;
