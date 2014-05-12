@@ -1,46 +1,47 @@
 $(document).ready(function(){
 
 		// form validation
-		$('#registration-form').validate({
-		rules:{
-
-		name:{
-			required: true,
-			required: true
-		},
-		username:{
-			minlength: 6,
-			required: true
-		},
-		password:{
-			required: true,
-			minlength: 6
-		},
-		confirm_password: {
-			required: true,
-			minlength: 6,
-			equalTo: "#password"
-		},
-		email:{
-			required: true,
-			email: true
-		},
-		address: {
-			minlength: 10,
-			required: true
-		},
-		agree: "required"
-		},
-			highlight: function(element) {
-				$(element).closest('.control-group').removeClass('success').addClass('error');
-			},
-			success: function(element) {
-				element
-				.text('OK!').addClass('valid')
-				.closest('.control-group').removeClass('error').addClass('success');
+		$('#form').bootstrapValidator({
+			message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+            name: {
+                validators: {
+                    notEmpty: {
+                        message: 'The name is required and cannot be empty'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email address is required'
+                    },
+                    emailAddress: {
+                        message: 'The input is not a valid email address'
+                    }
+                }
+            },
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: 'The input is not a valid phone number'
+                    }
+                }
+            },
+            inquiryProduct: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please choose at least one inquiry Topic'
+                        }
+                    }
+                }
 			}
 		});
-
 
 		// product categories slide init
 		$('.accordion').accordion();

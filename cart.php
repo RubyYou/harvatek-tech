@@ -59,6 +59,7 @@
 					<td>Color: RED</td>
 					<td class="delete"><span class="glyphicon glyphicon-remove-circle"></span></td>
 				</tr>
+
 				<tr>
 					<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
 					<td><a href="product.php?ht-158Series">HT-T158 Series</a></td>
@@ -80,38 +81,39 @@
 <section id="clientinfo">
 	<div class="container well">
 		<h3 class="text-center"> Your Info</h3>
-		<p class="lead text-center">To provide you the best service, Please fill out the your information below.</p>
+		<p class="lead text-center">To provide you the best service, 
+			Please fill out the your information below.</p>
 		<hr/>
-		<form class="form-horizontal" role="form">
+		<form id="yourInfo" class="form-horizontal" method="post" action="confirm.php">
 			<div class="col-md-6">
 				<div class="form-group">
 					 <label for="Country" class="col-md-3 control-label">Country</label>
 					 <div class="col-md-9">
-					 <input type="text" class=" form-control" name="country" placeholder="Country">
+					 <input type="text" class="form-control" name="country" placeholder="Country">
 					</div>
 				</div>
 				<div class="form-group">
 					 <label for="firstName" class="col-md-3 control-label">First Name</label>
 					 <div class="col-md-9">
-					 <input type="text" class=" form-control" name="country" placeholder="First Name">
+					 <input type="text" class="form-control" name="firstName" placeholder="First Name">
 					</div>
 				</div>
 				<div class="form-group">
 					 <label for="lastName" class="col-md-3 control-label">Last Name</label>
 					 <div class="col-md-9">
-					 <input type="text" class=" form-control" name="country" placeholder="Last Name">
+					 <input type="text" class="form-control" name="lastName" placeholder="Last Name">
 					</div>
 				</div>
 				<div class="form-group">
 					 <label for="email" class="col-md-3 control-label">Email</label>
 					 <div class="col-md-9">
-					 <input type="email" class=" form-control" name="country" placeholder="Email">
+					 <input type="email" class="form-control" name="email" placeholder="Email">
 					</div>
 				</div>
 				<div class="form-group">
 					 <label for="phone" class="col-md-3 control-label">Phone</label>
 					 <div class="col-md-9">
-					 <input type="number" class=" form-control" name="country" placeholder="phone">
+					 <input type="number" class="form-control" name="phone" placeholder="phone">
 					</div>
 				</div>
 
@@ -120,18 +122,18 @@
 				<div class="form-group">
 					<label for="address" class="col-md-3 control-label">Address</label>
 					<div class="col-md-9">
-					<input type="text" class="form-control" name="country" placeholder="Address">
+					<input type="text" class="form-control" name="address" placeholder="Address">
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-md-9 col-md-offset-3">
-					<input type="text" class="form-control" name="country" placeholder="Address (optional)">
+					<input type="text" class="form-control" name="address-option" placeholder="Address (optional)">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="zipcode" class="col-md-3 control-label">Zip Code</label>
 					<div class="col-md-9">
-					<input type="number" class="form-control" name="country" placeholder="Postcode">
+					<input type="number" class="form-control" name="postcode" placeholder="Postcode">
 					</div>
 				</div>
 				<div class="form-group">
