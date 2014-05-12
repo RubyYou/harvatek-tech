@@ -115,7 +115,7 @@
 			</div>
 		</div>
 		<div class="row text-center">
-			<button type="reset" class="btn btn-default">RESET</button>
+			<button type="reset" class="btn btn-primary">RESET</button>
 			<button type="submit" class="btn btn-danger">SUBMIT</button>
 		</div>
 		</form>

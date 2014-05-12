@@ -19,7 +19,6 @@ $default-text-shadow-v-offset: 1px;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Montserrat);
 @include font-face("Proxima Nova", font-files("scripts/font/proximanova-webfont.ttf"));
-//@include sticky-footer(auto, "#layout", "#layout_footer", "#footer");
 
 /* ======== Overwrite bootstrap css ============================== */
 
@@ -32,6 +31,7 @@ body{
 #layout{
 	flex: 1;
 }
+
 p{	font-size:1.6rem;
 	font-weight: 300;
 	line-height: 1.8em;
@@ -80,13 +80,13 @@ input[type="checkbox"]{
 	font-size: 0.8em;
 	float: right;
 }
-.nav > li > a{
-	padding:5px 15px;
-}
 .navbar{
 	border:none;
 	background-color:rgba($darkblue,0.9);
 	padding-bottom:1em;
+}
+.nav > li > a{
+	padding:5px 10px;
 }
 .navbar-toggle{
 	background-color:$blue;
@@ -143,7 +143,10 @@ ul.navbar-nav {
 .table > thead > tr > th{
 	 border-color:$skyblue;
 	 }
-.nav-pills > li > a{
+
+.nav-pills > li{
+	margin-bottom:5px;
+	> a{
 	font-weight:300;
 	padding:5px 30px;
 	letter-spacing:1px;
@@ -151,14 +154,15 @@ ul.navbar-nav {
 	color:white;
 	&:hover{
 	background-color:lighten($darkblue,10);
-	}
-}
-.nav-pills > li.active > a{
+	}// hover
+	}// >a
+	&.active > a{
 	font-weight:300;
 	padding:5px 30px;
 	&:hover{
 	background-color:lighten($darkblue,10);
-	}
+	}// hover
+	}// a
 }
 .btn{
 	padding:5px 30px;
@@ -476,17 +480,22 @@ ul.navbar-nav {
 
 /* =============  Media Query Adjust mobile layout======================================== */
 @media (min-width: 992px){
-
+	
+	.navbar-nav{
+		float:right;
+		margin-top: 35px;
+	}
 	#footer{
 		.col-md-6 .col-md-12{
 		padding-left: 0;
 		}
 	}
 }
+
 @media (min-width: 768px){
 	.navbar-nav{
-		float:right;
 		margin-top: 35px;
+		width:700px;
 	}
 	#content .brand{
 		min-height: 235px;
@@ -506,10 +515,18 @@ ul.navbar-nav {
 	}
 }
 // when collapse start
-@media (max-width: 692px){
+@media (max-width: 768px){
 	.navbar{
 		position:absolute;
 		top:0;
 		width:100%;
+		z-index: 99999;
+	}
+	.navbar-toggle{
+		margin-top: 30px;
+	}
+	.title h3{
+		margin-top: 3em;
 	}
 }
+

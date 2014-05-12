@@ -33,9 +33,9 @@
 ================================================== -->
 
 <!-- todo: need to take out iframe: or change to other way of doing / not responsive and can not be hover as well-->
-<iframe src="http://www.harvatek-tech.com/salesMap.html" 
+<iframe id="mapFrame" class="visible-lg visible-md" src="http://www.harvatek-tech.com/salesMap.html" 
 		height="642" width="1000" frameborder="0" scrolling="no"></iframe>
-
+<img class="visible-sm visible-xs img-responsive" src="http://harvatek-tech.com/wp-content/uploads/2013/08/salesMap.jpg">
 <div class="row salesRepo">
 	<ul class="col-sm-4">
 		<li style="color: #febe10;">OASIS SALES</li>
