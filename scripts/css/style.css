@@ -508,4 +508,9 @@ ul.navbar-nav a:hover {
 
   /* line 528, ../components/sass/style.scss */
   .title h3 {
-    margin-top: 3em; } }
+    margin-top: 3em; }
+
+  /* line 531, ../components/sass/style.scss */
+  .index-col {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee; } }
