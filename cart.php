@@ -84,36 +84,30 @@
 		<p class="lead text-center">To provide you the best service, 
 			Please fill out the your information below.</p>
 		<hr/>
-		<form id="yourInfo" class="form-horizontal" method="post" action="confirm.php">
+		<form id="form" class="form-horizontal" method="post" action="confirm.php">
 			<div class="col-md-6">
 				<div class="form-group">
-					 <label for="Country" class="col-md-3 control-label">Country</label>
+					 <label for="Country" class="col-md-3 control-label">Country *</label>
 					 <div class="col-md-9">
 					 <input type="text" class="form-control" name="country" placeholder="Country">
 					</div>
 				</div>
 				<div class="form-group">
-					 <label for="firstName" class="col-md-3 control-label">First Name</label>
+					 <label for="firstName" class="col-md-3 control-label">Name *</label>
 					 <div class="col-md-9">
-					 <input type="text" class="form-control" name="firstName" placeholder="First Name">
+					 <input type="text" class="form-control" name="name" placeholder="Name">
 					</div>
 				</div>
 				<div class="form-group">
-					 <label for="lastName" class="col-md-3 control-label">Last Name</label>
-					 <div class="col-md-9">
-					 <input type="text" class="form-control" name="lastName" placeholder="Last Name">
-					</div>
-				</div>
-				<div class="form-group">
-					 <label for="email" class="col-md-3 control-label">Email</label>
+					 <label for="email" class="col-md-3 control-label">Email *</label>
 					 <div class="col-md-9">
 					 <input type="email" class="form-control" name="email" placeholder="Email">
 					</div>
 				</div>
 				<div class="form-group">
-					 <label for="phone" class="col-md-3 control-label">Phone</label>
+					 <label for="phone" class="col-md-3 control-label">Phone *</label>
 					 <div class="col-md-9">
-					 <input type="number" class="form-control" name="phone" placeholder="phone">
+					 <input type="number" class="form-control" name="phone" placeholder="Phone">
 					</div>
 				</div>
 
@@ -148,7 +142,7 @@
 		<div class="col-md-12 text-center">
 			<hr/>
 			<div class="col-md-4 col-md-offset-4">
-			<a href="confirm.php" class="btn btn-primary btn-block">Send</a>
+			<button type="submit" class="btn btn-primary btn-block">Send</button>
 			</div>
 		</div>
 	</div>

@@ -9,6 +9,13 @@ $(document).ready(function(){
                 validating: 'glyphicon glyphicon-refresh'
             },
             fields: {
+            country: {
+                validators: {
+                    notEmpty: {
+                        message: 'The country is required and cannot be empty'
+                    }
+                }
+            },
             name: {
                 validators: {
                     notEmpty: {

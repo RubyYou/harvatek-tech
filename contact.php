@@ -77,7 +77,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 			<p class="lead text-center"> Inquiry Topic </p>
 			<hr/>
 		<div class="row form-group">

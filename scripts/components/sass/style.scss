@@ -9,6 +9,7 @@ $blue: #458ccb;
 $skyblue:#2aaae1;
 $darkblue: darken($blue, 40);
 $green:#77ab41;
+$red:#d9534f;
 
 
 // mixin setups
@@ -76,7 +77,12 @@ input[type="checkbox"]{
 	background-color: white;
 	}
 }
-
+.glyphicon-remove-circle{
+	font-size:24px;
+	&:hover{
+		color:$red;
+	}
+}
 ul.navbar-nav {
 
 	> li{
