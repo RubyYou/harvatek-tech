@@ -47,6 +47,10 @@ $cTree->add($rootid,"Inquiry","#","");
 $id1=$cTree->getNowId();
 $cTree->add($id1,STR_LIST,"inquiry/list.php","mainframe");
 
+$cTree->add($rootid,"Contact","#","");
+$id1=$cTree->getNowId();
+$cTree->add($id1,STR_LIST,"contact/list.php","mainframe");
+
 /***********************/
 switch(BGM_ACCOUNTSETTING)
 {

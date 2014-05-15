@@ -32,7 +32,7 @@
 		Please fill out this form and we will get in touch with you shortly.</p>
 <!-- product // table & product location
 ================================================== -->
-	<form id="form" class="form-horizontal">
+	<form id="form" class="form-horizontal" method="post" action="contact_.php">
 		<div class="row">
 			<div class="col-md-6">
 				<div class="form-group">
@@ -80,38 +80,38 @@
 			<hr/>
 		<div class="row form-group">
 			<ul class="col-sm-3 col-xs-6">
-				<li><input type="checkbox" value="display" name="inquiryProduct"><b>Display</b></li>
-				<li><input type="checkbox" value="Numeric" name="inquiryProduct" >Numeric</li>
-				<li><input type="checkbox" value="Dot-Matrix" name="inquiryProduct">Dot Matrix</li>
-				<li><input type="checkbox" value="SMD-Display" name="inquiryProduct">SMD Display</li>
+				<li><input type="checkbox" value="display" name="inquiryProduct[]"><b>Display</b></li>
+				<li><input type="checkbox" value="Numeric" name="inquiryProduct[]" >Numeric</li>
+				<li><input type="checkbox" value="Dot-Matrix" name="inquiryProduct[]">Dot Matrix</li>
+				<li><input type="checkbox" value="SMD-Display" name="inquiryProduct[]">SMD Display</li>
 			</ul>
 			<ul class="col-sm-3 col-xs-6">
-				<li><input type="checkbox" value="SMD-LED" name="inquiryProduct"><b>SMD LED</b></li>
-				<li><input type="checkbox" value="Surface-Mount" name="inquiryProduct">Surface Mount</li>
-				<li><input type="checkbox" value="Back-Lighting" name="inquiryProduct">Back Lighting</li>
-				<li><input type="checkbox" value="General-Lighting" name="inquiryProduct">General Lighting</li>
-				<li><input type="checkbox" value="LM-80" name="inquiryProduct">LM-80</li>
+				<li><input type="checkbox" value="SMD-LED" name="inquiryProduct[]"><b>SMD LED</b></li>
+				<li><input type="checkbox" value="Surface-Mount" name="inquiryProduct[]">Surface Mount</li>
+				<li><input type="checkbox" value="Back-Lighting" name="inquiryProduct[]">Back Lighting</li>
+				<li><input type="checkbox" value="General-Lighting" name="inquiryProduct[]">General Lighting</li>
+				<li><input type="checkbox" value="LM-80" name="inquiryProduct[]">LM-80</li>
 			</ul>
 			<ul class="col-sm-3 col-xs-6">
-				<li><input type="checkbox" value="Through-Hole-LED" name="inquiryProduct"><b>Through Hole LED</b></li>
-				<li><input type="checkbox" value="Round-Lamp" name="inquiryProduct">Round Lamp</li>
-				<li><input type="checkbox" value="Oval-Lamp" name="inquiryProduct">Oval Lamp</li>
-				<li><input type="checkbox" value="Piranha" name="inquiryProduct">Piranha</li>
-				<li><input type="checkbox" value="Lead-Frame-Axial" name="inquiryProduct">Lead Frame Axial</li>
-				<li><input type="checkbox" value="Lamp-with-housing" name="inquiryProduct">Lamp with housing</li>
+				<li><input type="checkbox" value="Through-Hole-LED" name="inquiryProduct[]"><b>Through Hole LED</b></li>
+				<li><input type="checkbox" value="Round-Lamp" name="inquiryProduct[]">Round Lamp</li>
+				<li><input type="checkbox" value="Oval-Lamp" name="inquiryProduct[]">Oval Lamp</li>
+				<li><input type="checkbox" value="Piranha" name="inquiryProduct[]">Piranha</li>
+				<li><input type="checkbox" value="Lead-Frame-Axial" name="inquiryProduct[]">Lead Frame Axial</li>
+				<li><input type="checkbox" value="Lamp-with-housing" name="inquiryProduct[]">Lamp with housing</li>
 			</ul>
 			<ul class="col-sm-3 col-xs-6">
-				<li><input type="checkbox" value="Infrared" name="inquiryProduct"><b>Infrared</b></li>
-				<li><input type="checkbox" value="Emitter" name="inquiryProduct">Emitter</li>
-				<li><input type="checkbox" value="Sensor" name="inquiryProduct">Sensor</li>
-				<li><input type="checkbox" value="Photo-Coupler" name="inquiryProduct">Photo Coupler</li>
-				<li><input type="checkbox" value="UV-LED" name="inquiryProduct"><b>UV LED</b></li>
+				<li><input type="checkbox" value="Infrared" name="inquiryProduct[]"><b>Infrared</b></li>
+				<li><input type="checkbox" value="Emitter" name="inquiryProduct[]">Emitter</li>
+				<li><input type="checkbox" value="Sensor" name="inquiryProduct[]">Sensor</li>
+				<li><input type="checkbox" value="Photo-Coupler" name="inquiryProduct[]">Photo Coupler</li>
+				<li><input type="checkbox" value="UV-LED" name="inquiryProduct[]"><b>UV LED</b></li>
 			</ul>
 		</div>
 		<div class="form-group">
 			 <label for="assistant" class="col-md-1 control-label">Application Assistant</label>
 			 <div class="col-md-11">
-			 <textarea type="text" class="form-control" row="5" name="Application-Assist"></textarea>
+			 <textarea type="text" class="form-control" row="5" name="Application_Assist"></textarea>
 			</div>
 		</div>
 		<div class="row text-center">

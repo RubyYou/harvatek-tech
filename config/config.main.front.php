@@ -3,9 +3,9 @@
     /*
      *function
      */
-    include_once BGM_PATH.'libraries/php/js.lib.php';
-    include_once BGM_PATH.'libraries/php/validation-1.0.lib.php';
-    include_once BGM_PATH.'libraries/php/injection-1.0.lib.php';
+    include_once WEB_PATH.'libraries/php/js.lib.php';
+    include_once WEB_PATH.'libraries/php/validation-1.0.lib.php';
+    include_once WEB_PATH.'libraries/php/injection-1.0.lib.php';
     
     include_once WEB_PATH.'modules/Myadodb/adodb.inc.php';
     /*
