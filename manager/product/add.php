@@ -40,6 +40,18 @@ require_once WEB_PATH.'include/head.inc.php';
           </td>
         </tr>
         <tr>
+          <td class="title alignright">Dimension:</td>
+          <td>
+            <input type="text" name="dimension" />
+          </td>
+        </tr>
+        <tr>
+          <td class="title alignright">Datasheet Link:</td>
+          <td>
+            <input type="text" name="datasheet" />
+          </td>
+        </tr>
+        <tr>
           <td class="title alignright">Picture:</td>
           <td>
             <input type="file" name="file"/>

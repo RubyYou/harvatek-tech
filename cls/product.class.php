@@ -78,6 +78,8 @@ class Product extends Main{
 					,'".$table_id."'
 					,'".$products_id."'
 					,'".$name."'
+					,'".$dimension."'
+					,'".$datasheet."'
 					,'".$ext."'
 					,'".$quantity_visible_."'
 					,'".$color_options."'
@@ -287,6 +289,8 @@ class Product extends Main{
 				,'table_id' 		=> 		$rs->table_id
 				,'products_id'		=>		$rs->products_id
 				,'name' 			=> 		$rs->name
+				,'dimension' 		=> 		$rs->dimension
+				,'datasheet' 		=> 		$rs->datasheet
 				,'ext' 				=> 		$rs->ext
 				,'quantity_visible'	=>		$rs->quantity_visible
 				,'color_options'	=>		$rs->color_options
@@ -314,6 +318,8 @@ class Product extends Main{
 				,'table_id' 		=> 		$rs->table_id
 				,'products_id'		=>		$rs->products_id
 				,'name' 			=> 		$rs->name
+				,'dimension' 		=> 		$rs->dimension
+				,'datasheet' 		=> 		$rs->datasheet
 				,'ext' 				=> 		$rs->ext
 				,'quantity_visible'	=>		$rs->quantity_visible
 				,'color_options'	=>		$rs->color_options
@@ -354,6 +360,8 @@ class Product extends Main{
 				table_id = '".$table_id."'
 				,products_id = '".$products_id."'
 				,name='".$name."'
+				,dimension='".$dimension."'
+				,datasheet='".$datasheet."'
 				,quantity_visible = '".$quantity_visible_."'
 				,color_options = '".$color_options."'
 				,cri_options = '".$cri_options."'
@@ -380,8 +388,11 @@ class Product extends Main{
 				table_id = '".$table_id."'
 				,products_id = '".$products_id."'
 				,name='".$name."'
+				,dimension='".$dimension."'
+				,datasheet='".$datasheet."'
 				,quantity_visible = '".$quantity_visible_."'
-				,color_options = '".$color_options_."'
+				,color_options = '".$color_options."'
+				,cri_options = '".$cri_options."'
 				,content = '".$content."'
 				,order_num = '".$order_num."'";
 			if($ext != '')

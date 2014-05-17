@@ -36,7 +36,19 @@ require_once WEB_PATH.'include/head.inc.php';
         <tr>
           <td class="title alignright">Name:</td>
           <td>
-            <input type="text" name="name" value="<?php echo $arr['name'];?>"/>
+            <input type="text" name="name" value="<?php echo htmlspecialchars($arr['name']);?>"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="title alignright">Dimension:</td>
+          <td>
+            <input type="text" name="dimension" value="<?php echo htmlspecialchars($arr['dimension']);?>"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="title alignright">Datasheet Link:</td>
+          <td>
+            <input type="text" name="datasheet" value="<?php echo $arr['datasheet'];?>"/>
           </td>
         </tr>
         <tr>
