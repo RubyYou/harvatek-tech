@@ -56,7 +56,7 @@ class Cri extends Main{
 					,'".$cri_json."'
 				)";
 		$this->db->execute($sql);
-		echo $sql;
+		//echo $sql;
 	}
 	
 	function getPage($nowpage)
@@ -126,7 +126,7 @@ class Cri extends Main{
 			cri_id='".$cri_id."'";
 		
 		$this->db->execute($sql);
-		echo $sql;
+		//echo $sql;
 	}
 
 	function deleteCri($cri_id)
@@ -160,7 +160,22 @@ class Cri extends Main{
 		return null;
 	}
 	
-	
+	function getAllCriOptionName()
+	{
+		$sql = "select *
+				from ".$this->table1."
+				order by name asc";
+		$this->db->execute($sql);
+		while($rs = $this->db->getNext())
+		{
+			$ary[] = array(
+				'cri_id' 		=> 		$rs->cri_id
+				,'name' 		=> 		$rs->name
+			);
+		}
+		
+		return $ary;
+	}
 
 	//Front-End
 

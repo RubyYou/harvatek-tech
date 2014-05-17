@@ -7,4 +7,9 @@ unset($cPri);
 /*permission*/
 $cProduct = new Product();
 $categoriesSelect = $cProduct->getCategoriesSelect();
+
+$cColor = new Color();
+$colorSelect = $cColor->getAllColorOptionName();
+$cCri = new Cri();
+$criSelect = $cCri->getAllCriOptionName();
 ?>

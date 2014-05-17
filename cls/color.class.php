@@ -56,7 +56,7 @@ class Color extends Main{
 					,'".$color_json."'
 				)";
 		$this->db->execute($sql);
-		echo $sql;
+		//echo $sql;
 	}
 	
 	function getPage($nowpage)
@@ -126,7 +126,7 @@ class Color extends Main{
 			color_id='".$color_id."'";
 		
 		$this->db->execute($sql);
-		echo $sql;
+		//echo $sql;
 	}
 
 	function deleteColor($color_id)
@@ -160,7 +160,22 @@ class Color extends Main{
 		return null;
 	}
 	
-	
+	function getAllColorOptionName()
+	{
+		$sql = "select *
+				from ".$this->table1."
+				order by name asc";
+		$this->db->execute($sql);
+		while($rs = $this->db->getNext())
+		{
+			$ary[] = array(
+				'color_id' 		=> 		$rs->color_id
+				,'name' 		=> 		$rs->name
+			);
+		}
+		
+		return $ary;
+	}
 
 	//Front-End
 

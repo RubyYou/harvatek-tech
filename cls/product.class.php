@@ -61,7 +61,6 @@ class Product extends Main{
 		
 		
 		$quantity_visible_ = ($quantity_visible == 1)?1:0;
-		$color_visible_ = ($color_visible == 1)? 1:0;
 		$categories = explode('-',$categories_id);
 		$table_id = $categories[0];
 		$products_id = $categories[1];
@@ -81,7 +80,8 @@ class Product extends Main{
 					,'".$name."'
 					,'".$ext."'
 					,'".$quantity_visible_."'
-					,'".$color_visible_."'
+					,'".$color_options."'
+					,'".$cri_options."'
 					,'".$content."'
 					,'".$order_num."'
 				)";
@@ -289,7 +289,8 @@ class Product extends Main{
 				,'name' 			=> 		$rs->name
 				,'ext' 				=> 		$rs->ext
 				,'quantity_visible'	=>		$rs->quantity_visible
-				,'color_visible'	=>		$rs->color_visible
+				,'color_options'	=>		$rs->color_options
+				,'cri_options'		=>		$rs->cri_options
 				,'content'			=>		$rs->content
 				,'order_num' 		=> 		$rs->order_num
 			);
@@ -315,7 +316,8 @@ class Product extends Main{
 				,'name' 			=> 		$rs->name
 				,'ext' 				=> 		$rs->ext
 				,'quantity_visible'	=>		$rs->quantity_visible
-				,'color_visible'	=>		$rs->color_visible
+				,'color_options'	=>		$rs->color_options
+				,'cri_options'		=>		$rs->cri_options
 				,'content'			=>		$rs->content
 				,'order_num' 		=> 		$rs->order_num
 			);
@@ -337,7 +339,6 @@ class Product extends Main{
 		$ext = ($ext == '.')?'':$ext;
 		
 		$quantity_visible_ = ($quantity_visible == 1)?1:0;
-		$color_visible_ = ($color_visible == 1)? 1:0;
 		$categories = explode('-',$categories_id);
 		$table_id = $categories[0];
 		$products_id = $categories[1];
@@ -354,7 +355,8 @@ class Product extends Main{
 				,products_id = '".$products_id."'
 				,name='".$name."'
 				,quantity_visible = '".$quantity_visible_."'
-				,color_visible = '".$color_visible_."'
+				,color_options = '".$color_options."'
+				,cri_options = '".$cri_options."'
 				,content = '".$content."'";
 			
 			if($ext != '')
@@ -379,7 +381,7 @@ class Product extends Main{
 				,products_id = '".$products_id."'
 				,name='".$name."'
 				,quantity_visible = '".$quantity_visible_."'
-				,color_visible = '".$color_visible_."'
+				,color_options = '".$color_options_."'
 				,content = '".$content."'
 				,order_num = '".$order_num."'";
 			if($ext != '')

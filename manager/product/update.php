@@ -51,8 +51,44 @@ require_once WEB_PATH.'include/head.inc.php';
           <td><input type="checkbox" name="quantity_visible" value="1" <?php echo ($arr['quantity_visible'] == 1)?'checked="checked"':'';?>></td>
         </tr>
         <tr>
-          <td class="title alignright">Color visible:</td>
-          <td><input type="checkbox" name="color_visible" value="1" <?php echo ($arr['color_visible'] == 1)?'checked="checked"':'';?>></td>
+          <td class="title alignright">Color Options</td>
+          <td>
+            <select name="color_options">
+              <option value="-1">None</option>
+              <?php
+              if(count($colorSelect) > 0)
+              {
+                foreach($colorSelect as $key => $val)
+                {
+                  $selected = '';
+                  if($arr['color_options'] == $colorSelect[$key]['color_id'])
+                    $selected = 'selected="selected"';
+                  echo '<option value="'.$colorSelect[$key]['color_id'].'" '.$selected.' >'.$colorSelect[$key]['name'].'</option>';
+                }
+              }
+              ?>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="title alignright">Cri Options</td>
+          <td>
+            <select name="cri_options">
+              <option value="-1">None</option>
+              <?php
+              if(count($criSelect) > 0)
+              {
+                foreach($criSelect as $key => $val)
+                {
+                  $selected = '';
+                  if($arr['cri_options'] == $criSelect[$key]['cri_id'])
+                    $selected = 'selected="selected"';
+                  echo '<option value="'.$criSelect[$key]['cri_id'].'" '.$selected.'>'.$criSelect[$key]['name'].'</option>';
+                }
+              }
+              ?>
+            </select>
+          </td>
         </tr>
         <tr>
           <td class="title alignright">Content:</td>

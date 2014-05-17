@@ -46,12 +46,42 @@ require_once WEB_PATH.'include/head.inc.php';
           </td>
         </tr>
         <tr>
-          <td class="title alignright">Quantity visible:</td>
+          <td class="title alignright">Quantity Select visible:</td>
           <td><input type="checkbox" name="quantity_visible" value="1"></td>
         </tr>
         <tr>
-          <td class="title alignright">Color visible:</td>
-          <td><input type="checkbox" name="color_visible" value="1"></td>
+          <td class="title alignright">Color Options</td>
+          <td>
+            <select name="color_options">
+              <option value="-1">None</option>
+              <?php
+              if(count($colorSelect) > 0)
+              {
+                foreach($colorSelect as $key => $val)
+                {
+                  echo '<option value="'.$colorSelect[$key]['color_id'].'">'.$colorSelect[$key]['name'].'</option>';
+                }
+              }
+              ?>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="title alignright">Cri Options</td>
+          <td>
+            <select name="cri_options">
+              <option value="-1">None</option>
+              <?php
+              if(count($criSelect) > 0)
+              {
+                foreach($criSelect as $key => $val)
+                {
+                  echo '<option value="'.$criSelect[$key]['cri_id'].'">'.$criSelect[$key]['name'].'</option>';
+                }
+              }
+              ?>
+            </select>
+          </td>
         </tr>
         <tr>
           <td class="title alignright">Content:</td>

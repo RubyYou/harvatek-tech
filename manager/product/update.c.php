@@ -13,4 +13,9 @@ $cProduct = new Product();
 $arr = $cProduct->getProduct($_GET['product_id']);
 $categoriesSelect = $cProduct->getCategoriesSelect($arr['table_id'].'-'.$arr['products_id']);
 
+$cColor = new Color();
+$colorSelect = $cColor->getAllColorOptionName();
+$cCri = new Cri();
+$criSelect = $cCri->getAllCriOptionName();
+
 ?>
