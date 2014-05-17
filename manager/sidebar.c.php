@@ -38,6 +38,16 @@ $id1=$cTree->getNowId();
 $cTree->add($id1,STR_ADD,"product/add.php","mainframe");
 $cTree->add($id1,STR_LIST,"product/list.php","mainframe");
 
+$cTree->add($rootid,"Color","#","");
+$id1=$cTree->getNowId();
+$cTree->add($id1,STR_ADD,"color/add.php","mainframe");
+$cTree->add($id1,STR_LIST,"color/list.php","mainframe");
+
+$cTree->add($rootid,"CRI","#","");
+$id1=$cTree->getNowId();
+$cTree->add($id1,STR_ADD,"cri/add.php","mainframe");
+$cTree->add($id1,STR_LIST,"cri/list.php","mainframe");
+
 $cTree->add($rootid,"News","#","");
 $id1=$cTree->getNowId();
 $cTree->add($id1,STR_ADD,"news/add.php","mainframe");
