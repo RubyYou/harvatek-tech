@@ -38,7 +38,7 @@
 <!-- product // table & product location
 ================================================== -->
 		<div class="col-md-9 ">
-			<ol class="breadcrumb"> Display / Numeric / Sigal Digit</ol>
+			<ol class="breadcrumb"> <?php echo $path;?></ol>
 			<div class="table-responsive">
 				<table width="100%" border="1" class="text-center">
 					<thead>
@@ -51,27 +51,30 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
-							<td>HT-T158 Series</td>
-							<td>3.0 x 2.0 x 1.3 (mm)</td>
-							<td><a href="#"><i class="fa fa-download fa-2x"></i></a></td>
-							<td><a href="#" class="btn btn-primary">Details</a></td>
-						</tr>
-						<tr>
-							<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
-							<td>HT-T158 Series</td>
-							<td>3.0 x 2.0 x 1.3 (mm)</td>
-							<td><a href="#"><i class="fa fa-download fa-2x"></i></a></td>
-							<td><a href="#" class="btn btn-primary">Details</a></td>
-						</tr>
-						<tr>
-							<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
-							<td>HT-T158 Series</td>
-							<td>3.0 x 2.0 x 1.3 (mm)</td>
-							<td><a href="#"><i class="fa fa-download fa-2x"></i></a></td>
-							<td><a href="#" class="btn btn-primary">Details</a></td>
-						</tr>
+						<?php
+						if(is_array($product_arr))
+						{
+							foreach($product_arr['data'] as $key => $val)
+							{
+								$datasheetLink = ($product_arr['data'][$key]['datasheet'] == '') ? 'javascript:void(0);' : $product_arr['data'][$key]['datasheet'];
+						?>
+								<tr>
+									<td><img src="<?php echo $cProduct->webRoot.$product_arr['data'][$key]['product_id'].$product_arr['data'][$key]['ext'];?>" width="60" height="60" alt="product-thumbnails"></td>
+									<td><?php echo $product_arr['data'][$key]['name'];?></td>
+									<td><?php echo $product_arr['data'][$key]['dimension'];?></td>
+									<td><a href="<?php echo $datasheetLink;?>"><i class="fa fa-download fa-2x"></i></a></td>
+									<td><a href="details.php?i=<?php echo $product_arr['data'][$key]['product_id'];?>" class="btn btn-primary">Details</a></td>
+								</tr>
+						<?php
+							}
+						}
+						else
+						{
+						?>
+								<!--<tr><td colspan="5">No data</td></tr>-->
+						<?php
+						}
+						?>
 					</tbody>
 				</table>
 			</div>

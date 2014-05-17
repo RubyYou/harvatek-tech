@@ -103,7 +103,7 @@ class Color extends Main{
 		$ary = array(
 			'color_id' 			=> 		$rs->color_id
 			,'name' 			=> 		$rs->name
-			,'sel_option' 			=> 		json_decode($rs->sel_option)
+			,'sel_option' 		=> 		json_decode($rs->sel_option)
 		);
 		
 		return $ary;
@@ -178,6 +178,21 @@ class Color extends Main{
 	}
 
 	//Front-End
+	function getColorOption($color_id)
+	{
+		$options = '';
+		$arr = $this->getColor($color_id);
+		$colorOptions = $arr['sel_option'];
+		if(is_array($colorOptions))
+		{
+			foreach($colorOptions as $key => $val)
+			{
+				$options .= '<option value="'.$val.'">'.$val.'</option>';
+			}
+		}
+		
+		return $options;
+	}
 
 
 	

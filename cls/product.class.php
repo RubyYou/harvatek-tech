@@ -458,9 +458,10 @@ class Product extends Main{
 			if(count($p2_arr) > 0)
 			{
 				$href1 = str_replace(' ','-',$p1_arr[$key1]['name']);
+				$href1 = str_replace('/','-',$href1);
 				$categoriesSelect .= '
 				<li>
-					<a class="toggle"><img src="'.$cProduct1->webRoot.$p1_arr[$key1]["product1_id"].$p1_arr[$key1]["ext"].'" alt=""/>'.$p1_arr[$key1]['name'].'</a>
+					<a class="toggle" href="#'.$href1.'"><img src="'.$cProduct1->webRoot.$p1_arr[$key1]["product1_id"].$p1_arr[$key1]["ext"].'" alt=""/>'.$p1_arr[$key1]['name'].'</a>
 				';
 				
 				
@@ -486,6 +487,7 @@ class Product extends Main{
 						foreach($p3_arr as $key3 => $val3)
 						{
 							$p4_arr = $cProduct4->getAll($p3_arr[$key3]['product3_id']);
+							$href3 = str_replace(' ','-',$p3_arr[$key3]['name']);
 							if(count($p4_arr) > 0)
 							{
 								$categoriesSelect .= '
@@ -501,7 +503,7 @@ class Product extends Main{
 									$selected_ = '';
 									$tmpCategories .= '
 											<li>
-												<a href="#">'.$p4_arr[$key4]['name'].'</a>
+												<a href="product.php?t=4&ps='.$p4_arr[$key4]['product4_id'].'#'.$href1.'-'.$href2.'-'.$href3.'">'.$p4_arr[$key4]['name'].'</a>
 											</li>
 									';
 								}
@@ -517,7 +519,7 @@ class Product extends Main{
 								$selected_ = '';
 								$categoriesSelect .= '
 									<li>
-										<a href="#">'.$p3_arr[$key3]['name'].'</a>
+										<a href="product.php?t=3&ps='.$p3_arr[$key3]['product3_id'].'#'.$href1.'-'.$href2.'">'.$p3_arr[$key3]['name'].'</a>
 									</li>
 								';
 							}
@@ -539,7 +541,7 @@ class Product extends Main{
 						$selected_ = '';
 						$categoriesSelect .= '
 								<li>
-									<a href="#">'.$p2_arr[$key2]['name'].'</a>
+									<a href="product.php?t=2&ps='.$p2_arr[$key2]['product2_id'].'#'.$href1.'">'.$p2_arr[$key2]['name'].'</a>
 								</li>
 								';
 					}
@@ -560,7 +562,7 @@ class Product extends Main{
 				$selected_ = '';
 				$categoriesSelect .= '
 				<li>
-					<a href="#"><img src="'.$cProduct1->webRoot.$p1_arr[$key1]["product1_id"].$p1_arr[$key1]["ext"].'" alt=""/>'.$p1_arr[$key1]['name'].'</a>
+					<a href="product.php?t=1&ps='.$p1_arr[$key1]['product1_id'].'"><img src="'.$cProduct1->webRoot.$p1_arr[$key1]["product1_id"].$p1_arr[$key1]["ext"].'" alt=""/>'.$p1_arr[$key1]['name'].'</a>
 				</li>
 				';
 			}
@@ -600,6 +602,92 @@ class Product extends Main{
 	
 
 	//Front-End
+	
+	function getFrontPage($table_id,$products_id)
+	{
+		$sql = "select *
+				from ".$this->table1."
+				where
+				table_id = '".$table_id."'
+				and
+				products_id = '".$products_id."'
+				order by
+				order_num
+				asc";
+		//echo $sql;
+		$this->db->execute($sql);
+		while($rs = $this->db->getNext())
+		{
+			$ary['data'][] = array(
+				'product_id' 		=> 		$rs->product_id
+				,'table_id' 		=> 		$rs->table_id
+				,'products_id'		=>		$rs->products_id
+				,'name' 			=> 		$rs->name
+				,'dimension' 		=> 		$rs->dimension
+				,'datasheet' 		=> 		$rs->datasheet
+				,'ext' 				=> 		$rs->ext
+				,'quantity_visible'	=>		$rs->quantity_visible
+				,'color_options'	=>		$rs->color_options
+				,'cri_options'		=>		$rs->cri_options
+				,'content'			=>		$rs->content
+				,'order_num' 		=> 		$rs->order_num
+			);
+		}
+		return $ary;
+		
+	}
+	
+	function getProductPath($table_id,$products_id)
+	{
+		$cProduct1 = new Product1();
+		$cProduct2 = new Product2();
+		$cProduct3 = new Product3();
+		$cProduct4 = new Product4();
+		$path = '';
+		$path1 = '';
+		$path2 = '';
+		$path3 = '';
+		$path4 = '';
+		
+		if($table_id == 4)
+		{
+			$arr = $cProduct4->getProduct4($products_id);
+			$path4 = $arr['name'];
+			$arr = $cProduct3->getProduct3($arr['product3_id']);
+			$path3 = $arr['name'];
+			$arr = $cProduct2->getProduct2($arr['product2_id']);
+			$path2 = $arr['name'];
+			$arr = $cProduct1->getProduct1($arr['product1_id']);
+			$path1 = $arr['name'];
+			$path = $path1 .' / '. $path2 .' / '. $path3 .' / '. $path4;
+		}
+		else if($table_id == 3)
+		{
+			$arr = $cProduct3->getProduct3($products_id);
+			$path3 = $arr['name'];
+			$arr = $cProduct2->getProduct2($arr['product2_id']);
+			$path2 = $arr['name'];
+			$arr = $cProduct1->getProduct1($arr['product1_id']);
+			$path1 = $arr['name'];
+			$path = $path1 .' / '. $path2 .' / '. $path3;
+		}
+		else if($table_id == 2)
+		{
+			$arr = $cProduct2->getProduct2($products_id);
+			$path2 = $arr['name'];
+			$arr = $cProduct1->getProduct1($arr['product1_id']);
+			$path1 = $arr['name'];
+			$path = $path1 .' / '. $path2;
+		}
+		else if($table_id == 1)
+		{
+			$arr = $cProduct1->getProduct1($products_id);
+			$path1 = $arr['name'];
+			$path = $path1;
+		}
+		
+		return $path;
+	}
 
 }
 ?>

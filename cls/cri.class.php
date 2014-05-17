@@ -178,7 +178,21 @@ class Cri extends Main{
 	}
 
 	//Front-End
-
+	function getCriOption($cri_id)
+	{
+		$options = '';
+		$arr = $this->getCri($cri_id);
+		$criOptions = $arr['sel_option'];
+		if(is_array($criOptions))
+		{
+			foreach($criOptions as $key => $val)
+			{
+				$options .= '<option value="'.$val.'">'.$val.'</option>';
+			}
+		}
+		
+		return $options;
+	}
 
 	
 }

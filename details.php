@@ -1,4 +1,4 @@
-
+<?php include("details.c.php");?>
 
 <?php include("includes/header.php");?>
 
@@ -40,118 +40,72 @@
 			<div class="col-md-9">
 				<div class="row">
 					<div class="col-md-3">
-						<img class="productImg" src="http://harvatek-tech.com/wp-content/uploads/2013/08/Throughhole-DotMatrix-150x150.jpg"/>
+						<img class="productImg" src="<?php echo $cProduct->webRoot.$product_arr['product_id'].$product_arr['ext'];?>" style="width: 150px;height: 150px;"/>
 					</div>
 					<div class="col-md-9">
-						<h3> 0.67″ 5×7 Dot Matrix</h3>
+						<h3><?php echo $product_arr['name'];?></h3>
 						<!--quanitity-->
-						<form id="addcart" role="form" class="form-inline">
+						<form id="addcart" role="form" class="form-inline" action="add_cart.php" method="post">
+							<?php
+							if($product_arr['quantity_visible'] == 1)
+							{
+							?>
 							<label class="control-label" >Quantity</label>
 							<select class="form-control input-md">
-							  <option>0 ~ 10K</option>
-							  <option>10k ~ 100K</option>
-							  <option>100k ~ 1kk</option>
-							  <option>1kk and above</option>
+								<?php
+								foreach($cProduct->quantityOption as $key => $val)
+								{
+									echo '<option value="'.$key.'">'.$val.'</option>';
+								}
+								?>
 							</select>
+							<?php
+							}
+							?>
 						<!-- color -->
+							<?php
+							if($product_arr['color_options'] != -1)
+							{
+							?>
 							<label class="control-label " >Color</label>
 							<select class="form-control input-md">
-							  <option>Amber</option>
-							  <option>Blue</option>
-							  <option>Yellow</option>
-							  <option>Red</option>
+							  <?php
+								echo $cColor->getColorOption($product_arr['color_options']);
+							  ?>
 							</select>
+							<?php
+							}
+							?>
+						<!-- cri -->
+							<?php
+							if($product_arr['cri_options'] != -1)
+							{
+							?>
+							<label class="control-label " >CRI</label>
+							<select class="form-control input-md">
+							  <?php
+								echo $cCri->getCriOption($product_arr['cri_options']);
+							  ?>
+							</select>
+							<?php
+							}
+							?>
 							<br/><br/>
-							<a href="http://harvatek-tech.com/wp-content/uploads/2013/10/HT-T157-Series.pdf" class="btn btn-primary">Datasheet</a>
-							<a href="cart.php" class="btn btn-addcart">Add to Cart</a>
+							<?php
+							if($product_arr['datasheet'] != '')
+							{
+							?>
+							<a href="<?php echo $product_arr['datasheet'];?>" class="btn btn-primary">Datasheet</a>
+							<?php
+							}
+							?>
+							<input type="submit" class="btn btn-addcart" value="Add to Cart"/>
 						</form>
 					</div>
 				</div>
 					<!--here start the php input html parts -->
 					<div class="product-description">
-						<h3 >Product Descriptions</h3>
-						<img src="http://harvatek-tech.com/wp-content/uploads/2013/08/ThDot0.67-01-1024x488.jpg" class="img-responsive"/>
-					<table class="table" border="1">
-						<thead>
-							<tr>
-								<th colspan="2">Product</th>
-								<th rowspan="2">IF (mA)</th>
-								<th rowspan="2">Color</th>
-								<th rowspan="2">λD (nm)</th>
-								<th rowspan="2">IV (mcd)</th>
-								<th rowspan="2">VF (V)</th>
-							</tr>
-							<tr>
-								<th>Common Anode</th>
-								<th>Common Cathode</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>HDMT5767UAA</td>
-								<td>HDMT5767UAC</td>
-								<td>20</td>
-								<td>Amber</td>
-								<td>606</td>
-								<td>40</td>
-								<td>2.1</td>
-							</tr>
-							<tr>
-								<td>HDMT5767UYGA</td>
-								<td>HDMT5767UYGC</td>
-								<td>20</td>
-								<td>Yellow Green</td>
-								<td>571</td>
-								<td>20</td>
-								<td>3.2</td>
-							</tr>
-							<tr>
-								<td>HDMT5767TGA</td>
-								<td>HDMT5767TGC</td>
-								<td>20</td>
-								<td>True Green</td>
-								<td>525</td>
-								<td>160</td>
-								<td>2.0</td>
-							</tr>
-							<tr>
-								<td>HDMT5767UYA</td>
-								<td>HDMT5767UYC</td>
-								<td>20</td>
-								<td>Yellow</td>
-								<td>590</td>
-								<td>40</td>
-								<td>2.0</td>
-							</tr>
-							<tr>
-								<td>HDMT5767USRA</td>
-								<td>HDMT5767USRC</td>
-								<td>20</td>
-								<td>Super Red</td>
-								<td>639</td>
-								<td>30</td>
-								<td>2.0</td>
-							</tr>
-							<tr>
-								<td>HDMT5767URA</td>
-								<td>HDMT5767URC</td>
-								<td>20</td>
-								<td>Hyper Red</td>
-								<td>625</td>
-								<td>40</td>
-								<td>3.2</td>
-							</tr>
-							<tr>
-								<td>HDMT5767UBA</td>
-								<td>HDMT5767UBC</td>
-								<td>20</td>
-								<td>Blue</td>
-								<td>470</td>
-								<td>60</td>
-								<td>2.0</td>
-							</tr>
-						</tbody>
-						</table>
+						<?php echo $product_arr['content'];?>
 					</div>
 			</div>
 
