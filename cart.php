@@ -1,4 +1,4 @@
-
+<?php include 'cart.c.php';?>
 
 <?php include("includes/header.php");?>
 
@@ -42,29 +42,28 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
-					<td><a href="product.php?ht-158Series">HT-T158 Series</a></td>
-					<td>1kk ~ above </td>
-					<td>Color: RED</td>
-					<td class="delete"><span class="glyphicon glyphicon-remove-circle"></span></td>
-				</tr>
-
-				<tr>
-					<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
-					<td><a href="product.php?ht-158Series">HT-T158 Series</a></td>
-					<td>1kk ~ above </td>
-					<td>Color: RED</td>
-					<td class="delete"><span class="glyphicon glyphicon-remove-circle"></span></td>
-				</tr>
-
-				<tr>
-					<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
-					<td><a href="product.php?ht-158Series">HT-T158 Series</a></td>
-					<td>1kk ~ above </td>
-					<td> </td>
-					<td class="delete"><span class="glyphicon glyphicon-remove-circle"></span></td>
-				</tr>
+				<?php
+				if(count($cartItems) > 0)
+				{
+					foreach($cartItems as $key => $val)
+					{
+				?>
+							<tr>
+								<td><img src="<?php echo $cartItems[$key]['img'];?>" width="60" height="60" alt="product-thumbnails"></td>
+								<td><a href="details.php?i=<?php echo $cartItems[$key]['id'];?>"><?php echo $cartItems[$key]['name'];?></a></td>
+								<td><?php echo $cartItems[$key]['quantity_info'];?></td>
+								<td>
+									<?php echo ($cartItems[$key]['color'] == '') ? '' : '<p> Color:'.$cartItems[$key]['color'].'</p>';?>
+									<?php echo ($cartItems[$key]['cri'] == '') ? '' : '<p> Cri:'.$cartItems[$key]['cri'].'</p>';?>
+								</td>
+								<td class="delete"><span class="glyphicon glyphicon-remove-circle" onclick="document.location.href='delete_cart.php?i=<?php echo $cartItems[$key]['id'];?>&q=<?php echo $cartItems[$key]['quantity'];?>&c=<?php echo $cartItems[$key]['color'];?>&r=<?php echo $cartItems[$key]['cri'];?>'"></span></td>
+							</tr>
+				<?php
+					}
+				}
+				?>
+				
+				
 			</tbody>
 		</table>
 		<span > &nbsp; </span>

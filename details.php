@@ -1,5 +1,5 @@
 <?php include("details.c.php");?>
-
+<?php //session_start(); session_destroy();?>
 <?php include("includes/header.php");?>
 
 <body>
@@ -45,13 +45,13 @@
 					<div class="col-md-9">
 						<h3><?php echo $product_arr['name'];?></h3>
 						<!--quanitity-->
-						<form id="addcart" role="form" class="form-inline" action="add_cart.php" method="post">
+						<form id="addcart" role="form" class="form-inline" action="add_cart.php?i=<?php echo $product_arr['product_id'];?>" method="post">
 							<?php
 							if($product_arr['quantity_visible'] == 1)
 							{
 							?>
 							<label class="control-label" >Quantity</label>
-							<select class="form-control input-md">
+							<select class="form-control input-md" name="quantity">
 								<?php
 								foreach($cProduct->quantityOption as $key => $val)
 								{
@@ -62,13 +62,15 @@
 							<?php
 							}
 							?>
+							
+							
 						<!-- color -->
 							<?php
 							if($product_arr['color_options'] != -1)
 							{
 							?>
 							<label class="control-label " >Color</label>
-							<select class="form-control input-md">
+							<select class="form-control input-md" name="color">
 							  <?php
 								echo $cColor->getColorOption($product_arr['color_options']);
 							  ?>
@@ -76,13 +78,16 @@
 							<?php
 							}
 							?>
+							
+							
+							
 						<!-- cri -->
 							<?php
 							if($product_arr['cri_options'] != -1)
 							{
 							?>
 							<label class="control-label " >CRI</label>
-							<select class="form-control input-md">
+							<select class="form-control input-md" name="cri">
 							  <?php
 								echo $cCri->getCriOption($product_arr['cri_options']);
 							  ?>
