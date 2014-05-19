@@ -1,4 +1,4 @@
-
+<?php include 'confirm.c.php';?>
 
 <?php include("includes/header.php");?>
 
@@ -34,10 +34,9 @@
 		<p class="lead text-center well">Thank you! your inquiry has been received.</p>
 
 		<h3 class="pull-left"> Inquiry products</h3>
-		<p class="pull-right date"> <b>Inquiry number</b> # 166 / 
+		<p class="pull-right date"> <b>Inquiry number</b> # <?php echo $form['inquiry_id'];?> / 
 			<b>Date</b>
-			<?php date_default_timezone_set('UTC');
-				  echo date("d/M/Y");?></p>
+			<?php echo date("d/M/Y");?></p>
 		<table width="100%" border="1" class="text-center">
 			<thead>
 				<tr>
@@ -48,25 +47,25 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
-					<td><a href="product.php?ht-158Series">HT-T158 Series</a></td>
-					<td>1kk ~ above </td>
-					<td>Color: RED</td>
-				</tr>
-
-				<tr>
-					<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
-					<td><a href="product.php?ht-158Series">HT-T158 Series</a></td>
-					<td>1kk ~ above </td>
-					<td>Color: RED</td>
-				</tr>
-				<tr>
-					<td><img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTT136-90x90.jpg" width="60" height="60" alt="product-thumbnails"></td>
-					<td><a href="product.php?ht-158Series">HT-T158 Series</a></td>
-					<td>1kk ~ above </td>
-					<td> </td>
-				</tr>
+				<?php
+				if(count($cartItems))
+				{
+					foreach($cartItems as $key => $val)
+					{
+				?>
+							<tr>
+								<td><img src="<?php echo $cartItems[$key]['img'];?>" width="60" height="60" alt="product-thumbnails"></td>
+								<td><a href="details.php?i=<?php echo $cartItems[$key]['id'];?>"><?php echo $cartItems[$key]['name'];?></a></td>
+								<td><?php echo $cartItems[$key]['quantity_info'];?></td>
+								<td>
+									<?php echo ($cartItems[$key]['color'] == '') ? '' : '<p> Color:'.$cartItems[$key]['color'].'</p>';?>
+									<?php echo ($cartItems[$key]['cri'] == '') ? '' : '<p> Cri:'.$cartItems[$key]['cri'].'</p>';?>
+								</td>
+							</tr>
+				<?php
+					}
+				}
+				?>
 			</tbody>
 		</table>
 	</div>
@@ -79,34 +78,36 @@
 		<hr/>
 			<div class="col-md-6">
 				<div class="row">
-					<p class="col-xs-3"><b>Country</b></p><p class="col-xs-9">The U.S.A</p>
+					<p class="col-xs-3"><b>Country</b></p><p class="col-xs-9"><?php echo $form['country'];?></p>
 				</div>
 				<div class="row">
-					<p class="col-xs-3"><b>First Name</b></p><p class="col-xs-9">ShihYu</p>
+					<p class="col-xs-3"><b>First Name</b></p><p class="col-xs-9"><?php echo $form['first_name'];?></p>
 				</div>
 				<div class="row">
-					<p class="col-xs-3"><b>Last Name</b></p><p class="col-xs-9">YOU</p>
+					<p class="col-xs-3"><b>Last Name</b></p><p class="col-xs-9"><?php echo $form['last_name'];?></p>
 				</div>
 				<div class="row">
-					<p class="col-xs-3"><b>Email</b></p><p class="col-xs-9">ruby@gmail.com</p>
+					<p class="col-xs-3"><b>Email</b></p><p class="col-xs-9"><?php echo $form['email'];?></p>
 				</div>
 				<div class="row">
-					<p class="col-xs-3"><b>Phone</b></p><p class="col-xs-9">+1.445.665.6767</p>
+					<p class="col-xs-3"><b>Phone</b></p><p class="col-xs-9"><?php echo $form['phone'];?></p>
 				</div>
 			</div>
 
 			<div class="col-md-6">
 				<div class="row">
-					<p class="col-xs-3"><b>Address</b></p><p class="col-xs-9">first line of address</p>
+					<p class="col-xs-3"><b>Address</b></p><p class="col-xs-9"><?php echo $form['address'];?></p>
 				</div>
 				<div class="row">
-					<p class="col-xs-3"> </p><p class="col-xs-9">second line of address</p>
+					<p class="col-xs-3"> </p><p class="col-xs-9"><?php echo $form['address_option'];?></p>
 				</div>
 				<div class="row">
-					<p class="col-xs-3"><b>Zip Code</b></p><p class="col-xs-9">1235324</p>
+					<p class="col-xs-3"><b>Zip Code</b></p><p class="col-xs-9"><?php echo $form['postcode'];?></p>
 				</div>
 				<div class="row">
-					<p class="col-xs-3"><b>Additional Info</b></p><p class="col-xs-9">I would like just have some information regards the part number and dimension with what I ordered.</p>
+					<p class="col-xs-3"><b>Additional Info</b></p><p class="col-xs-9">
+						<?php echo nl2br($form['additionalInfo']);?>
+					</p>
 				</div>
 
 			</div>

@@ -2,7 +2,8 @@
 /***************************************
  *Error message
  **************************************/
-date_default_timezone_set('Asia/Taipei');
+//date_default_timezone_set('Asia/Taipei');
+date_default_timezone_set('UTC');
 ini_set('display_errors', true);
 error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 //error_reporting(E_ALL ^ (E_NOTICE));

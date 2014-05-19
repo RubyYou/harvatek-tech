@@ -81,7 +81,7 @@
 		<p class="lead text-center">To provide you the best service, 
 			Please fill out the your information below.</p>
 		<hr/>
-		<form id="form" class="form-horizontal" method="post" action="confirm.php">
+		<form id="form" name="form" class="form-horizontal" method="post" action="cart_.php">
 			<div class="col-md-6">
 				<div class="form-group">
 					 <label for="Country" class="col-md-3 control-label">Country *</label>
@@ -90,9 +90,15 @@
 					</div>
 				</div>
 				<div class="form-group">
-					 <label for="firstName" class="col-md-3 control-label">Name *</label>
+					 <label for="firstName" class="col-md-3 control-label">First Name *</label>
 					 <div class="col-md-9">
-					 <input type="text" class="form-control" name="name" placeholder="Name">
+					 <input type="text" class="form-control" name="first_name" placeholder="First Name">
+					</div>
+				</div>
+				<div class="form-group">
+					 <label for="lastName" class="col-md-3 control-label">Last Name *</label>
+					 <div class="col-md-9">
+					 <input type="text" class="form-control" name="last_name" placeholder="Last Name">
 					</div>
 				</div>
 				<div class="form-group">
@@ -118,7 +124,7 @@
 				</div>
 				<div class="form-group">
 					<div class="col-md-9 col-md-offset-3">
-					<input type="text" class="form-control" name="address-option" placeholder="Address (optional)">
+					<input type="text" class="form-control" name="address_option" placeholder="Address (optional)">
 					</div>
 				</div>
 				<div class="form-group">
@@ -134,14 +140,13 @@
 					</div>
 				</div>
 			</div>
-		</form>
-		
-		<div class="col-md-12 text-center">
-			<hr/>
-			<div class="col-md-4 col-md-offset-4">
-			<button type="submit" class="btn btn-primary btn-block">Send</button>
+			<div class="col-md-12 text-center">
+				<hr/>
+				<div class="col-md-4 col-md-offset-4">
+				<button type="submit" class="btn btn-primary btn-block">Send</button>
+				</div>
 			</div>
-		</div>
+		</form>
 	</div>
 </section> 
 <div id='layout_footer'></div>
