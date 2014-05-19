@@ -64,5 +64,10 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
   3.contact us 的內容要記在資料庫？（我忘了...sorry）
     => YES.
 
+
+
+- 2014-05-20
+  inquiry cart done!!
+
   by Nick.
   
