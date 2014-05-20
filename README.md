@@ -3,23 +3,9 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
 
 ======================================================================
 
-- Duplicate part is in includes folder. templating code
-- originTemplate.html is the not seperated html for overall template.
-
-- Ruby next step:
-  mobile ability.
-  Email template: 寄出order list email到客戶和顧主信箱 ~ 
-
 - 後台測試位置：
   http://nickchen.uphero.com/harvatek-tech/manager/
-  
-  進度：
-  categories level second
 
-=>沒關係~ 用中文也可以，我們容易溝通就好了，
-  首要條件是看你怎麼比較方便做，如果奇怪，我之後再改就好了！:)
-  
-  我也想練練英文～哈哈
   
 - 2014-04-25
 
@@ -71,3 +57,12 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
 
   by Nick.
   
+  Ruby: 進度完成了！是否有什麼方式可以架出來，讓我試著開始上傳產品呢？
+  或是我可以直接上傳到你的遠端，測試看看，到時候再把資料庫一起搬過去，你也可以同時做後面的東西 :)
+  ~ 我朋友有在問了~ 上傳產品應該要些時間，總覺得我要勤快一點了 :(
+
+  喔對了~ 
+  產品還有一個功能，就是如果他是有featured的，會到主頁面的featured~
+  還有我想問搜詢產品編號會不會很難? 我們想加加看這個功能！
+  >> 也許以上的這兩個功能再加上首頁的list可以讓我試試看，讓我上傳完產品，upload上去後。
+
