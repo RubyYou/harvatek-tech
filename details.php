@@ -66,13 +66,17 @@
 							
 						<!-- color -->
 							<?php
-							if($product_arr['color_options'] != -1)
+							
+							if($product_arr['color_options'] != '')
 							{
+								$colorOptions = explode(',',$product_arr['color_options']);
 							?>
 							<label class="control-label " >Color</label>
 							<select class="form-control input-md" name="color">
 							  <?php
-								echo $cColor->getColorOption($product_arr['color_options']);
+								foreach($colorOptions as $key => $val){
+									echo '<option value="'.$val.'">'.$val.'</option>';
+								}
 							  ?>
 							</select>
 							<?php
@@ -83,13 +87,16 @@
 							
 						<!-- cri -->
 							<?php
-							if($product_arr['cri_options'] != -1)
+							if($product_arr['cri_options'] != '')
 							{
+								$criOptions = explode(',',$product_arr['cri_options']);
 							?>
 							<label class="control-label " >CRI</label>
 							<select class="form-control input-md" name="cri">
 							  <?php
-								echo $cCri->getCriOption($product_arr['cri_options']);
+								foreach($criOptions as $key => $val){
+									echo '<option value="'.$val.'">'.$val.'</option>';
+								}
 							  ?>
 							</select>
 							<?php

@@ -7,8 +7,4 @@ $product_arr = $cProduct->getProduct($product_id);
 //$quantity_visible = $product_arr['quantity_visible'];
 //$color_options = $product_arr['color_options'];
 //$cri_options = $product_arr['cri_options'];
-
-$cColor = new Color();
-$cCri = new Cri();
-
 ?>

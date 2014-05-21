@@ -56,11 +56,13 @@
             <th width="40"><?php echo STR_ORDER;?></th>
             <th width="40"><?php echo STR_EDIT;?></th>
             <th width="40"><?php echo STR_DELETE;?></th>
+			<th width="40">Featured</th>
           </tr>
           <?php
 		  if(count($page['data']) > 0)
             foreach($page['data'] as $key => $val)
 			{
+				$checked = ($page['data'][$key]['featured'] == 1) ? 'checked="checked"' : '';
           ?>
 			  <tr>
 				<td class="aligncenter">
@@ -78,7 +80,10 @@
 				</td>
 					<td class="sysimg">
 					  <a href="delete.php?table_id=<?php echo $page['data'][$key]['table_id']?>&products_id=<?php echo $page['data'][$key]['products_id']?>&product_id=<?php echo $page['data'][$key]['product_id'];?>&nowpage=<?php echo $nowpage;?>"><img src="../images/del.gif" width="24" height="24" border="0"></a> 
-					</td>
+				</td>
+				<td class="aligncenter">
+					<input type="checkbox" name="show" value="<?php echo $page['data'][$key]['product_id'];?>" onclick="setFeatured($(this));" <?php echo $checked;?>/>
+				</td>
 			  </tr>
           <?php
 			}
@@ -91,4 +96,39 @@
   </div>
 </div>
 </body>
+<script type="text/javascript">
+  function setFeatured(obj) {
+	var ov = !obj.prop('checked');
+	var visible = (obj.prop('checked')) ? 1 : 0;
+	v = confirm('Are you sure to edit this status?');
+	if (v) {
+		$.ajax({
+		  url: "setfeatured.php",
+		  data:{'v':visible,'i':obj.val()},
+		  type: "post",
+		  dataType: 'text',
+		  success: function(msg) {
+			if (msg == 'ok') {
+			  alert('Edit success!');
+			}
+			else if (msg == 'full') {
+			  alert('It\'s full！');
+			  obj.prop('checked',ov);
+			}
+			else{
+			  alert('Edit fail！');
+			  obj.prop('checked',ov);
+			}
+		  }
+		  ,error:function(){
+			alert('Edit fail！');
+			obj.prop('checked',ov);
+			
+		  }
+		});
+	}
+	else
+		obj.val(ov);
+  }
+</script>
 </html>

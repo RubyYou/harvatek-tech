@@ -44,102 +44,47 @@ class Color extends Main{
 	{
 		array_walk($post,"quoteSlashes");
 		extract($post);
-		$color = $this->popNullArray($color);
-		$color_json = json_encode($color);
-		quoteSlashe($color_json);
-		$sql = "insert into 
+		array_walk($color,"quoteSlashes");
+		
+		if(is_array($color))
+		{
+			$this->deleteColor();
+			foreach($color as $key => $val)
+			{
+				$sql = "insert into 
 				".$this->table1."
 				values
 				(
-					null
-					,'".$name."'
-					,'".$color_json."'
+					'".$val."'
 				)";
-		$this->db->execute($sql);
+				$this->db->execute($sql);
+			}
+		}
+		
 		//echo $sql;
 	}
 	
-	function getPage($nowpage)
+	function getPage()
     {
-		$nowpage = intval($nowpage);
-		$pagesize = 10;
-		$MenuSize = 10;
-		if($nowpage==0 || $nowpage=='') $nowpage=1;
-		
 		$sql = "select *
 				from ".$this->table1."
 				order by
 				name
 				asc";
-		$page=new paging($this->db,$sql,$pagesize,$nowpage,$MenuSize);
-		$pagecount=$page->getPageCount();
-		$nowpage=$page->getNowPage();
-		$pageMenu=$page->getPagelink(true);
-		$pageMenu=str_replace('[=slink=]','',$pageMenu);
-		$ary['pageMenu']=$pageMenu;
-		$ary['nowpage']=$nowpage;
-		$ary['pagecount']=$pagecount;
+		$this->db->execute($sql);
 		while($rs = $this->db->getNext())
 		{
-			$ary['data'][] = array(
-				'color_id' 			=> 		$rs->color_id
-				,'name' 			=> 		$rs->name
-			);
+			$ary[] = $rs->name;
+			
 		}
 		return $ary;
 		
-	}
-	
-	function getColor($color_id)
-	{
-		$color_id = intval($color_id);
-		$sql = "select * 
-				from ".$this->table1."
-				where 
-				color_id='".$color_id."'";
-		$this->db->execute($sql);
-		$rs = $this->db->getNext();
-		
-		$ary = array(
-			'color_id' 			=> 		$rs->color_id
-			,'name' 			=> 		$rs->name
-			,'sel_option' 		=> 		json_decode($rs->sel_option)
-		);
-		
-		return $ary;
-		
-	}
-	
-	function updateColor($post)
-	{
-		array_walk($post,"quoteSlashes");
-		extract($post);
-		$color = $this->popNullArray($color);
-		$color_json = json_encode($color);
-		quoteSlashe($color_json);
-		
-		$sql = "update ".$this->table1."
-			set
-			name='".$name."'
-			,sel_option='".$color_json."'
-			where 
-			color_id='".$color_id."'";
-		
-		$this->db->execute($sql);
-		//echo $sql;
 	}
 
-	function deleteColor($color_id)
+	function deleteColor()
 	{
-		if($_GET['del']!='true')
-		{
-			delForm($_GET,STR_DELETECONFIRM,$_POST);
-			exit;
-		}
 		$sql = "delete from
-				".$this->table1."
-				where
-				color_id='".$color_id."'";
+				".$this->table1;
 		$this->db->execute($sql);
 	}
 	
@@ -158,23 +103,6 @@ class Color extends Main{
 		}
 		
 		return null;
-	}
-	
-	function getAllColorOptionName()
-	{
-		$sql = "select *
-				from ".$this->table1."
-				order by name asc";
-		$this->db->execute($sql);
-		while($rs = $this->db->getNext())
-		{
-			$ary[] = array(
-				'color_id' 		=> 		$rs->color_id
-				,'name' 		=> 		$rs->name
-			);
-		}
-		
-		return $ary;
 	}
 
 	//Front-End

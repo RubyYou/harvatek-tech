@@ -9,7 +9,7 @@ $cProduct = new Product();
 $categoriesSelect = $cProduct->getCategoriesSelect();
 
 $cColor = new Color();
-$colorSelect = $cColor->getAllColorOptionName();
+$colorSelect = $cColor->getPage();
 $cCri = new Cri();
-$criSelect = $cCri->getAllCriOptionName();
+$criSelect = $cCri->getPage();
 ?>

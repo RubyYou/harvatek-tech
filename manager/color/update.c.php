@@ -10,6 +10,6 @@ unset($cPri);
 
 
 $cColor = new Color();
-$arr = $cColor->getColor($_GET['color_id']);
+$arr = $cColor->getPage();
 
 ?>

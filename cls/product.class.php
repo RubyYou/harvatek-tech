@@ -68,6 +68,22 @@ class Product extends Main{
 		$keyAry['table_id'] = $table_id;
 		$keyAry['products_id'] = $products_id;
 		
+		$color_options_ = '';
+		if(is_array($color_options)){
+			foreach($color_options as $key => $val){
+				$color_options_ .= ','.$val;
+			}
+			$color_options_ = preg_replace('/,/','',$color_options_,1);
+		}
+		
+		$cri_options_ = '';
+		if(is_array($cri_options)){
+			foreach($cri_options as $key => $val){
+				$cri_options_ .= ','.$val;
+			}
+			$cri_options_ = preg_replace('/,/','',$cri_options_,1);
+		}
+		
 		
 		$order_num=$this->get_order($keyAry,false,$this->table1);
 		$sql = "insert into 
@@ -82,9 +98,10 @@ class Product extends Main{
 					,'".$datasheet."'
 					,'".$ext."'
 					,'".$quantity_visible_."'
-					,'".$color_options."'
-					,'".$cri_options."'
+					,'".$color_options_."'
+					,'".$cri_options_."'
 					,'".$content."'
+					,0
 					,'".$order_num."'
 				)";
 		$this->db->execute($sql);
@@ -296,6 +313,7 @@ class Product extends Main{
 				,'color_options'	=>		$rs->color_options
 				,'cri_options'		=>		$rs->cri_options
 				,'content'			=>		$rs->content
+				,'featured'			=>		$rs->featured
 				,'order_num' 		=> 		$rs->order_num
 			);
 		}
@@ -325,6 +343,7 @@ class Product extends Main{
 				,'color_options'	=>		$rs->color_options
 				,'cri_options'		=>		$rs->cri_options
 				,'content'			=>		$rs->content
+				,'featured'			=>		$rs->featured
 				,'order_num' 		=> 		$rs->order_num
 			);
 		
@@ -352,6 +371,23 @@ class Product extends Main{
 		$arr = $this->getProduct($product_id);
 		$o_products_id = $arr['products_id'];
 		$o_table_id = $arr['table_id'];
+		
+		$color_options_ = '';
+		if(is_array($color_options)){
+			foreach($color_options as $key => $val){
+				$color_options_ .= ','.$val;
+			}
+			$color_options_ = preg_replace('/,/','',$color_options_,1);
+		}
+		
+		$cri_options_ = '';
+		if(is_array($cri_options)){
+			foreach($cri_options as $key => $val){
+				$cri_options_ .= ','.$val;
+			}
+			$cri_options_ = preg_replace('/,/','',$cri_options_,1);
+		}
+		
 		$sql = '';
 		if($o_products_id == $products_id && $o_table_id == $table_id)
 		{
@@ -363,8 +399,8 @@ class Product extends Main{
 				,dimension='".$dimension."'
 				,datasheet='".$datasheet."'
 				,quantity_visible = '".$quantity_visible_."'
-				,color_options = '".$color_options."'
-				,cri_options = '".$cri_options."'
+				,color_options = '".$color_options_."'
+				,cri_options = '".$cri_options_."'
 				,content = '".$content."'";
 			
 			if($ext != '')
@@ -391,8 +427,8 @@ class Product extends Main{
 				,dimension='".$dimension."'
 				,datasheet='".$datasheet."'
 				,quantity_visible = '".$quantity_visible_."'
-				,color_options = '".$color_options."'
-				,cri_options = '".$cri_options."'
+				,color_options = '".$color_options_."'
+				,cri_options = '".$cri_options_."'
 				,content = '".$content."'
 				,order_num = '".$order_num."'";
 			if($ext != '')
@@ -401,7 +437,7 @@ class Product extends Main{
 			$sql .= " where 
 					product_id='".$product_id."'";
 		}
-		
+		//echo $sql;
 		$this->db->execute($sql);
 		if($ext != '')
 		{
@@ -412,6 +448,56 @@ class Product extends Main{
 				die(STR_UPLOADFAIL);
 			}
 		}
+	}
+	
+	function updateFeatured($product_id,$featured)
+	{
+		$product_id = intval($product_id);
+		$featured = intval($featured);
+		if($featured == 1){
+			$sql = "select
+				count(featured) as count
+				from ".$this->table1."
+				where
+				featured = 1";
+			$this->db->execute($sql);
+			$rs = $this->db->getNext();
+			if($rs->count < 6){
+				$sql = "update ".$this->table1."
+				set
+				featured = '".$featured."'
+				where
+				product_id = '".$product_id."'";
+				if($this->db->execute($sql)){
+					return 'ok';
+				}
+				else{
+					return 'error';
+				}
+			}
+			else{
+				return 'full';
+			}
+			
+		}
+		else{
+			$sql = "update ".$this->table1."
+				set
+				featured = '".$featured."'
+				where
+				product_id = '".$product_id."'";
+				if($this->db->execute($sql)){
+					return 'ok';
+				}
+				else{
+					return 'error';
+				}
+		}
+		
+		
+		
+		
+		
 	}
 
 	function deleteProduct($product_id)

@@ -6,8 +6,8 @@ if(!$cPri->checkLogin()){parentGoto(BGM_ROOT);}
 unset($cPri);
 /*permission*/
 /*code*/
-$_POST['cri_id'] = intval($_GET['cri_id']);
+
 $cCri = new Cri();
-$cCri->updateCri($_POST);
-goto_('list.php');
+$cCri->addCri($_POST);
+goto_('update.php');
 ?>

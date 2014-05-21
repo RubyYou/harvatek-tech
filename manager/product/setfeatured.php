@@ -7,7 +7,10 @@ if(!$cPri->checkLogin()){parentGoto(BGM_ROOT);}
 unset($cPri);
 /*permission*/
 /*code*/
-$cCir = new Cir();
-$cCir->deleteCir($_GET['cir_id']);
-header('Location:list.php?nowpage='.$_GET["nowpage"]);
+
+$product_id = intval($_POST['i']);
+$featured = ($_POST['v'] == true) ? 1 : 0;
+$cProduct = new Product();
+echo $cProduct->updateFeatured($product_id,$featured);
+unset($cProduct);
 ?>

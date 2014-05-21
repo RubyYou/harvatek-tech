@@ -64,14 +64,11 @@ require_once WEB_PATH.'include/head.inc.php';
         <tr>
           <td class="title alignright">Color Options</td>
           <td>
-            <select name="color_options">
-              <option value="-1">None</option>
+            <select name="color_options[]" multiple="multiple" size="5" style="width: 200px;">
               <?php
-              if(count($colorSelect) > 0)
-              {
-                foreach($colorSelect as $key => $val)
-                {
-                  echo '<option value="'.$colorSelect[$key]['color_id'].'">'.$colorSelect[$key]['name'].'</option>';
+              if(is_array($colorSelect)){
+                foreach($colorSelect as $key => $val){
+                  echo '<option value="'.$val.'">'.$val.'</option>';
                 }
               }
               ?>
@@ -81,14 +78,11 @@ require_once WEB_PATH.'include/head.inc.php';
         <tr>
           <td class="title alignright">Cri Options</td>
           <td>
-            <select name="cri_options">
-              <option value="-1">None</option>
+            <select name="cri_options[]" multiple="multiple" size="5" style="width: 200px;">>
               <?php
-              if(count($criSelect) > 0)
-              {
-                foreach($criSelect as $key => $val)
-                {
-                  echo '<option value="'.$criSelect[$key]['cri_id'].'">'.$criSelect[$key]['name'].'</option>';
+              if(is_array($criSelect)){
+                foreach($criSelect as $key => $val){
+                  echo '<option value="'.$val.'">'.$val.'</option>';
                 }
               }
               ?>

@@ -8,8 +8,11 @@ require_once WEB_PATH.'include/head.inc.php';
 <script src="<?php echo WEB_ROOT.'libraries/js/';?>ckeditor.js"></script>
 <style>
   #update_wrap table.update_table{
-    width:800px;
+    width:300px;
     /*border: 1px #ccc solid;*/
+  }
+  #update_wrap table.update_table input{
+    width: 100%;
   }
   #update_wrap table.update_table td.title{
     /*border: 1px #ccc solid;*/
@@ -21,7 +24,12 @@ require_once WEB_PATH.'include/head.inc.php';
   .sample{
     display: none;
   }
-  .content_table{
+  #update_wrap table.submit{
+    margin: 0 auto;
+    width:300px;
+    text-align: center;
+  }
+  tr.item td,tr.first td{
     text-align: center;
   }
 </style>
@@ -34,47 +42,46 @@ require_once WEB_PATH.'include/head.inc.php';
   </div>
   <div id="main">
     <div id="update_wrap">
-      <form name="form" action="update_.php?cri_id=<?php echo $arr['cri_id'];?>" method="POST" enctype="multipart/form-data" onsubmit="return check();">
-      <table class="update_table">
+      <form name="form" action="update_.php" method="POST" enctype="multipart/form-data" onsubmit="return check();">
+      <table class="update_table fancyTable">
         <tr>
-          <td class="title alignright">Name:</td>
-          <td>
-            <input type="text" name="name" value="<?php echo $arr['name'];?>"/>
-          </td>
+          <th width="200">Name</th>
+          <th width="40"><?php echo STR_EDIT;?></th>
         </tr>
-        <tr>
-          <td class="title alignright">Option:</td>
-          <td>
-            <table class="content_table">
-              <?php
-              if(count($arr['sel_option']) > 0)
-                foreach($arr['sel_option'] as $key => $val)
-                {
-                  $val = htmlspecialchars($val);
-                  if($key == 0)
-                  {
-                      echo <<< EOF
-                      <tr class="first">
-                        <td><input type="text" name="cri[]" size="50" value="$val"/></td>
-                        <td><div onclick="addItem();" class="btn"><img src="../images/item_add.png"></div></td>
-                      </tr>
+        
+        <?php
+        if(is_array($arr)){
+          foreach($arr as $key => $val){
+            $val = htmlspecialchars($val);
+            if($key == 0){
+                echo <<< EOF
+                <tr class="first">
+                  <td><input type="text" name="cri[]" size="50" value="$val"/></td>
+                  <td><div onclick="addItem();" class="btn"><img src="../images/item_add.png"></div></td>
+                </tr>
 EOF;
-                  }
-                  else
-                  {
-                      echo <<< EOF
-                      <tr class="item">
-                        <td><input type="text" name="cri[]" size="50" value="$val"/></td>
-                        <td><div onclick="delItem($(this));" class="btn"><img src="../images/item_del.png"></div></td>
-                      </tr>
+            }
+            else{
+                echo <<< EOF
+                <tr class="item">
+                  <td><input type="text" name="cri[]" size="50" value="$val"/></td>
+                  <td><div onclick="delItem($(this));" class="btn"><img src="../images/item_del.png"></div></td>
+                </tr>
 EOF;
-                  }
-                }
-              ?>
-              
-            </table>
-          </td>
-        </tr>
+            }
+          }
+        }
+        else{
+          echo <<< EOF
+                <tr class="first">
+                  <td><input type="text" name="cri[]" size="50" value=""/></td>
+                  <td><div onclick="addItem();" class="btn"><img src="../images/item_add.png"></div></td>
+                </tr>
+EOF;
+        }
+        ?>
+      </table>
+      <table class="submit">
         <tr>
             <td colspan="2"><div align="center"><input type="submit" value="<?php echo STR_SUBMIT;?>"></div></td>
         </tr>
@@ -85,6 +92,14 @@ EOF;
   <div id="footer">
     <?php require_once '../includes/copyright.php';?>
   </div>
+</div>
+<div class="sample">
+  <table>
+    <tr class="item">
+      <td><input type="text" name="cri[]" size="50" value=""/></td>
+      <td><div onclick="delItem($(this));" class="btn"><img src="../images/item_del.png"></div></td>
+    </tr>
+  </table>
 </div>
 </body>
 <script type="text/javascript">
@@ -109,6 +124,14 @@ EOF;
     }
     else
       return true;
+  }
+  
+  function addItem() {
+    $('.update_table tr:last').after($('.sample tr.item').clone());
+  }
+  
+  function delItem(obj) {
+    obj.parent().parent().remove();
   }
 </script>
 </html>

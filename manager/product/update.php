@@ -65,17 +65,16 @@ require_once WEB_PATH.'include/head.inc.php';
         <tr>
           <td class="title alignright">Color Options</td>
           <td>
-            <select name="color_options">
-              <option value="-1">None</option>
+            <select name="color_options[]" multiple="multiple" size="5" style="width: 200px;">
               <?php
-              if(count($colorSelect) > 0)
-              {
-                foreach($colorSelect as $key => $val)
-                {
+              if(is_array($colorSelect)){
+                $colorOptionArr = explode(',',$arr['color_options']);
+                foreach($colorSelect as $key => $val){
                   $selected = '';
-                  if($arr['color_options'] == $colorSelect[$key]['color_id'])
+                  if(in_array($val,$colorOptionArr)){
                     $selected = 'selected="selected"';
-                  echo '<option value="'.$colorSelect[$key]['color_id'].'" '.$selected.' >'.$colorSelect[$key]['name'].'</option>';
+                  }
+                  echo '<option value="'.$val.'" '.$selected.'>'.$val.'</option>';
                 }
               }
               ?>
@@ -85,17 +84,16 @@ require_once WEB_PATH.'include/head.inc.php';
         <tr>
           <td class="title alignright">Cri Options</td>
           <td>
-            <select name="cri_options">
-              <option value="-1">None</option>
+            <select name="cri_options[]" multiple="multiple" size="5" style="width: 200px;">>
               <?php
-              if(count($criSelect) > 0)
-              {
-                foreach($criSelect as $key => $val)
-                {
+              if(is_array($criSelect)){
+                $criOptionArr = explode(',',$arr['cri_options']);
+                foreach($criSelect as $key => $val){
                   $selected = '';
-                  if($arr['cri_options'] == $criSelect[$key]['cri_id'])
+                  if(in_array($val,$criOptionArr)){
                     $selected = 'selected="selected"';
-                  echo '<option value="'.$criSelect[$key]['cri_id'].'" '.$selected.'>'.$criSelect[$key]['name'].'</option>';
+                  }
+                  echo '<option value="'.$val.'" '.$selected.'>'.$val.'</option>';
                 }
               }
               ?>

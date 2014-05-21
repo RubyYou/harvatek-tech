@@ -10,6 +10,6 @@ unset($cPri);
 
 
 $cCri = new Cri();
-$arr = $cCri->getCri($_GET['cri_id']);
+$arr = $cCri->getPage();
 
 ?>
