@@ -76,4 +76,8 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
   是在前端頁面要有這功能嗎？還是後台搜尋？
   >> 也許以上的這兩個功能再加上首頁的list可以讓我試試看，讓我上傳完產品，upload上去後。
   如果時間上ok的話我是可以讓你做看看
+  
+- 2014-05-22
+  featured 的後台功能我加上去了！首頁我還沒套
+  完成Color & Cri的修改，妳再看看這樣應該可以
 
