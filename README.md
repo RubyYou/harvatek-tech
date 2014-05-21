@@ -70,6 +70,7 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
   你跟你朋友說的時間是什麼時候？
   我可以先把資料庫清空，讓你上傳完之後，再傳到現在網站的位置。
   也可以邊測試看看有沒有問題。
+  * 我這邊的話，先讓我把Color跟CRI的template改好後！！就可以開始
   
   >>還有我想問搜詢產品編號會不會很難? 我們想加加看這個功能！
   是在前端頁面要有這功能嗎？還是後台搜尋？
