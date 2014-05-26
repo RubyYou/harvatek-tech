@@ -30,11 +30,11 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="brands.php">Harvatek brands</a></li>
-						<li><a href="#">Display</a></li>
-						<li><a href="#">SMD LED</a></li>
-						<li><a href="#">Through Hole LED</a></li>
-						<li><a href="#">Infrared Emitter/Sensor/Coupler</a></li>
-						<li><a href="#">UV LED</a></li>
+						<li><a href="product.php?t=4&ps=4#Display-Through-Hole-Display-Numeric">Display</a></li>
+						<li><a href="product.php?t=2&ps=3#SMD-LED">SMD LED</a></li>
+						<li><a href="product.php?t=2&ps=7#Through-Hole-LED">Through Hole LED</a></li>
+						<li><a href="product.php?t=2&ps=12#Infrared-Emitter-Sensor-Coupler">Infrared Emitter/Sensor/Coupler</a></li>
+						<li><a href="product.php?t=1&ps=8">UV LED</a></li>
 					</ul>
 				</li>
 				<li><a class="dropdown-toggle" data-toggle="dropdown">
