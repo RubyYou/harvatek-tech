@@ -775,5 +775,33 @@ class Product extends Main{
 		return $path;
 	}
 
+	function getFeatured()
+	{
+		$sql = "select *
+				from ". $this->table1 . "
+				where featured = 1
+				order by
+				name
+				asc";
+		$this->db->execute($sql);
+		while($rs = $this->db->getNext())
+		{
+			$ary[] = array(
+				'product_id' 		=> 		$rs->product_id
+				,'table_id' 		=> 		$rs->table_id
+				,'products_id'		=>		$rs->products_id
+				,'name' 			=> 		$rs->name
+				,'dimension' 		=> 		$rs->dimension
+				,'datasheet' 		=> 		$rs->datasheet
+				,'ext' 				=> 		$rs->ext
+				,'quantity_visible'	=>		$rs->quantity_visible
+				,'color_options'	=>		$rs->color_options
+				,'cri_options'		=>		$rs->cri_options
+				,'content'			=>		$rs->content
+				,'order_num' 		=> 		$rs->order_num
+			);
+		}
+		return $ary;
+	}
 }
 ?>

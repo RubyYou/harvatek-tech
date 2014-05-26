@@ -1,4 +1,4 @@
-
+<?php include_once 'index.c.php';?>
 
 <?php include("includes/header.php");?>
 
@@ -49,12 +49,10 @@
 			<h3 class="text-center">News</h3>
 
 			<!-- Latest Posts -->
-			<p> <a href="news.php">Harvatek Technologies Implements New Product Branding Strategy</a><br/>
-				<span class="date">Novemeber, 19.2014<span></p>
+			<p>
+				<a href="news.php"><?php echo $newsArr['name'];?></a><br/>
+				<span class="date"><?php echo $newsArr['post_date'];?><span></p>
 			<hr/>
-			<p> xxxxx / xxxxxx / xxxxxx </p>
-			<hr/>
-			<p> xxxxx / xxxxxx / xxxxxx </p>
 		</div>
 	</div>
 </section>
@@ -66,54 +64,24 @@
 				<div class="col-sm-4 hidden-xs"><hr/></div>
 			</div>
 			<div class="row">
-				<div class="col-sm-2 col-xs-4 text-center">
-					<div class="featured text-center">
-					<a href="#" >
-						<img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="HTF199">
-						<p>HTF199</p>
-					</a>
-					</div>
-				</div>
-				<div class="col-sm-2 col-xs-4 text-center">
-					<div class="featured text-center">
-					<a href="#">
-						<img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
-						<p>HTF199</p>
-					</a>
-					</div>
-				</div>
-				<div class="col-sm-2 col-xs-4 text-center">
-					<div class="featured text-center">
-					<a href="#">
-						<img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
-						<p>HTF199</p>
-					</a>
-					</div>
-				</div>
-				<div class="col-sm-2 col-xs-4 text-center">
-					<div class="featured text-center">
-					<a href="#">
-						<img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
-						<p>HTF199</p>
-					</a>
-					</div>
-				</div>
-				<div class="col-sm-2 col-xs-4 text-center">
-					<div class="featured text-center">
-					<a href="#">
-						<img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
-						<p>HTF199</p>
-					</a>
-					</div>
-				</div>
-				<div class="col-sm-2 col-xs-4 text-center">
-					<div class="featured text-center">
-					<a href="#">
-						<img src="http://harvatek-tech.com/wp-content/uploads/2013/07/HTF199-90x90.jpg" alt="...">
-						<p>HTF199</p>
-					</a>
-					</div>
-				</div>
+				<?php
+				if(is_array($arr))
+				{
+					foreach($arr as $key => $val)
+					{
+						echo '
+								<div class="col-sm-2 col-xs-4 text-center">
+									<div class="featured text-center">
+										<a href="details.php?i='.$arr[$key]['product_id'].'" >
+										<img src="'.$cProduct->webRoot.$arr[$key]['product_id'].$arr[$key]['ext'].'" alt="'.$arr[$key]['name'].'">
+										<p>'.$arr[$key]['name'].'</p>
+										</a>
+									</div>
+								</div>
+						';
+					}
+				}
+				?>
 			</div>
 		</div>
 </section>

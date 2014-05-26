@@ -1,4 +1,4 @@
-
+<?php include_once 'brands.c.php';?>
 
 <?php include("includes/header.php");?>
 

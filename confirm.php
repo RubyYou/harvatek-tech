@@ -50,20 +50,53 @@
 				<?php
 				if(count($cartItems))
 				{
+					/***************** email.html *****************/
+					$emailList = '';
+					
+					
 					foreach($cartItems as $key => $val)
 					{
+						$color = ($cartItems[$key]['color'] == '') ? '' : '<p> Color:'.$cartItems[$key]['color'].'</p>';
+						$cri = ($cartItems[$key]['cri'] == '') ? '' : '<p> Cri:'.$cartItems[$key]['cri'].'</p>';
 				?>
 							<tr>
 								<td><img src="<?php echo $cartItems[$key]['img'];?>" width="60" height="60" alt="product-thumbnails"></td>
 								<td><a href="details.php?i=<?php echo $cartItems[$key]['id'];?>"><?php echo $cartItems[$key]['name'];?></a></td>
 								<td><?php echo $cartItems[$key]['quantity_info'];?></td>
 								<td>
-									<?php echo ($cartItems[$key]['color'] == '') ? '' : '<p> Color:'.$cartItems[$key]['color'].'</p>';?>
-									<?php echo ($cartItems[$key]['cri'] == '') ? '' : '<p> Cri:'.$cartItems[$key]['cri'].'</p>';?>
+									<?php echo $color;?>
+									<?php echo $cri;?>
 								</td>
 							</tr>
 				<?php
+							$emailList .= '<tr style="background:#EDECEC; color:#183648;" align="center">
+												<td height="35">'.$cartItems[$key]['name'].'</td>
+												<td>'
+													.$color . $cri .
+												'</td>
+												<td>'.$cartItems[$key]['quantity_info'].'</td>
+											</tr>
+											';
 					}
+					
+					
+					
+					
+					$cMail=new Mail(FWEB_SERVICEMAILTITLE,FWEB_WEBSITEMAIL,$form['email'],"email.html");
+					$cMail->setBcc(FWEB_SERVICEMAIL1);
+					$cMail->assign("country",$form['country']);
+					$cMail->assign("address",$form['address']);
+					$cMail->assign("first_name",$form['first_name']);
+					$cMail->assign("postcode",$form['postcode']);
+					$cMail->assign("last_name",$form['last_name']);
+					$cMail->assign("address_option",$form['address_option']);
+					$cMail->assign("additionalinfo",$form['additionalinfo']);
+					$cMail->assign("email",$form['email']);
+					$cMail->assign("phone",$form['phone']);
+					$cMail->assign("list",$emailList);
+					$cMail->assign("addtime",date("Y-m-d H:i:s"));
+					$cMail->replace();
+					$cMail->send();
 				}
 				?>
 			</tbody>

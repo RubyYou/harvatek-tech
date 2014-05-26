@@ -17,7 +17,22 @@
 
 		<div class="container text-center">
 			<div class="title">
-				<img src="images/inolux_logo.png" alt="inolux_logo" /> 
+				<?php
+				$categoryArr = explode(' / ' , $path);
+				if($categoryArr[0] == 'Display' || $categoryArr[0] == 'Through Hole LED' || $categoryArr[0] == 'UV LED' )
+				{
+					echo '<img src="images/inolux_logo.png" alt="inolux_logo" />';
+				}
+				else if($categoryArr[0] == 'Infrared Emitter/Sensor/Coupler')
+				{
+					echo '<img src="images/CT_brand.png" alt="ctm_logo" />';
+				}
+				else if($categoryArr[0] == 'SMD LED')
+				{
+					echo '<img src="images/harvatek_brand.png" alt="harvatek_logo" />';
+				}
+				?>
+				
 				<h3> PRODUCTS </h3>
 			</div>
 		</div>
@@ -56,13 +71,21 @@
 						{
 							foreach($product_arr['data'] as $key => $val)
 							{
-								$datasheetLink = ($product_arr['data'][$key]['datasheet'] == '') ? 'javascript:void(0);' : $product_arr['data'][$key]['datasheet'];
+								$datasheetLink = ($product_arr['data'][$key]['datasheet'] == '') ? '' : $product_arr['data'][$key]['datasheet'];
 						?>
 								<tr>
 									<td><img src="<?php echo $cProduct->webRoot.$product_arr['data'][$key]['product_id'].$product_arr['data'][$key]['ext'];?>" width="60" height="60" alt="product-thumbnails"></td>
 									<td><?php echo $product_arr['data'][$key]['name'];?></td>
 									<td><?php echo $product_arr['data'][$key]['dimension'];?></td>
-									<td><a href="<?php echo $datasheetLink;?>"><i class="fa fa-download fa-2x"></i></a></td>
+									<td>
+										<?php
+										if($datasheetLink != '')
+										{
+											echo '<a href="'.$datasheetLink.'"><i class="fa fa-download fa-2x"></i></a>';
+										}
+										?>
+										
+									</td>
 									<td><a href="details.php?i=<?php echo $product_arr['data'][$key]['product_id'];?>" class="btn btn-primary">Details</a></td>
 								</tr>
 						<?php

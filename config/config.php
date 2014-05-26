@@ -25,10 +25,10 @@ define(WEB_ROOT,'http://'.WEB_HOST.'/harvatek-tech/');
 define(WEB_PATH,'/home/a5099492/public_html/harvatek-tech/');
 define(WEB_TITLE,'harvatek-tech');
 define(FWEB_TITLE,'harvatek-tech');
-define(FWEB_WEBSITEMAIL,'nick@targets.com.tw');
-define(FWEB_SERVICEMAIL1,'nick@targets.com.tw');
+define(FWEB_WEBSITEMAIL,'shih@svisualjoint.co.uk');
+define(FWEB_SERVICEMAIL1,'shih@svisualjoint.co.uk');
 define(FWEB_SERVICEMAIL2,'');
-define(FWEB_SERVICEMAILTITLE,'');
+define(FWEB_SERVICEMAILTITLE,'Harvatek Technologies');
 /***************************************
  *Define-
  *DB path
