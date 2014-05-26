@@ -42,7 +42,7 @@
 	      		<p><b>3350 Scott Blvd #41-01, Santa Clara, CA, 95054</b><br/>
 					TEL:+1 408 884 3871<br/>
 					Fax: +1 408 844 9618<br/>
-					Email: sales@harvatek-tech.com<br/>
+					Email: <a href="mailto:sales@harvatek-tech.com">sales@harvatek-tech.com</a><br/>
 					
 	      		</p>
 	      	</div>
