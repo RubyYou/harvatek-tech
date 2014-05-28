@@ -80,7 +80,7 @@
 			<hr/>
 		<div class="row form-group">
 			<ul class="col-sm-3 col-xs-6">
-				<li><input type="checkbox" value="display" name="inquiryProduct[]"><b>Display</b></li>
+				<li><input type="checkbox" value="Display" name="inquiryProduct[]"><b>Display</b></li>
 				<li><input type="checkbox" value="Numeric" name="inquiryProduct[]" >Numeric</li>
 				<li><input type="checkbox" value="Dot-Matrix" name="inquiryProduct[]">Dot Matrix</li>
 				<li><input type="checkbox" value="SMD-Display" name="inquiryProduct[]">SMD Display</li>

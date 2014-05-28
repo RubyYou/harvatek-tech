@@ -72,8 +72,29 @@ class Contact extends Main{
 			foreach($inquiryProduct as $key => $val){
 				$cMail->assign($val,$style);
 			}
+			$cMail->replace();
+			$cMail->assign('display','');
+			$cMail->assign('SMD-LED','');
+			$cMail->assign('Through-Hole-LED','');
+			$cMail->assign('Infrared','');
+			$cMail->assign('Numeric','');
+			$cMail->assign('Surface-Mount','');
+			$cMail->assign('Round-Lamp','');
+			$cMail->assign('Emitter','');
+			$cMail->assign('Dot-Matrix','');
+			$cMail->assign('Back-Lighting','');
+			$cMail->assign('Oval-Lamp','');
+			$cMail->assign('Sensor','');
+			$cMail->assign('SMD-Display','');
+			$cMail->assign('General-Lighting','');
+			$cMail->assign('Piranha','');
+			$cMail->assign('Photo-Coupler','');
+			$cMail->assign('LM-80','');
+			$cMail->assign('Lead-Frame-Axial','');
+			$cMail->assign('UV-LED','');
+			$cMail->assign('Lamp-with-housing','');
 			$cMail->assign("addtime",date("Y-m-d H:i:s"));
-			$cMail->replace(true);
+			$cMail->replace();
 			$cMail->send();
 			return 1;
 		}
