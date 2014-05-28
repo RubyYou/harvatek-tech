@@ -58,9 +58,29 @@ class Contact extends Main{
 					,'".date('Y-m-d H:i:s')."'
 				)";
 		if($this->db->execute($sql))
+		{
+			$style = 'color:#d9534f;';
+			$cMail=new Mail(FWEB_SERVICEMAILTITLE,FWEB_WEBSITEMAIL,FWEB_SERVICEMAIL1,WEB_PATH."contactMail.html");
+			$cMail->assign("webroot",WEB_ROOT);
+			$cMail->assign("name",htmlspecialchars($name));
+			$cMail->assign("company",htmlspecialchars($company));
+			$cMail->assign("email",htmlspecialchars($email));
+			$cMail->assign("position",htmlspecialchars($position));
+			$cMail->assign("phone",htmlspecialchars($phone));
+			$cMail->assign("feedback",nl2br(htmlspecialchars(stripcslashes($feedback))));
+			$cMail->assign("Application_Assist",nl2br(htmlspecialchars(stripcslashes($Application_Assist))));
+			foreach($inquiryProduct as $key => $val){
+				$cMail->assign($val,$style);
+			}
+			$cMail->assign("addtime",date("Y-m-d H:i:s"));
+			$cMail->replace(true);
+			$cMail->send();
 			return 1;
+		}
 		else
+		{
 			return -1;
+		}
 	}
     
 	function getPage($nowpage)

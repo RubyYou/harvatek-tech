@@ -84,6 +84,7 @@
 					
 					$cMail=new Mail(FWEB_SERVICEMAILTITLE,FWEB_WEBSITEMAIL,$form['email'],"email.html");
 					$cMail->setBcc(FWEB_SERVICEMAIL1);
+					$cMail->assign("webroot",WEB_ROOT);
 					$cMail->assign("country",$form['country']);
 					$cMail->assign("address",$form['address']);
 					$cMail->assign("first_name",$form['first_name']);

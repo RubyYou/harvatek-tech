@@ -26,7 +26,7 @@ define(WEB_ROOT,'http://'.WEB_HOST.'/harvatek-tech-git/');
 define(WEB_PATH,$_SERVER['DOCUMENT_ROOT'].'/harvatek-tech-git/');
 define(WEB_TITLE,'harvatek-tech');
 define(FWEB_TITLE,'harvatek-tech');
-define(FWEB_WEBSITEMAIL,'nick14@targets.com.tw');
+define(FWEB_WEBSITEMAIL,'nick@targets.com.tw');
 define(FWEB_SERVICEMAIL1,'nick@targets.com.tw');
 define(FWEB_SERVICEMAIL2,'');
 define(FWEB_SERVICEMAILTITLE,'Harvatek Technologies');

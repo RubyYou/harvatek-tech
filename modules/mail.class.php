@@ -26,10 +26,14 @@ class Mail{
 		return $BODY;
    }
 
-   function replace(){
+   function replace($replaceAll2Space = false){
    		if(is_array($this->ary)){
 			foreach($this->ary as $key => $value){
 				$this->BODY = str_replace("==".$key."==",$value,$this->BODY);
+			}
+			
+			if($replaceAll2Space){
+			   $this->BODY = preg_replace('/==[\w\W]+==/','',$this->BODY);
 			}
 		}
    }
