@@ -81,3 +81,12 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
   featured 的後台功能我加上去了！首頁我還沒套
   完成Color & Cri的修改，妳再看看這樣應該可以
 
+- 2014-05-29
+  明天準備上線！
+  要麻煩你給我，
+  1.ftp主機位置
+  你的ftp主機位置應該是你上次給我的那個？
+  2.mysql(phpMyAdmin)的位置
+  帳號&密碼
+  
+  
