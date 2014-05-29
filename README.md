@@ -120,4 +120,7 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
   uploads
   後台上傳的資料夾
   
+  manager
+  管理介面資料夾
+  
   
