@@ -73,7 +73,7 @@
 								<div class="col-sm-2 col-xs-4 text-center">
 									<div class="featured text-center">
 										<a href="details.php?i='.$arr[$key]['product_id'].'" >
-										<img src="'.$cProduct->webRoot.$arr[$key]['product_id'].$arr[$key]['ext'].'" alt="'.$arr[$key]['name'].'">
+										<img width="100" src="'.$cProduct->webRoot.$arr[$key]['product_id'].$arr[$key]['ext'].'" alt="'.$arr[$key]['name'].'">
 										<p>'.$arr[$key]['name'].'</p>
 										</a>
 									</div>

@@ -52,23 +52,32 @@
 				<div class="col-md-4 col-sm-4">
 					<div class="thumbnail brand">
 						<img src="images/harvatek_brand.jpg"/>
-						<div class="productLine">SMD LED</div>
+						<div class="productLine">
+							<a href="product.php?t=2&ps=3#SMD-LED">SMD LED</a>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="thumbnail brand">
 						<img src="images/inolux_brand.jpg"/>
-						<div class="productLine">Display</div>
-						<div class="productLine">Through Hole LED</div>
-						<div class="productLine">UV LED</div>
+						<div class="productLine">
+							<a href="product.php?t=4&ps=4#Display-Through-Hole-Display-Numeric">Display</a>
+						</div>
+						<div class="productLine">
+							<a href="product.php?t=2&ps=7#Through-Hole-LED">Through Hole LED</a>
+						</div>
+						<div class="productLine">
+							<a href="product.php?t=1&ps=8">UV LED</a></div>
 
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<div class="thumbnail brand">
 						<img src="images/ctm_brand.jpg"/>
-						<div class="productLine">Infrared 
-							Emitter / Sensor / Coupler</div>
+						<div class="productLine">
+							<a href="product.php?t=2&ps=12#Infrared-Emitter-Sensor-Coupler">
+								Infrared Emitter / Sensor / Coupler</a>
+						</div>
 					</div>
 				</div>
 			</div>
