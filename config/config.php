@@ -3,8 +3,8 @@
  *Error message
  **************************************/
 date_default_timezone_set('UTC');
-ini_set('display_errors', true);
-error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+ini_set('display_errors', false);
+//error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 //error_reporting(E_ALL ^ (E_NOTICE));
 //ini_set('upload_max_filesize',10240);
 

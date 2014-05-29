@@ -89,4 +89,35 @@ harvatek-tech.com // rebuild the site with understandable, generatic code.
   2.mysql(phpMyAdmin)的位置
   帳號&密碼
   
+- 2014-05-30
+  設定檔
+  config/config.main.front.php --- 前端網頁include設定
+  config/config.main.php --- 管理後台網頁include設定
+  config/config.php --- 網站設定檔
+  config/db.config.php --- 資料庫連線設定
+  config/config.local.php --- 本機測試網站設定檔
+  config/db.config.local.php --- 本機測試資料庫連線設定
+  
+  libraries
+  css --- 後台用的css
+  js --- 後台用到的JS
+  php --- 前後台共用的php程式
+  php/js.lib.php ---
+  這個特別說明一下，這是偷懶用php呼叫js的function
+  如果覺得alert內容很醜，可以來這邊調整callAlert這個function
+  
+  modules
+  自定義的class
+  這邊應該只有用到
+  Myadodb --- 資料庫套件
+  mail.class.php --- 寄送mail
+  main.class.php --- 資料庫class
+  mydb.class.php --- 資料庫class
+  paging.class.php --- 後台分頁class
+  pri.class.php --- 後台登入權限class
+  tree.class.php --- 後台側邊Tree class
+  
+  uploads
+  後台上傳的資料夾
+  
   
