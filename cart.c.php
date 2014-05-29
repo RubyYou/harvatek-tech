@@ -18,6 +18,6 @@ if(count($cartItems) > 0)
 else
 {
 	callAlert('inquiry cart empty.');
-	goto_('product.php');
+	goto_('brands.php');
 }
 ?>
