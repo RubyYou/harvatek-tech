@@ -21,11 +21,11 @@ define(WEB_DESCRIPTION_CN,'');
  *Front-End
  ***************************************/
 define(WEB_HOST,$_SERVER['HTTP_HOST']);//gethostbyname($_SERVER['HTTP_HOST']) || $_SERVER['HTTP_HOST'];
-define(WEB_ROOT,'http://'.WEB_HOST.'/harvatek-tech/');
-define(WEB_PATH,'/home/a5099492/public_html/harvatek-tech/');
+define(WEB_ROOT,'http://'.WEB_HOST.'/');
+define(WEB_PATH,'/home/content/55/11308255/html/');
 define(WEB_TITLE,'harvatek-tech');
 define(FWEB_TITLE,'harvatek-tech');
-define(FWEB_WEBSITEMAIL,'shih@svisualjoint.co.uk');
+define(FWEB_WEBSITEMAIL,'Harvatek Technologies<shih@svisualjoint.co.uk>');
 define(FWEB_SERVICEMAIL1,'shih@svisualjoint.co.uk');
 define(FWEB_SERVICEMAIL2,'');
 define(FWEB_SERVICEMAILTITLE,'Harvatek Technologies');

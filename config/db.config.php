@@ -1,6 +1,6 @@
 <?php
-$server = "mysql16.000webhost.com";
-$database = "a5099492_tech";
-$user = "a5099492_tech";
-$password = "harvatek-tech";
+$server = "50.63.106.53";
+$database = "harvateck";
+$user = "harvateck";
+$password = "Tech@2013";
 ?>
