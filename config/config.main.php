@@ -3,7 +3,7 @@
     session_start();
     
     
-    include_once 'config.php';
+    include_once 'config.local.php';
     /*
      *function
      */

@@ -153,21 +153,37 @@ class News extends Main{
 		$news_id = intval($news_id);
 		$sql = "select * 
 				from ".$this->table1;
-		if($news_id == 0)
-			$sql .= " order by post_date desc limit 0,1";
-		else
+		if($news_id == 0) {
+			/*index.php
+			 *因為在index其實不會傳入news_id
+			 *所以limit 3要加在這
+			 */
+			$sql .= " order by post_date desc limit 3";
+		}
+		else {
+			/*news.php
+			 *對應傳入的id抓取對應資料
+			 */
 			$sql .= " where 
 					news_id='".$news_id."'";
+		}
 		$this->db->execute($sql);
-		$rs = $this->db->getNext();
-		
-		$ary = array(
-			'news_id' 			=> 		$rs->news_id
-			,'name' 			=> 		$rs->name
-			,'post_date' 		=> 		$rs->post_date
-			,'content'			=>		$rs->content
-		);
-		
+		/*
+		 *$rs = $this->db->getNext()
+		 *這樣只會抓取單筆
+		 *用while會一次把所有資料抓完
+		 *所以下面把資料丟到$ary[]的array中
+		 *回傳$ary
+		 */
+		while($rs = $this->db->getNext())
+		{
+			$ary[] = array(
+				'news_id' 			=> 		$rs->news_id
+				,'name' 			=> 		$rs->name
+				,'post_date' 		=> 		$rs->post_date
+				,'content'			=>		$rs->content
+			);
+		}
 		return $ary;
 	}
 	

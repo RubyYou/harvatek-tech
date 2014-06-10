@@ -49,10 +49,17 @@
 			<h3 class="text-center">News</h3>
 
 			<!-- Latest Posts -->
-			<p>
-				<a href="news.php"><?php echo $newsArr['name'];?></a><br/>
-				<span class="date"><?php echo $newsArr['post_date'];?><span></p>
-			<hr/>
+			<?php
+			if(is_array($newsArr)) {
+				foreach($newsArr as $key => $val) {
+						echo '	<p>
+										<a href="news.php?i='.$newsArr[$key]['news_id'].'">'.$newsArr[$key]['name'].'</a><br/>
+										<span class="date">'.$newsArr[$key]['post_date'].'<span></p>
+								<hr/>';
+				}
+			}
+			?>
+			
 		</div>
 	</div>
 </section>
