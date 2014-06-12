@@ -37,9 +37,9 @@
 	<!--  News Post locations
     ================================================== -->
 				<div class="col-md-9">
-					<h3><?php echo $arr['name'];?></h3>
-					<p class="date">Post Date : <?php echo $arr['post_date'];?> </p>
-					<?php echo $arr['content'];?>
+				<h3><?php echo $arr[0]['name'];?></h3>
+					<p class="date">Post Date : <?php echo $arr[0]['post_date'];?> </p>
+					<?php echo $arr[0]['content'];?>
 				</div>
 			</div>
 		</div>
