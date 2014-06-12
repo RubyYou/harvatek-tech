@@ -78,9 +78,9 @@
 									<td><img src="<?php echo $cProduct->webRoot.$product_arr['data'][$key]['product_id'].$product_arr['data'][$key]['ext'];?>" width="60" height="60" alt="product-thumbnails"></td>
 									<td><?php echo $product_arr['data'][$key]['name'];?></td>
 									<td><?php echo $product_arr['data'][$key]['dimension'];?></td>
-									<td><?php echo $product_arr['data'][$key]['wp'];?></td>
-									<!--<?php if ($product_arr['data'][$key]['wp'] != ''){
-										echo "<td>"+$product_arr['data'][$key]['wp']+"</td>"; 
+									<td><?php echo $product_arr['data'][$key]['wp-option'];?></td>
+									<!--<?php if ($product_arr['data'][$key]['wp-option'] != ''){
+										echo "<td>"+$product_arr['data'][$key]['wp-option']+"</td>"; 
 									};?>-->
 									
 									<td>
