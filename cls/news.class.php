@@ -146,7 +146,7 @@ class News extends Main{
 		$this->db->execute($sql);
 	}
 
-	//Front-End // try to the latest three records by myself.
+	//Front-End
 
 	function getNews_Front($news_id)
 	{
@@ -159,7 +159,6 @@ class News extends Main{
 			$sql .= " where 
 					news_id='".$news_id."'";
 		$this->db->execute($sql);
-		//$rs = $this->db->getNext();
 
 		while($rs = $this->db->getNext()){
 		$ary[] = array(
