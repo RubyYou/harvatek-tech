@@ -2,9 +2,10 @@
 /***************************************
  *Error message
  **************************************/
+//date_default_timezone_set('Asia/Taipei');
 date_default_timezone_set('UTC');
-ini_set('display_errors', false);
-//error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+ini_set('display_errors', true);
+error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 //error_reporting(E_ALL ^ (E_NOTICE));
 //ini_set('upload_max_filesize',10240);
 
@@ -21,12 +22,12 @@ define(WEB_DESCRIPTION_CN,'');
  *Front-End
  ***************************************/
 define(WEB_HOST,$_SERVER['HTTP_HOST']);//gethostbyname($_SERVER['HTTP_HOST']) || $_SERVER['HTTP_HOST'];
-define(WEB_ROOT,'http://'.WEB_HOST.'/');
-define(WEB_PATH,'/home/content/55/11308255/html/');
+define(WEB_ROOT,'http://'.WEB_HOST.'/harvatek_2014April/harvatek-tech/');
+define(WEB_PATH,$_SERVER['DOCUMENT_ROOT'].'/harvatek_2014April/harvatek-tech/');
 define(WEB_TITLE,'harvatek-tech');
 define(FWEB_TITLE,'harvatek-tech');
-define(FWEB_WEBSITEMAIL,'Harvatek Technologies<shih@svisualjoint.co.uk>');
-define(FWEB_SERVICEMAIL1,'shih@svisualjoint.co.uk');
+define(FWEB_WEBSITEMAIL,'nick@targets.com.tw');
+define(FWEB_SERVICEMAIL1,'nick@targets.com.tw');
 define(FWEB_SERVICEMAIL2,'');
 define(FWEB_SERVICEMAILTITLE,'Harvatek Technologies');
 /***************************************

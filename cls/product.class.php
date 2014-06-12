@@ -100,6 +100,7 @@ class Product extends Main{
 					,'".$quantity_visible_."'
 					,'".$color_options_."'
 					,'".$cri_options_."'
+					,'".$wp_options_."' 
 					,'".$content."'
 					,0
 					,'".$order_num."'
@@ -312,6 +313,7 @@ class Product extends Main{
 				,'quantity_visible'	=>		$rs->quantity_visible
 				,'color_options'	=>		$rs->color_options
 				,'cri_options'		=>		$rs->cri_options
+				,'wp_options'		=>		$rs->wp_options
 				,'content'			=>		$rs->content
 				,'featured'			=>		$rs->featured
 				,'order_num' 		=> 		$rs->order_num
@@ -342,6 +344,7 @@ class Product extends Main{
 				,'quantity_visible'	=>		$rs->quantity_visible
 				,'color_options'	=>		$rs->color_options
 				,'cri_options'		=>		$rs->cri_options
+				,'wp_options'		=>		$rs->wp_options
 				,'content'			=>		$rs->content
 				,'featured'			=>		$rs->featured
 				,'order_num' 		=> 		$rs->order_num
@@ -401,6 +404,7 @@ class Product extends Main{
 				,quantity_visible = '".$quantity_visible_."'
 				,color_options = '".$color_options_."'
 				,cri_options = '".$cri_options_."'
+				,wp_options = '".$wp_options_."'
 				,content = '".$content."'";
 			
 			if($ext != '')
@@ -429,6 +433,7 @@ class Product extends Main{
 				,quantity_visible = '".$quantity_visible_."'
 				,color_options = '".$color_options_."'
 				,cri_options = '".$cri_options_."'
+				,wp_options = '".$wp_options_."'
 				,content = '".$content."'
 				,order_num = '".$order_num."'";
 			if($ext != '')
@@ -633,11 +638,6 @@ class Product extends Main{
 					}
 					
 				}
-				
-				
-				
-				
-				
 				$categoriesSelect .= '
 						</ul>
 				</li>
@@ -715,6 +715,7 @@ class Product extends Main{
 				,'quantity_visible'	=>		$rs->quantity_visible
 				,'color_options'	=>		$rs->color_options
 				,'cri_options'		=>		$rs->cri_options
+				,'wp_options'		=>		$rs->wp_options
 				,'content'			=>		$rs->content
 				,'order_num' 		=> 		$rs->order_num
 			);
@@ -797,6 +798,7 @@ class Product extends Main{
 				,'quantity_visible'	=>		$rs->quantity_visible
 				,'color_options'	=>		$rs->color_options
 				,'cri_options'		=>		$rs->cri_options
+				,'wp_options'		=>		$rs->wp_options
 				,'content'			=>		$rs->content
 				,'order_num' 		=> 		$rs->order_num
 			);

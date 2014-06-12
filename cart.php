@@ -113,8 +113,8 @@
 					 <input type="number" class="form-control" name="phone" placeholder="Phone">
 					</div>
 				</div>
-
 			</div>
+			
 			<div class="col-md-6">
 				<div class="form-group">
 					<label for="address" class="col-md-3 control-label">Address</label>

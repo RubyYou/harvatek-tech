@@ -1,6 +1,6 @@
 <?php
-$server = "50.63.106.53";
-$database = "harvateck";
-$user = "harvateck";
-$password = "Tech@2013";
+$server='127.0.0.1';
+$user='root';
+$password='';
+$database='harvateck';
 ?>
