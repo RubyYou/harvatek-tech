@@ -74,6 +74,8 @@ input[type="checkbox"]{
 }
 .breadcrumb{
 	display: inline-block;
+	margin-top:0;
+	margin-bottom:10px;
 }
 .date{
 	color:$grey;
@@ -182,6 +184,14 @@ ul.navbar-nav {
 	background-color:$green;
 	&:hover{
 		background-color:lighten($green,10);
+		color:white;
+	}
+}
+.btn-search{
+	background-color:darken($blue,10);
+	padding:5px 15px;
+	&:hover{
+		background-color:lighten($blue,10);
 		color:white;
 	}
 }
