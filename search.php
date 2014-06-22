@@ -1,4 +1,4 @@
-<?php include("product.c.php");?>
+<?php include("search.c.php");?>
 
 <?php include("includes/header.php");?>
 
@@ -18,6 +18,9 @@
 		<div class="container text-center">
 			<div class="title">
 				<?php
+				/*
+				 *search 無法顯示path
+				
 				$categoryArr = explode(' / ' , $path);
 				if($categoryArr[0] == 'Display' || $categoryArr[0] == 'Through Hole LED' || $categoryArr[0] == 'UV LED' )
 				{
@@ -31,6 +34,7 @@
 				{
 					echo '<img src="images/harvatek_brand.png" alt="harvatek_logo" />';
 				}
+				*/
 				?>
 				
 				<h3> PRODUCTS </h3>
@@ -102,13 +106,14 @@
 			</div>
 
 			<ul class="pagination">
-			  <li><a href="#">&laquo;</a></li>
-			  <li><a href="#">1</a></li>
-			  <li><a href="#">2</a></li>
-			  <li><a href="#">3</a></li>
-			  <li><a href="#">4</a></li>
-			  <li><a href="#">5</a></li>
-			  <li><a href="#">&raquo;</a></li>
+			  <li><a href="?nowpage=<?php echo $product_arr['nowpage']-1;?>&k=<?php echo $_GET['k'];?>">&laquo;</a></li>
+			  <?php
+				for ($i = 1; $i <= $product_arr['pagecount'] ; $i++ )
+				{
+					echo '<li><a href="?nowpage='.$i.'&k='.$_GET['k'].'">'.$i.'</a></li>';
+				}
+			  ?>
+			  <li><a href="?nowpage=<?php echo $product_arr['nowpage']+1;?>&k=<?php echo $_GET['k'];?>">&raquo;</a></li>
 			</ul>
 		</div>
 	</div>

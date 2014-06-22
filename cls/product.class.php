@@ -805,5 +805,53 @@ class Product extends Main{
 		}
 		return $ary;
 	}
+	
+	
+	function getSearch($nowpage,$searchKey)
+    {
+		$nowpage = intval($nowpage);
+		$pagesize = 1;
+		$MenuSize = 10;
+		if($nowpage==0 || $nowpage=='') $nowpage=1;
+		
+		quoteSlashe($searchKey);
+		
+		$sql = "select *
+				from ".$this->table1."
+				where
+				name like '%".$searchKey."%'
+				order by
+				name
+				asc";
+		$page=new paging($this->db,$sql,$pagesize,$nowpage,$MenuSize);
+		$pagecount=$page->getPageCount();
+		$nowpage=$page->getNowPage();
+		$pageMenu=$page->getPagelink(true);
+		$pageMenu=str_replace('[=slink=]','',$pageMenu);
+		$ary['pageMenu']=$pageMenu;
+		$ary['nowpage']=$nowpage;
+		$ary['pagecount']=$pagecount;
+		while($rs = $this->db->getNext())
+		{
+			$ary['data'][] = array(
+				'product_id' 		=> 		$rs->product_id
+				,'table_id' 		=> 		$rs->table_id
+				,'products_id'		=>		$rs->products_id
+				,'name' 			=> 		$rs->name
+				,'dimension' 		=> 		$rs->dimension
+				,'datasheet' 		=> 		$rs->datasheet
+				,'ext' 				=> 		$rs->ext
+				,'quantity_visible'	=>		$rs->quantity_visible
+				,'color_options'	=>		$rs->color_options
+				,'cri_options'		=>		$rs->cri_options
+				,'wp_options'		=>		$rs->wp_options
+				,'content'			=>		$rs->content
+				,'featured'			=>		$rs->featured
+				,'order_num' 		=> 		$rs->order_num
+			);
+		}
+		return $ary;
+		
+	}
 }
 ?>
