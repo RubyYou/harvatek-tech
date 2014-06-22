@@ -2,8 +2,8 @@
     ================================================== -->
 	<div class="col-md-3">
 		<div class="input-group">
-		  <input type="text" class="form-control" value="Search Product..">
-		  <a class="btn btn-search input-group-addon"> Go </a>
+		  <input type="text" class="form-control" value="Search Product.." name="search">
+		  <a class="btn btn-search input-group-addon" href="javascript:window.location.href='search.php?k='+$('input[name=search]').val();"> Go </a>
 		</div>
 		<h4 class="categoryTitle">PRODUCT CATEGORIES</h4>
 		<?php echo $categoriesMenu;?>
