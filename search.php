@@ -58,6 +58,9 @@
 ================================================== -->
 		<div class="col-md-9 ">
 			<div class="table-responsive">
+				<?php
+					if(is_array($product_arr)){
+				?>
 				<table width="100%" border="1" class="text-center">
 					<thead>
 						<tr>
@@ -69,10 +72,8 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php
-						if(is_array($product_arr))
-						{
-							foreach($product_arr['data'] as $key => $val)
+						<?php 
+						foreach($product_arr['data'] as $key => $val)
 							{
 								$datasheetLink = ($product_arr['data'][$key]['datasheet'] == '') ? '' : $product_arr['data'][$key]['datasheet'];
 						?>
@@ -97,14 +98,15 @@
 						else
 						{
 						?>
-								<!--<tr><td colspan="5">No data</td></tr>-->
+							<p>No data for this search!</p>
 						<?php
 						}
 						?>
 					</tbody>
 				</table>
 			</div>
-
+			
+			<?php if(is_array($product_arr)){ ?>
 			<ul class="pagination">
 			  <li><a href="?nowpage=<?php echo $product_arr['nowpage']-1;?>&k=<?php echo $_GET['k'];?>">&laquo;</a></li>
 			  <?php
@@ -115,6 +117,11 @@
 			  ?>
 			  <li><a href="?nowpage=<?php echo $product_arr['nowpage']+1;?>&k=<?php echo $_GET['k'];?>">&raquo;</a></li>
 			</ul>
+			<?php
+			}else{
+			?>
+				
+		<?php }?>
 		</div>
 	</div>
 </section>

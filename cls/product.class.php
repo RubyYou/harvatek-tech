@@ -810,7 +810,7 @@ class Product extends Main{
 	function getSearch($nowpage,$searchKey)
     {
 		$nowpage = intval($nowpage);
-		$pagesize = 1;
+		$pagesize = 10;
 		$MenuSize = 10;
 		if($nowpage==0 || $nowpage=='') $nowpage=1;
 		
