@@ -61,4 +61,11 @@ $(document).ready(function(){
 			event.preventDefault();
 		});
 
+        $('.search-input').focus(function(){
+            $(this).attr("value","");
+        });
+        $('.search-input').blur(function(){
+            $(this).attr("value","Search Product..");
+        });
+
 }); // end document.ready

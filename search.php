@@ -17,26 +17,6 @@
 
 		<div class="container text-center">
 			<div class="title">
-				<?php
-				/*
-				 *search 無法顯示path
-				
-				$categoryArr = explode(' / ' , $path);
-				if($categoryArr[0] == 'Display' || $categoryArr[0] == 'Through Hole LED' || $categoryArr[0] == 'UV LED' )
-				{
-					echo '<img src="images/inolux_logo.png" alt="inolux_logo" />';
-				}
-				else if($categoryArr[0] == 'Infrared Emitter/Sensor/Coupler')
-				{
-					echo '<img src="images/CT_brand.png" alt="ctm_logo" />';
-				}
-				else if($categoryArr[0] == 'SMD LED')
-				{
-					echo '<img src="images/harvatek_brand.png" alt="harvatek_logo" />';
-				}
-				*/
-				?>
-				
 				<h3> PRODUCTS </h3>
 			</div>
 		</div>
