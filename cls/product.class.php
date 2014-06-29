@@ -112,9 +112,9 @@ class Product extends Main{
 			$path = $this->uploadPath.$insert_id.$ext;
 			if(!move_uploaded_file($tmpfile,$path))
 			{
-				@unlink($tmpfile);
 				die(STR_UPLOADFAIL);
 			}
+			@unlink($tmpfile);
 		}
 	}
 	
@@ -449,9 +449,9 @@ class Product extends Main{
 			$path = $this->uploadPath.$product_id.$ext;
 			if(!move_uploaded_file($tmpfile,$path))
 			{
-				@unlink($tmpfile);
 				die(STR_UPLOADFAIL);
 			}
+			@unlink($tmpfile);
 		}
 	}
 	
