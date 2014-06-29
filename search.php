@@ -39,7 +39,7 @@
 		<div class="col-md-9 ">
 			<div class="table-responsive">
 				<?php
-					if(is_array($product_arr)){
+					if(!empty($product_arr['data'])){
 				?>
 				<table width="100%" border="1" class="text-center">
 					<thead>
@@ -78,7 +78,9 @@
 						else
 						{
 						?>
-							<p>No data for this search!</p>
+						<div class="well">
+							<h4 class="text-center">Sorry! There is no data for this search!</h4>
+						</div>
 						<?php
 						}
 						?>
@@ -86,7 +88,7 @@
 				</table>
 			</div>
 			
-			<?php if(is_array($product_arr)){ ?>
+			<?php if(!empty($product_arr['data'])){ ?>
 			<ul class="pagination">
 			  <li><a href="?nowpage=<?php echo $product_arr['nowpage']-1;?>&k=<?php echo $_GET['k'];?>">&laquo;</a></li>
 			  <?php
@@ -100,7 +102,6 @@
 			<?php
 			}else{
 			?>
-				
 		<?php }?>
 		</div>
 	</div>
