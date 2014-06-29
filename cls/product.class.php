@@ -106,7 +106,8 @@ class Product extends Main{
 					,'".$order_num."'
 				)";
 		$this->db->execute($sql);
-		$insert_id = $this->db->getInsert_Id();
+		$insert_id = $this->db->getInsert_Id();//這是回傳你上一筆寫入的ID給你
+		//
 		if($ext != '')
 		{
 			$path = $this->uploadPath.$insert_id.$ext;
