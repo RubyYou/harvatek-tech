@@ -59,7 +59,7 @@
 		</div>
 	</div>
 </section>
-<section id="featureProduct">
+<section id="featureProduct" style="display:none;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4 hidden-xs"><hr/></div>
