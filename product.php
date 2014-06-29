@@ -61,7 +61,11 @@
 							<th>&nbsp;</th>
 							<th>Name</th>
 							<th>Dimension</th>
+							<?php
+							//if($_GET['t']==2 && $_GET['ps']==16){
+								?>
 							<th>Wp(typ.)</th>
+							<?php //} ?>
 							<th>Datasheet</th>
 							<th></th>
 						</tr>
@@ -78,10 +82,11 @@
 									<td><img src="<?php echo $cProduct->webRoot.$product_arr['data'][$key]['product_id'].$product_arr['data'][$key]['ext'];?>" width="60" height="60" alt="product-thumbnails"></td>
 									<td><?php echo $product_arr['data'][$key]['name'];?></td>
 									<td><?php echo $product_arr['data'][$key]['dimension'];?></td>
-									<td><?php echo $product_arr['data'][$key]['wp-option'];?></td>
-									<!--<?php if ($product_arr['data'][$key]['wp-option'] != ''){
-										echo "<td>"+$product_arr['data'][$key]['wp-option']+"</td>"; 
-									};?>-->
+									<td><?php echo $product_arr['data'][$key]['wp_type'];?></td>
+									<?php if($_GET['t']==2 && $_GET['ps']==16){
+										//if ($product_arr['data'][$key]['wp_type'] != ''){
+										echo "<td>"+$product_arr['data'][$key]['wp_type']+"</td>"; 
+									};?>
 									
 									<td>
 										<?php

@@ -101,6 +101,12 @@ require_once WEB_PATH.'include/head.inc.php';
           </td>
         </tr>
         <tr>
+          <td class="title alignright">WP_type: </td>
+          <td>
+            <input type="text" name="wp_type" value="<?php echo htmlspecialchars($arr['wp_type']);?>"/>
+          </td>
+        </tr>
+        <tr>
           <td class="title alignright">Content:</td>
           <td>
             <textarea class="ckeditor" cols="80" id="content" name="content" rows="10">
