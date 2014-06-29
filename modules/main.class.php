@@ -22,6 +22,13 @@ class Main{
 		$this->db->closeConnection();
 	}
 	
+	/*
+	 * 取得排序
+	 * @param $keys 排序類別陣列
+	 * @param $after true 從最後加入,false 從最前面加入
+	 * @param $tbl_name 指定資料表名稱,預設當前資料表
+	 * @param $order_filed 排序欄位名稱
+	 */
 	function get_order($keys='',$after=true,$tbl_name="",$order_filed='order_num'){
 		if($tbl_name=="") $tbl_name=$this->tbl_name;
 		$tmpsql="";
@@ -44,6 +51,14 @@ class Main{
 		return 0;
 	}
 	
+	/*
+	 * 重設排序
+	 * @param $idkey 重設資料id的欄位名稱
+	 * @param $idval 重設資料id的值
+	 * @param $keys 影響排序的類別陣列
+	 * @param $tbl_name 指定資料表名稱,預設當前資料表
+	 * @param $order_filed 排序欄位名稱
+	 */
 	function reset_order($idkey,$idval,$keys='',$tbl_name="",$order_filed='order_num'){
 		if($tbl_name=="") $tbl_name=$this->tbl_name;
 		$tmpsql="";
@@ -66,7 +81,15 @@ class Main{
 		}
 	}
 	
-	
+	/*
+	 * 更換排序
+	 * @param $idkey 重設資料id的欄位名稱
+	 * @param $idval 重設資料id的值
+	 * @param $keys 影響排序的類別陣列
+	 * @param $order up 向上排序,down 向下排序
+	 * @param $tbl_name 指定資料表名稱,預設當前資料表
+	 * @param $order_filed 排序欄位名稱
+	 */
 	function change_order($idkey,$idval,$keys='',$order='',$tbl_name="",$order_filed='order_num'){
 		if($tbl_name=="") $tbl_name=$this->tbl_name;
 		$tmpsql="";
