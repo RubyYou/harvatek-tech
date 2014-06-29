@@ -100,7 +100,7 @@ class Product extends Main{
 					,'".$quantity_visible_."'
 					,'".$color_options_."'
 					,'".$cri_options_."'
-					,'".$wp_type_."' 
+					,'".$wp_type."' 
 					,'".$content."'
 					,0
 					,'".$order_num."'
@@ -404,7 +404,7 @@ class Product extends Main{
 				,quantity_visible = '".$quantity_visible_."'
 				,color_options = '".$color_options_."'
 				,cri_options = '".$cri_options_."'
-				,wp_type = '".$wp_type_."'
+				,wp_type = '".$wp_type."'
 				,content = '".$content."'";
 			
 			if($ext != '')

@@ -92,7 +92,7 @@ require_once WEB_PATH.'include/head.inc.php';
         <tr>
           <td class="title alignright">WP_type: </td>
           <td>
-            <input type="text" name="wp_type" value="<?php echo htmlspecialchars($arr['wp_type']);?>"/>
+            <input type="text" name="wp_type" value=""/>
           </td>
         </tr>
         <tr>
