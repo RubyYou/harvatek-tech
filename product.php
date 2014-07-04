@@ -42,7 +42,7 @@
 	<!-- Content
     ================================================== -->
 
-<section id="content">
+<section id="content" class="product">
 	<div class="container">
 
 <!-- Side menu // product categories
@@ -62,11 +62,12 @@
 							<th>Name</th>
 							<th>Dimension</th>
 							<?php
-							//if($_GET['t']==2 && $_GET['ps']==16){
+							if($_GET['ps']==16 || $_GET['ps']==17){
 								?>
-							<!--<th>Wp(typ.)</th>-->
-							<?php //} ?>
-							<th>Datasheet</th>
+							<th>Wp(typ.)</th>
+							<?php } else{?>
+								<th>Datasheet</th>
+							<?php } ?>
 							<th></th>
 						</tr>
 					</thead>
@@ -82,20 +83,15 @@
 									<td><img src="<?php echo $cProduct->webRoot.$product_arr['data'][$key]['product_id'].$product_arr['data'][$key]['ext'];?>" width="60" height="60" alt="product-thumbnails"></td>
 									<td><?php echo $product_arr['data'][$key]['name'];?></td>
 									<td><?php echo $product_arr['data'][$key]['dimension'];?></td>
-									<!--<td><?php echo $product_arr['data'][$key]['wp_type'];?></td>-->
-									<?php if($_GET['t']==2 && $_GET['ps']==16){
-										//if ($product_arr['data'][$key]['wp_type'] != ''){
-										echo "<td>"+$product_arr['data'][$key]['wp_type']+"</td>"; 
-									};?>
-									
-									<td>
-										<?php
-										if($datasheetLink != '')
-										{
-											echo '<a href="'.$datasheetLink.'"><i class="fa fa-download fa-2x"></i></a>';
-										}
-										?>
-										
+									<td><?php 
+										if($_GET['ps']==16 || $_GET['ps']==17){
+											echo $product_arr['data'][$key]['wp_type'];
+										}else{
+											if($datasheetLink != '')
+											{
+											echo "<td>"+'<a href="'.$datasheetLink.'"><i class="fa fa-download fa-2x"></i></a>'+"</td>";
+											}
+										}?>
 									</td>
 									<td><a href="details.php?i=<?php echo $product_arr['data'][$key]['product_id'];?>" class="btn btn-primary">Details</a></td>
 								</tr>
