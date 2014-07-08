@@ -89,7 +89,7 @@
 										}else{
 											if($datasheetLink != '')
 											{
-											echo "<td>"+'<a href="'.$datasheetLink.'"><i class="fa fa-download fa-2x"></i></a>'+"</td>";
+											echo '<a href="'.$datasheetLink.'" target="_blank"><i class="fa fa-download fa-2x"></i></a>';
 											}
 										}?>
 									</td>
