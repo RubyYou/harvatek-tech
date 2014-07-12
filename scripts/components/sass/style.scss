@@ -476,6 +476,7 @@ ul.navbar-nav {
 
 /* ============  Local representative ========================= */
 .salesRepo{
+	margin:1em 0;
 	li{
 		font-size:1.6rem;
 		font-weight: 300;
@@ -487,9 +488,9 @@ ul.navbar-nav {
 
 // map : current disable
 #map{
-	width:1000px;
-	height:642px;
-	background: url('http://harvatek-tech.com/wp-content/uploads/2013/08/salesMap.jpg');
+	width:1028px;
+	height:640px;
+	background: url('http://harvatek-tech.com/images/us-sales-map.jpg');
 }
 
 /* =============  Media Query Adjust mobile layout======================================== */

@@ -465,77 +465,80 @@ ul.navbar-nav a:hover {
   color: #a94442; }
 
 /* ============  Local representative ========================= */
-/* line 479, ../components/sass/style.scss */
-.salesRepo li {
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 1.8em;
-  color: #656970; }
+/* line 478, ../components/sass/style.scss */
+.salesRepo {
+  margin: 1em 0; }
+  /* line 480, ../components/sass/style.scss */
+  .salesRepo li {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.8em;
+    color: #656970; }
 
-/* line 489, ../components/sass/style.scss */
+/* line 490, ../components/sass/style.scss */
 #map {
-  width: 1000px;
-  height: 642px;
-  background: url("http://harvatek-tech.com/wp-content/uploads/2013/08/salesMap.jpg"); }
+  width: 1028px;
+  height: 640px;
+  background: url("http://harvatek-tech.com/images/us-sales-map.jpg"); }
 
 /* =============  Media Query Adjust mobile layout======================================== */
 @media (min-width: 992px) {
-  /* line 498, ../components/sass/style.scss */
+  /* line 499, ../components/sass/style.scss */
   .navbar-nav {
     float: right;
     margin-top: 35px; }
 
-  /* line 503, ../components/sass/style.scss */
+  /* line 504, ../components/sass/style.scss */
   #footer .col-md-6 .col-md-12 {
     padding-left: 0; } }
 @media (min-width: 768px) {
-  /* line 510, ../components/sass/style.scss */
+  /* line 511, ../components/sass/style.scss */
   .navbar-nav {
     margin-top: 35px;
     width: 700px; }
 
-  /* line 514, ../components/sass/style.scss */
+  /* line 515, ../components/sass/style.scss */
   #content .brand {
     min-height: 235px; }
 
-  /* line 517, ../components/sass/style.scss */
+  /* line 518, ../components/sass/style.scss */
   .index-col {
     position: relative;
     padding: 0 3em;
     border-right: 1px solid #eee;
     min-height: 210px; }
-    /* line 523, ../components/sass/style.scss */
+    /* line 524, ../components/sass/style.scss */
     .index-col .btn {
       bottom: 0; }
 
-  /* line 527, ../components/sass/style.scss */
+  /* line 528, ../components/sass/style.scss */
   .newsList {
     padding: 0 3em; } }
 @media (max-width: 992px) {
-  /* line 532, ../components/sass/style.scss */
+  /* line 533, ../components/sass/style.scss */
   .product .col-md-3, .product .col-md-9 {
     position: static; }
 
-  /* line 535, ../components/sass/style.scss */
+  /* line 536, ../components/sass/style.scss */
   .breadcrumb, .product .productImg {
     margin-top: 2em; } }
 @media (max-width: 768px) {
-  /* line 541, ../components/sass/style.scss */
+  /* line 542, ../components/sass/style.scss */
   .navbar {
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 99999; }
 
-  /* line 547, ../components/sass/style.scss */
+  /* line 548, ../components/sass/style.scss */
   .navbar-toggle {
     margin-top: 30px; }
 
-  /* line 550, ../components/sass/style.scss */
+  /* line 551, ../components/sass/style.scss */
   .title {
     margin-top: 12em; }
 
-  /* line 553, ../components/sass/style.scss */
+  /* line 554, ../components/sass/style.scss */
   .title img, .title h3 {
     margin-top: 3em;
     display: block;
@@ -543,26 +546,26 @@ ul.navbar-nav a:hover {
     margin: 1em auto;
     font-size: 2.5em; }
 
-  /* line 560, ../components/sass/style.scss */
+  /* line 561, ../components/sass/style.scss */
   .title img {
     width: 80%; }
 
-  /* line 563, ../components/sass/style.scss */
+  /* line 564, ../components/sass/style.scss */
   .index-col {
     padding-bottom: 1em;
     border-bottom: 1px solid #eee; }
 
-  /* line 567, ../components/sass/style.scss */
+  /* line 568, ../components/sass/style.scss */
   .product .btn {
     padding: 5px 10px;
     font-size: 11px; }
 
-  /* line 571, ../components/sass/style.scss */
+  /* line 572, ../components/sass/style.scss */
   .product td {
     padding: 2px 10px;
     font-size: 13px; }
 
-  /* line 575, ../components/sass/style.scss */
+  /* line 576, ../components/sass/style.scss */
   .product th {
     font-size: 13px;
     padding: 5px 10px; } }
