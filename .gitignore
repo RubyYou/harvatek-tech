@@ -1,6 +1,8 @@
 /node_modules
 /.sass-cache
 /config
+/datasheet
+
 config/config.php
 
 config/config.php

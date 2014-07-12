@@ -121,7 +121,7 @@
 							if($product_arr['datasheet'] != '')
 							{
 							?>
-							<a href="<?php echo $product_arr['datasheet'];?>" class="btn btn-primary">Datasheet</a>
+							<a href="<?php echo $product_arr['datasheet'];?>" target="_blank" class="btn btn-primary">Datasheet</a>
 							<?php
 							}
 							?>

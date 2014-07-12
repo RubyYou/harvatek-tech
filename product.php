@@ -61,13 +61,7 @@
 							<th>&nbsp;</th>
 							<th>Name</th>
 							<th>Dimension</th>
-							<?php
-							if($_GET['ps']==16 || $_GET['ps']==17){
-								?>
-							<th>Wp(typ.)</th>
-							<?php } else{?>
-								<th>Datasheet</th>
-							<?php } ?>
+							<th>Datasheet</th>
 							<th></th>
 						</tr>
 					</thead>
@@ -84,14 +78,14 @@
 									<td><?php echo $product_arr['data'][$key]['name'];?></td>
 									<td><?php echo $product_arr['data'][$key]['dimension'];?></td>
 									<td><?php 
-										if($_GET['ps']==16 || $_GET['ps']==17){
+										/* if($_GET['ps']==16 || $_GET['ps']==17){
 											echo $product_arr['data'][$key]['wp_type'];
 										}else{
-											if($datasheetLink != '')
+											*/ if($datasheetLink != '')
 											{
 											echo '<a href="'.$datasheetLink.'" target="_blank"><i class="fa fa-download fa-2x"></i></a>';
 											}
-										}?>
+										/*} */?>
 									</td>
 									<td><a href="details.php?i=<?php echo $product_arr['data'][$key]['product_id'];?>" class="btn btn-primary">Details</a></td>
 								</tr>
