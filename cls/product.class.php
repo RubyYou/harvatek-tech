@@ -297,7 +297,7 @@ class Product extends Main{
 		$pagecount=$page->getPageCount();
 		$nowpage=$page->getNowPage();
 		$pageMenu=$page->getPagelink(true);
-		$pageMenu=str_replace('[=slink=]','',$pageMenu);
+		$pageMenu=str_replace('[=slink=]','table_id='.$table_id.'&products_id='.$products_id,$pageMenu);
 		$ary['pageMenu']=$pageMenu;
 		$ary['nowpage']=$nowpage;
 		$ary['pagecount']=$pagecount;
