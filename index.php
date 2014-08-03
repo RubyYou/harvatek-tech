@@ -23,7 +23,6 @@
 
 	<!-- Content
     ================================================== -->
-
 <section id="content">
 	<div class="container">
 
@@ -88,7 +87,6 @@
 			</div>
 		</div>
 </section>
-<div id='layout_footer'></div>
 </div>
 	<!-- Footer & javascript 
     ================================================== -->

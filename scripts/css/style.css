@@ -7,157 +7,150 @@
 /* ======== Overwrite bootstrap css ============================== */
 /* line 25, ../components/sass/style.scss */
 body {
-  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column; }
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif; }
 
-/* line 31, ../components/sass/style.scss */
-#layout {
-  flex: 1; }
-
-/* line 35, ../components/sass/style.scss */
+/* line 37, ../components/sass/style.scss */
 p {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.8em;
   color: #656970; }
 
-/* line 40, ../components/sass/style.scss */
+/* line 42, ../components/sass/style.scss */
 p.lead {
   line-height: 1.8em; }
 
-/* line 43, ../components/sass/style.scss */
+/* line 45, ../components/sass/style.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   letter-spacing: 1px;
   font-family: "Open Sans",Helvetica, Arial, sans-serif; }
 
-/* line 48, ../components/sass/style.scss */
+/* line 50, ../components/sass/style.scss */
 a:hover {
   text-decoration: none; }
 
-/* line 51, ../components/sass/style.scss */
+/* line 53, ../components/sass/style.scss */
 th {
   text-align: center; }
 
-/* line 54, ../components/sass/style.scss */
+/* line 56, ../components/sass/style.scss */
 ul {
   padding-left: 0; }
-  /* line 56, ../components/sass/style.scss */
+  /* line 58, ../components/sass/style.scss */
   ul li {
     list-style: none; }
 
-/* line 60, ../components/sass/style.scss */
+/* line 62, ../components/sass/style.scss */
 .table > thead > tr > th {
   border-bottom: none; }
 
-/* line 63, ../components/sass/style.scss */
+/* line 65, ../components/sass/style.scss */
 ol {
   margin-top: 10px; }
 
-/* line 67, ../components/sass/style.scss */
+/* line 69, ../components/sass/style.scss */
 .form-horizontal .radio, .form-horizontal .checkbox {
   display: inline-block; }
 
-/* line 72, ../components/sass/style.scss */
+/* line 74, ../components/sass/style.scss */
 input[type="radio"],
 input[type="checkbox"] {
   margin-right: 5px; }
 
-/* line 75, ../components/sass/style.scss */
+/* line 77, ../components/sass/style.scss */
 .breadcrumb {
   display: inline-block;
   margin-top: 0;
   margin-bottom: 10px; }
 
-/* line 80, ../components/sass/style.scss */
+/* line 82, ../components/sass/style.scss */
 .date {
   color: #656970;
   font-size: 0.8em;
   float: right; }
 
-/* line 85, ../components/sass/style.scss */
+/* line 87, ../components/sass/style.scss */
 .navbar {
   border: none;
   background-color: rgba(15, 35, 53, 0.9);
   padding-bottom: 1em; }
 
-/* line 90, ../components/sass/style.scss */
+/* line 92, ../components/sass/style.scss */
 .nav > li > a {
   padding: 5px 10px; }
 
-/* line 93, ../components/sass/style.scss */
+/* line 95, ../components/sass/style.scss */
 .navbar-toggle {
   background-color: #458ccb; }
-  /* line 96, ../components/sass/style.scss */
+  /* line 98, ../components/sass/style.scss */
   .navbar-toggle .icon-bar {
     background-color: white; }
 
-/* line 100, ../components/sass/style.scss */
+/* line 102, ../components/sass/style.scss */
 .glyphicon-remove-circle {
   font-size: 24px; }
-  /* line 102, ../components/sass/style.scss */
+  /* line 104, ../components/sass/style.scss */
   .glyphicon-remove-circle:hover {
     color: #d9534f; }
 
-/* line 108, ../components/sass/style.scss */
+/* line 110, ../components/sass/style.scss */
 ul.navbar-nav > li a {
   color: #e8e8e8;
   font-weight: normal;
   letter-spacing: 1px; }
-/* line 114, ../components/sass/style.scss */
+/* line 116, ../components/sass/style.scss */
 ul.navbar-nav a.cart {
   background-color: #458ccb; }
-  /* line 117, ../components/sass/style.scss */
+  /* line 119, ../components/sass/style.scss */
   ul.navbar-nav a.cart:hover {
     background-color: #77ab41; }
-/* line 122, ../components/sass/style.scss */
+/* line 124, ../components/sass/style.scss */
 ul.navbar-nav a:hover {
   background-color: black; }
 
-/* line 128, ../components/sass/style.scss */
+/* line 130, ../components/sass/style.scss */
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: black; }
 
-/* line 132, ../components/sass/style.scss */
+/* line 134, ../components/sass/style.scss */
 .dropdown-menu {
   background-color: black;
   border: none; }
-  /* line 136, ../components/sass/style.scss */
+  /* line 138, ../components/sass/style.scss */
   .dropdown-menu > li > a {
     padding: 5px 15px; }
-    /* line 139, ../components/sass/style.scss */
+    /* line 141, ../components/sass/style.scss */
     .dropdown-menu > li > a:hover {
       color: #458ccb; }
 
-/* line 145, ../components/sass/style.scss */
+/* line 147, ../components/sass/style.scss */
 .table > tbody > tr > td,
 .table > thead > tr > th {
   border-color: #2aaae1; }
 
-/* line 149, ../components/sass/style.scss */
+/* line 151, ../components/sass/style.scss */
 .nav-pills > li {
   margin-bottom: 5px; }
-  /* line 151, ../components/sass/style.scss */
+  /* line 153, ../components/sass/style.scss */
   .nav-pills > li > a {
     font-weight: 300;
     padding: 5px 30px;
     letter-spacing: 1px;
     background: #458ccb;
     color: white; }
-    /* line 157, ../components/sass/style.scss */
+    /* line 159, ../components/sass/style.scss */
     .nav-pills > li > a:hover {
       background-color: #1a3e5d; }
-  /* line 161, ../components/sass/style.scss */
+  /* line 163, ../components/sass/style.scss */
   .nav-pills > li.active > a {
     font-weight: 300;
     padding: 5px 30px; }
-    /* line 164, ../components/sass/style.scss */
+    /* line 166, ../components/sass/style.scss */
     .nav-pills > li.active > a:hover {
       background-color: #1a3e5d; }
 
-/* line 169, ../components/sass/style.scss */
+/* line 171, ../components/sass/style.scss */
 .btn {
   padding: 5px 30px;
   font-weight: 300;
@@ -165,33 +158,33 @@ ul.navbar-nav a:hover {
   letter-spacing: 1px;
   border: none; }
 
-/* line 176, ../components/sass/style.scss */
+/* line 178, ../components/sass/style.scss */
 .btn-primary {
   background-color: #1a3e5d; }
-  /* line 178, ../components/sass/style.scss */
+  /* line 180, ../components/sass/style.scss */
   .btn-primary:hover {
     background-color: #3072ad;
     color: white; }
 
-/* line 183, ../components/sass/style.scss */
+/* line 185, ../components/sass/style.scss */
 .btn-addcart {
   background-color: #77ab41; }
-  /* line 185, ../components/sass/style.scss */
+  /* line 187, ../components/sass/style.scss */
   .btn-addcart:hover {
     background-color: #90c25d;
     color: white; }
 
-/* line 190, ../components/sass/style.scss */
+/* line 192, ../components/sass/style.scss */
 .btn-search {
   background-color: #3072ad;
   padding: 5px 15px; }
-  /* line 193, ../components/sass/style.scss */
+  /* line 195, ../components/sass/style.scss */
   .btn-search:hover {
     background-color: #6da5d6;
     color: white; }
 
 /* ================ section : title ===================================================== */
-/* line 201, ../components/sass/style.scss */
+/* line 203, ../components/sass/style.scss */
 #header {
   background-image: url("../../images/headImage2.jpg");
   background-repeat: no-repeat;
@@ -204,21 +197,21 @@ ul.navbar-nav a:hover {
   color: white;
   min-height: 350px; }
 
-/* line 213, ../components/sass/style.scss */
+/* line 215, ../components/sass/style.scss */
 .title {
   margin-top: 5em; }
-  /* line 216, ../components/sass/style.scss */
+  /* line 218, ../components/sass/style.scss */
   .title img, .title h3 {
     display: inline-block;
     vertical-align: middle;
     text-shadow: 0px 1px 10px black; }
-  /* line 222, ../components/sass/style.scss */
+  /* line 224, ../components/sass/style.scss */
   .title h3 {
     font-size: 3em;
     font-weight: normal;
     letter-spacing: 1px; }
 
-/* line 228, ../components/sass/style.scss */
+/* line 230, ../components/sass/style.scss */
 .indexTitle {
   position: absolute;
   bottom: 30px;
@@ -227,25 +220,25 @@ ul.navbar-nav a:hover {
   letter-spacing: 2px; }
 
 /* ============= Section: content ======================================== */
-/* line 238, ../components/sass/style.scss */
+/* line 240, ../components/sass/style.scss */
 #content {
   margin: 3em 0; }
-  /* line 241, ../components/sass/style.scss */
+  /* line 243, ../components/sass/style.scss */
   #content table {
     border: 1px solid #2aaae1; }
-    /* line 243, ../components/sass/style.scss */
+    /* line 245, ../components/sass/style.scss */
     #content table thead {
       background-color: #458ccb;
       color: white; }
-      /* line 246, ../components/sass/style.scss */
+      /* line 248, ../components/sass/style.scss */
       #content table thead th {
         font-weight: 300;
         letter-spacing: 1px;
         height: 40px; }
-    /* line 253, ../components/sass/style.scss */
+    /* line 255, ../components/sass/style.scss */
     #content table tbody tr:hover {
       background-color: whitesmoke; }
-  /* line 259, ../components/sass/style.scss */
+  /* line 261, ../components/sass/style.scss */
   #content .productLine {
     padding: 8px 15px;
     margin-bottom: 8px;
@@ -256,7 +249,7 @@ ul.navbar-nav a:hover {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px; }
-  /* line 267, ../components/sass/style.scss */
+  /* line 269, ../components/sass/style.scss */
   #content h3 {
     font-size: 1.5em;
     margin-bottom: 1em;
@@ -264,27 +257,27 @@ ul.navbar-nav a:hover {
     color: #255885;
     text-transform: uppercase; }
 
-/* line 278, ../components/sass/style.scss */
+/* line 280, ../components/sass/style.scss */
 #clientinfo,
 #clientdetail,
 #featureProduct {
   margin-bottom: 3em; }
 
-/* line 281, ../components/sass/style.scss */
+/* line 283, ../components/sass/style.scss */
 #clientinfo {
   display: none; }
 
-/* line 285, ../components/sass/style.scss */
+/* line 287, ../components/sass/style.scss */
 #featureProduct hr {
   margin: 30px 0; }
-/* line 288, ../components/sass/style.scss */
+/* line 290, ../components/sass/style.scss */
 #featureProduct h3 {
   font-size: 1.5em;
   font-weight: bold;
   color: #255885;
   margin-bottom: 2em;
   text-transform: uppercase; }
-/* line 295, ../components/sass/style.scss */
+/* line 297, ../components/sass/style.scss */
 #featureProduct .featured {
   width: 120px;
   height: 150px;
@@ -296,28 +289,28 @@ ul.navbar-nav a:hover {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px; }
-  /* line 303, ../components/sass/style.scss */
+  /* line 305, ../components/sass/style.scss */
   #featureProduct .featured:hover {
     border-color: #255885; }
-  /* line 306, ../components/sass/style.scss */
+  /* line 308, ../components/sass/style.scss */
   #featureProduct .featured img {
     width: 100px; }
-  /* line 309, ../components/sass/style.scss */
+  /* line 311, ../components/sass/style.scss */
   #featureProduct .featured p {
     font-size: 1.2rem;
     line-height: 1.5em;
     padding-top: 3px; }
 
 /* ============= Section: product Details ======================================== */
-/* line 319, ../components/sass/style.scss */
+/* line 321, ../components/sass/style.scss */
 #addcart label {
   font-size: 1.3em;
   padding-right: 10px; }
-/* line 323, ../components/sass/style.scss */
+/* line 325, ../components/sass/style.scss */
 #addcart select {
   margin-right: 10px; }
 
-/* line 327, ../components/sass/style.scss */
+/* line 329, ../components/sass/style.scss */
 .productImg {
   padding: 5px;
   border: 1px solid #b3b6bb;
@@ -327,15 +320,15 @@ ul.navbar-nav a:hover {
   -o-border-radius: 5px;
   border-radius: 5px; }
 
-/* line 334, ../components/sass/style.scss */
+/* line 336, ../components/sass/style.scss */
 .product-description {
   padding-top: 2em; }
-  /* line 336, ../components/sass/style.scss */
+  /* line 338, ../components/sass/style.scss */
   .product-description img {
     margin: 20px 0; }
 
 /* ============= The accordion menu style ======================================== */
-/* line 341, ../components/sass/style.scss */
+/* line 343, ../components/sass/style.scss */
 .categoryTitle {
   width: 100%;
   background: #80bee8;
@@ -350,19 +343,19 @@ ul.navbar-nav a:hover {
   -webkit-border-top-right-radius: 5px;
   border-top-right-radius: 5px; }
 
-/* line 350, ../components/sass/style.scss */
+/* line 352, ../components/sass/style.scss */
 .accordion {
   list-style-type: none;
   padding: 0;
   margin: 0 0 30px; }
-  /* line 355, ../components/sass/style.scss */
+  /* line 357, ../components/sass/style.scss */
   .accordion ul {
     padding: 0;
     margin: 0;
     float: left;
     display: block;
     width: 100%; }
-  /* line 363, ../components/sass/style.scss */
+  /* line 365, ../components/sass/style.scss */
   .accordion li {
     background: #458ccb;
     cursor: pointer;
@@ -372,19 +365,19 @@ ul.navbar-nav a:hover {
     float: left;
     display: block;
     width: 100%; }
-    /* line 371, ../components/sass/style.scss */
+    /* line 373, ../components/sass/style.scss */
     .accordion li img {
       margin-top: -3px;
       margin-right: 5px; }
-    /* line 376, ../components/sass/style.scss */
+    /* line 378, ../components/sass/style.scss */
     .accordion li ul li {
       background: #7FD2FF; }
-      /* line 379, ../components/sass/style.scss */
+      /* line 381, ../components/sass/style.scss */
       .accordion li ul li a {
         color: #1167a8;
         padding-left: 25px;
         border-bottom: 1px solid #458ccb; }
-  /* line 388, ../components/sass/style.scss */
+  /* line 390, ../components/sass/style.scss */
   .accordion > li:last-child {
     -moz-border-radius-bottomleft: 5px;
     -webkit-border-bottom-left-radius: 5px;
@@ -392,7 +385,7 @@ ul.navbar-nav a:hover {
     -moz-border-radius-bottomright: 5px;
     -webkit-border-bottom-right-radius: 5px;
     border-bottom-right-radius: 5px; }
-  /* line 393, ../components/sass/style.scss */
+  /* line 395, ../components/sass/style.scss */
   .accordion a {
     text-decoration: none;
     border-bottom: 1px solid #7cb8e5;
@@ -402,80 +395,80 @@ ul.navbar-nav a:hover {
     padding: 0 10px;
     display: block;
     cursor: pointer; }
-    /* line 402, ../components/sass/style.scss */
+    /* line 404, ../components/sass/style.scss */
     .accordion a.toggle {
       background: url("../../images/open.gif") no-repeat center right;
       font-weight: 300; }
-  /* line 408, ../components/sass/style.scss */
+  /* line 410, ../components/sass/style.scss */
   .accordion li.active > a {
     background: url("../../images/close.gif") no-repeat center right;
     color: #ffb850; }
 
 /* ============= Section: footer ======================================== */
-/* line 417, ../components/sass/style.scss */
+/* line 419, ../components/sass/style.scss */
 #footer {
   background: url("../../images/gplaypattern.jpg"); }
-  /* line 420, ../components/sass/style.scss */
+  /* line 423, ../components/sass/style.scss */
   #footer .container {
     padding: 3em 0;
     color: #656970;
     font-weight: 300; }
-  /* line 426, ../components/sass/style.scss */
+  /* line 429, ../components/sass/style.scss */
   #footer .barblue, #footer .barsky, #footer .bargreen {
     height: 5px; }
-  /* line 429, ../components/sass/style.scss */
+  /* line 432, ../components/sass/style.scss */
   #footer .barsky {
     background-color: #2aaae1; }
-  /* line 432, ../components/sass/style.scss */
+  /* line 435, ../components/sass/style.scss */
   #footer .barblue {
     background-color: #458ccb; }
-  /* line 435, ../components/sass/style.scss */
+  /* line 438, ../components/sass/style.scss */
   #footer .bargreen {
     background-color: #77ab41; }
-  /* line 439, ../components/sass/style.scss */
+  /* line 442, ../components/sass/style.scss */
   #footer h3 {
     margin-top: 0;
     color: #458ccb; }
-  /* line 444, ../components/sass/style.scss */
+  /* line 447, ../components/sass/style.scss */
   #footer ul a {
     font-size: 1.6rem;
     line-height: 1.8em;
     color: #656970; }
-  /* line 451, ../components/sass/style.scss */
+  /* line 454, ../components/sass/style.scss */
   #footer ul.mainlink li a,
   #footer li.mainlink {
     font-size: 1.6rem;
     line-height: 1.8em;
     color: #2aaae1; }
-  /* line 458, ../components/sass/style.scss */
+  /* line 461, ../components/sass/style.scss */
   #footer b {
     font-weight: 300;
     color: #77ab41; }
 
-/* line 466, ../components/sass/style.scss */
+/* line 469, ../components/sass/style.scss */
 .bv-form .help-block {
   margin-bottom: 0; }
 
-/* line 469, ../components/sass/style.scss */
+/* line 472, ../components/sass/style.scss */
 .nav-tabs li.bv-tab-success > a {
   color: #3c763d; }
 
-/* line 472, ../components/sass/style.scss */
+/* line 475, ../components/sass/style.scss */
 .nav-tabs li.bv-tab-error > a {
   color: #a94442; }
 
 /* ============  Local representative ========================= */
-/* line 478, ../components/sass/style.scss */
+/* line 481, ../components/sass/style.scss */
 .salesRepo {
   margin: 1em 0; }
-  /* line 480, ../components/sass/style.scss */
+  /* line 483, ../components/sass/style.scss */
   .salesRepo li {
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 1.8em;
     color: #656970; }
 
-/* line 490, ../components/sass/style.scss */
+/* line 493, ../components/sass/style.scss */
 #map {
   width: 1028px;
   height: 640px;
@@ -483,62 +476,62 @@ ul.navbar-nav a:hover {
 
 /* =============  Media Query Adjust mobile layout======================================== */
 @media (min-width: 992px) {
-  /* line 499, ../components/sass/style.scss */
+  /* line 502, ../components/sass/style.scss */
   .navbar-nav {
     float: right;
     margin-top: 35px; }
 
-  /* line 504, ../components/sass/style.scss */
+  /* line 507, ../components/sass/style.scss */
   #footer .col-md-6 .col-md-12 {
     padding-left: 0; } }
 @media (min-width: 768px) {
-  /* line 511, ../components/sass/style.scss */
+  /* line 514, ../components/sass/style.scss */
   .navbar-nav {
     margin-top: 35px;
     width: 700px; }
 
-  /* line 515, ../components/sass/style.scss */
+  /* line 518, ../components/sass/style.scss */
   #content .brand {
     min-height: 235px; }
 
-  /* line 518, ../components/sass/style.scss */
+  /* line 521, ../components/sass/style.scss */
   .index-col {
     position: relative;
     padding: 0 3em;
     border-right: 1px solid #eee;
     min-height: 210px; }
-    /* line 524, ../components/sass/style.scss */
+    /* line 527, ../components/sass/style.scss */
     .index-col .btn {
       bottom: 0; }
 
-  /* line 528, ../components/sass/style.scss */
+  /* line 531, ../components/sass/style.scss */
   .newsList {
     padding: 0 3em; } }
 @media (max-width: 992px) {
-  /* line 533, ../components/sass/style.scss */
+  /* line 536, ../components/sass/style.scss */
   .product .col-md-3, .product .col-md-9 {
     position: static; }
 
-  /* line 536, ../components/sass/style.scss */
+  /* line 539, ../components/sass/style.scss */
   .breadcrumb, .product .productImg {
     margin-top: 2em; } }
 @media (max-width: 768px) {
-  /* line 542, ../components/sass/style.scss */
+  /* line 545, ../components/sass/style.scss */
   .navbar {
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 99999; }
 
-  /* line 548, ../components/sass/style.scss */
+  /* line 551, ../components/sass/style.scss */
   .navbar-toggle {
     margin-top: 30px; }
 
-  /* line 551, ../components/sass/style.scss */
+  /* line 554, ../components/sass/style.scss */
   .title {
     margin-top: 12em; }
 
-  /* line 554, ../components/sass/style.scss */
+  /* line 557, ../components/sass/style.scss */
   .title img, .title h3 {
     margin-top: 3em;
     display: block;
@@ -546,26 +539,26 @@ ul.navbar-nav a:hover {
     margin: 1em auto;
     font-size: 2.5em; }
 
-  /* line 561, ../components/sass/style.scss */
+  /* line 564, ../components/sass/style.scss */
   .title img {
     width: 80%; }
 
-  /* line 564, ../components/sass/style.scss */
+  /* line 567, ../components/sass/style.scss */
   .index-col {
     padding-bottom: 1em;
     border-bottom: 1px solid #eee; }
 
-  /* line 568, ../components/sass/style.scss */
+  /* line 571, ../components/sass/style.scss */
   .product .btn {
     padding: 5px 10px;
     font-size: 11px; }
 
-  /* line 572, ../components/sass/style.scss */
+  /* line 575, ../components/sass/style.scss */
   .product td {
     padding: 2px 10px;
     font-size: 13px; }
 
-  /* line 576, ../components/sass/style.scss */
+  /* line 579, ../components/sass/style.scss */
   .product th {
     font-size: 13px;
     padding: 5px 10px; } }

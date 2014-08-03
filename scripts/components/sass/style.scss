@@ -24,12 +24,14 @@ $default-text-shadow-v-offset: 1px;
 
 body{
 	font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
-	display: flex;
-  	min-height: 100vh;
-  	flex-direction: column;
+	//display: flex;
+  	//min-height: 100vh;
+  	//flex-direction: column;
+
 }
 #layout{
-	flex: 1;
+	//flex: 1;
+
 }
 
 p{	font-size:1.6rem;
@@ -416,6 +418,7 @@ ul.navbar-nav {
 
 #footer{
 	background: url("../../images/gplaypattern.jpg");
+
 
 	.container{
 	padding:3em 0;
